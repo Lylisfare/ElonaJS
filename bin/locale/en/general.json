@@ -1,0 +1,192 @@
+{
+  "attributes": {
+    "long": {
+      "strength": "Strength",
+      "constitution": "Constitution",
+      "dexterity": "Dexterity",
+      "learning": "Learning",
+      "will": "Will",
+      "magic": "Magic",
+      "charisma": "Charisma"
+    },
+    "short": {
+      "str": "STR",
+      "con": "CON",
+      "dex": "DEX",
+      "ler": "LER",
+      "wil": "WIL",
+      "mag": "MAG",
+      "cha": "CHA"
+    },
+    "magnitude": {
+      "none": "None",
+      "slight": "Slight",
+      "little": "Little",
+      "normal": "Normal",
+      "not_bad": "Not Bad",
+      "good": "Good",
+      "great": "Great",
+      "best": "Best"
+    }
+  },
+  "hints": {
+    "1": "Cursor [Select]",
+    "2": "+, - [Page]",
+    "3": "Shift, Esc [Close]",
+    "4": "Enter [Gain Feat]",
+    "5": "z,x [Ally]",
+    "3b": "Shift, Esc [Back]",
+    "help": "Press F1 to show help."
+  },
+  "Objects": {
+    "bottle": "bottle",
+    "bottle_plural": "bottles",
+    "potion": "potion",
+    "potion_plural": "potions",
+    "scroll": "scroll",
+    "scroll_plural": "scrolls",
+    "objectWithCount": "%{count} %{type}"
+  },
+  "Potential": {
+    "Superb": "Superb",
+    "Great": "Great",
+    "Good": "Good",
+    "Bad": "Bad",
+    "Hopeless": "Hopeless"
+  },
+  "Quests": {
+    "Nightmare": {
+      "Choices": {
+        "1": "Fine, let's do it.",
+        "2": "Not a chance, you worm."
+      },
+      "Text": {
+        "1": "Hey you! Hold up! I've seen your face before punk... %{alias}... Ah yes... I remember now. You've been making quite a name for yourself throughout Tyris, haven't you?",
+        "2": "You wanna make some quick cash? I've got a request from the organization of Zanan. They need a test subject in order to get some experimental data. Or perhaps 'sacrifice' would be a more appropriate term. *If* you survive, I'll pay you enough to party until you waste away. Make your decision quickly.",
+        "3": "Excellent. Let me know when you've finished your preparations for death and I'll take you to the testing grounds.",
+        "4": "Fine then, piss off you spineless coward."
+      }
+    }
+  },
+  "settings": {
+    "name": {
+      "adaptive_res": "Adaptive Resolution",
+      "canvas_size": "Canvas Size",
+      "canvas_resolution": "Canvas Resolution",
+      "fullscreen": "Fullscreen"
+    },
+    "description": {
+      "adaptive_res": "Match canvas resolution to canvas size, and canvas size to window.",
+      "canvas_size": "Size of the canvas on the screen. Ignored if adaptive resolution is enabled.",
+      "canvas_resolution": "The internal size of the canvas. Ignored if adaptive resolution is enabled.",
+      "fullscreen": "Toggles fullscreen. Only works when using Electron; in browser, hit F11 instead."
+    }
+  },
+  "ui": {
+    "startmenu": {
+      "restore": "Restore an adventurer",
+      "create": "Generate an adventurer",
+      "incarnate": "Incarnate an adventurer",
+      "homepage": "View the homepage",
+      "title": "Starting Menu"
+    },
+    "AliasSelect": {
+      "Title": "Alias Selection",
+      "Section1": "Alias list",
+      "Guide": "Choose your alias."
+    },
+    "raceselect": {
+      "guide": "Welcome, traveler. I've been looking for you.",
+      "title": "Race Selection",
+      "section1": "Race",
+      "section2": "Detail",
+      "section3": "Attribute Bonuses",
+      "section4": "Trained Skills",
+      "wepprefix": "Weaponry: ",
+      "attributes": "str,con,dex,ler,wil,mag,cha"
+    },
+    "GenderSelect": {
+      "Guide": "What's your gender?",
+      "Title": "Gender Selection",
+      "Section1": "Gender"
+    },
+    "ClassSelect": {
+      "Guide": "Your class and race determine the growth rate of your skills and attributes.",
+      "Title": "Class Selection",
+      "Section1": "Class",
+      "Section2": "Detail"
+    },
+    "AttributeReroll": {
+      "Guide": "You should prepare well, if you want to survive long enough in Irva.",
+      "Title": "Attribute Reroll",
+      "Section1": "Attributes",
+      "Locks": "Locks Left: %{num}",
+      "Disclaimer": "Locked items will not change."
+    },
+    "FeatSelect": {
+      "Guide": "Choose your feats wisely.",
+      "Section1": "Name",
+      "Section2": "Detail",
+      "Disclaimer": "You can acquire %{count} ${ui.FeatSelect.Feat}.",
+      "Feat": "feat",
+      "Feat_plural": "feats",
+      "Header1": "[Feats and traits]",
+      "Header2": "[Available feats]",
+      "Title": "Feats and Traits"
+    },
+    "Reroll": "Reroll",
+    "Proceed": "Proceed",
+    "Page": "Page %{cur}/%{max}"
+  },
+  "Sexes": {
+    "Male": "Male",
+    "Female": "Female"
+  },
+  "Sys_38": "Level",
+  "Sys_41": "Race: ",
+  "Sys_42": "Hit the enter key to reroll your personal history.",
+  "Sys_43": "Attributes(Org) - Potential",
+  "Sys_44": "Combat Rolls",
+  "Sys_45": "Trace",
+  "Sys_46": "Blessings and Hexes",
+  "Sys_47": "Extra Info",
+  "Sys_48": "Name",
+  "Sys_49": "Aka",
+  "Sys_50": "Race",
+  "Sys_51": "Sex",
+  "Sys_52": "Class",
+  "Sys_53": "Age",
+  "Sys_54": "Height",
+  "Sys_55": "Weight",
+  "Sys_56": "Level",
+  "Sys_57": "EXP",
+  "Sys_58": "Next Lv",
+  "Sys_59": "God",
+  "Sys_60": "Guild",
+  "Sys_61": "Turns",
+  "Sys_62": "Days",
+  "Sys_63": "Kills",
+  "Sys_64": "Time",
+  "Sys_65": "Cargo Wt",
+  "Sys_66": "Cargo Lmt",
+  "Sys_67": "Equip Wt",
+  "Sys_68": "Deepest Lv",
+  "Sys_69": "Life",
+  "Sys_70": "Mana",
+  "Sys_71": "Sanity",
+  "Sys_72": "Speed",
+  "Sys_73": "Fame",
+  "Sys_74": "Karma",
+  "Sys_75": "Melee",
+  "Sys_76": "Shoot",
+  "Sys_77": "Are you satisfied now?",
+  "Sys_78": "Last question. What's your name?",
+  "Sys_79": "Restart",
+  "Sys_More": "(More)",
+  "Sys_No": "No",
+  "Sys_Yes": "Yes",
+  "Trait_disease": "[Disease]",
+  "Trait_feat": "[Feat]",
+  "Trait_mutation": "[Mutation]",
+  "Trait_race": "[Race]"
+}

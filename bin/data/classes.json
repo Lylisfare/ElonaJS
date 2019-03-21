@@ -1,0 +1,310 @@
+{"classes": {
+  "Archer": {
+    "id": "Archer",
+    "playable": true,
+    "base_attributes": {
+      "STR": 6,
+      "CON": 4,
+      "DEX": 8,
+      "PER": 5,
+      "LEA": 2,
+      "WIL": 0,
+      "MAG": 0,
+      "CHA": 0
+    },
+    "base_skills": {
+      "Axe": 3,
+      "Crossbow": 5,
+      "Evasion": 5,
+      "Magic Device": 3,
+      "Marksman": 3,
+      "Medium Armor": 3,
+      "Riding": 4,
+      "Short Sword": 4,
+      "Tailoring": 4
+    },
+    "name": "classes.archer.name",
+    "description": "classes.archer.description"
+  },
+  "Claymore": {
+    "id": "Claymore",
+    "playable": true,
+    "base_attributes": {
+      "STR": 9,
+      "CON": 3,
+      "DEX": 7,
+      "PER": 6,
+      "LEA": 0,
+      "WIL": 0,
+      "MAG": 4,
+      "CHA": 0
+    },
+    "base_skills": {
+      "Evasion": 7,
+      "Greater Evasion": 4,
+      "Healing": 6,
+      "Light Armor": 5,
+      "Literacy": 4,
+      "Long Sword": 6,
+      "Tactics": 5,
+      "Two Hand": 7
+    },
+    "name": "classes.claymore.name",
+    "description": "classes.claymore.description"
+  },
+  "Farmer": {
+    "id": "Farmer",
+    "playable": true,
+    "base_attributes": {
+      "STR": 5,
+      "CON": 5,
+      "DEX": 2,
+      "PER": 0,
+      "LEA": 8,
+      "WIL": 5,
+      "MAG": 0,
+      "CHA": 0
+    },
+    "base_skills": {
+      "Anatomy": 7,
+      "Cooking": 6,
+      "Evasion": 3,
+      "Gardening": 5,
+      "Healing": 5,
+      "Negotiation": 5,
+      "Polearm": 4,
+      "Scythe": 3,
+      "Tailoring": 5
+    },
+    "name": "classes.farmer.name",
+    "description": "classes.farmer.description"
+  },
+  "Gunner": {
+    "id": "Gunner",
+    "playable": false,
+    "base_attributes": {
+      "STR": 0,
+      "CON": 2,
+      "DEX": 5,
+      "PER": 8,
+      "LEA": 5,
+      "WIL": 4,
+      "MAG": 3,
+      "CHA": 0
+    },
+    "base_skills": {
+      "Evasion": 4,
+      "Firearm": 5,
+      "Healing": 4,
+      "Literacy": 3,
+      "Marksman": 3
+    },
+    "name": "classes.gunner.name",
+    "description": "classes.gunner.description"
+  },
+  "Pianist": {
+    "id": "Pianist",
+    "playable": true,
+    "base_attributes": {
+      "STR": 6,
+      "CON": 0,
+      "DEX": 4,
+      "PER": 5,
+      "LEA": 6,
+      "WIL": 0,
+      "MAG": 4,
+      "CHA": 8
+    },
+    "base_skills": {
+      "Weight Lifting": 19,
+      "Jeweler": 5,
+      "Light Armor": 4,
+      "Literacy": 4,
+      "Magic Device": 6,
+      "Memorization": 6,
+      "Performer": 6,
+      "Riding": 3
+    },
+    "name": "classes.pianist.name",
+    "description": "classes.pianist.description"
+  },
+  "Predator": {
+    "id": "Predator",
+    "playable": false,
+    "base_attributes": {
+      "STR": 8,
+      "CON": 11,
+      "DEX": 8,
+      "PER": 0,
+      "LEA": 0,
+      "WIL": 0,
+      "MAG": 0,
+      "CHA": 0
+    },
+    "base_skills": {
+      "Tactics": 4
+    },
+    "name": "classes.predator.name",
+    "description": "classes.predator.description"
+  },
+  "Priest": {
+    "id": "Priest",
+    "playable": true,
+    "base_attributes": {
+      "STR": 2,
+      "CON": 2,
+      "DEX": 0,
+      "PER": 2,
+      "LEA": 2,
+      "WIL": 10,
+      "MAG": 7,
+      "CHA": 2
+    },
+    "base_skills": {
+      "Blunt": 3,
+      "Casting": 5,
+      "Faith": 5,
+      "Healing": 5,
+      "Heavy Armor": 4,
+      "Literacy": 5,
+      "Magic Device": 5,
+      "Medium Armor": 3,
+      "Shield": 3
+    },
+    "name": "classes.priest.name",
+    "description": "classes.priest.description"
+  },
+  "Thief": {
+    "id": "Thief",
+    "playable": true,
+    "base_attributes": {
+      "STR": 4,
+      "CON": 4,
+      "DEX": 8,
+      "PER": 5,
+      "LEA": 4,
+      "WIL": 0,
+      "MAG": 0,
+      "CHA": 0
+    },
+    "base_skills": {
+      "Bow": 3,
+      "Dual Wield": 4,
+      "Evasion": 4,
+      "Long Sword": 3,
+      "Magic Device": 3,
+      "Medium Armor": 4,
+      "Negotiation": 4,
+      "Pickpocket": 4,
+      "Short Sword": 3,
+      "Tactics": 3
+    },
+    "name": "classes.thief.name",
+    "description": "classes.thief.description"
+  },
+  "Tourist": {
+    "id": "Tourist",
+    "playable": true,
+    "base_attributes": {
+      "STR": 0,
+      "CON": 0,
+      "DEX": 0,
+      "PER": 0,
+      "LEA": 0,
+      "WIL": 0,
+      "MAG": 0,
+      "CHA": 0
+    },
+    "base_skills": {
+      "Fishing": 5,
+      "Traveling": 3
+    },
+    "name": "classes.tourist.name",
+    "description": "classes.tourist.description"
+  },
+  "Warmage": {
+    "id": "Warmage",
+    "playable": true,
+    "base_attributes": {
+      "STR": 6,
+      "CON": 6,
+      "DEX": 2,
+      "PER": 0,
+      "LEA": 0,
+      "WIL": 4,
+      "MAG": 7,
+      "CHA": 0
+    },
+    "base_skills": {
+      "Casting": 4,
+      "Evasion": 3,
+      "Heavy Armor": 4,
+      "Literacy": 3,
+      "Long Sword": 4,
+      "Magic Capacity": 3,
+      "Magic Device": 5,
+      "Medium Armor": 4,
+      "Short Sword": 3
+    },
+    "name": "classes.warmage.name",
+    "description": "classes.warmage.description"
+  },
+  "Warrior": {
+    "id": "Warrior",
+    "playable": true,
+    "base_attributes": {
+      "STR": 10,
+      "DEX": 2,
+      "CON": 10,
+      "PER": 0,
+      "LEA": 0,
+      "WIL": 3,
+      "MAG": 0,
+      "CHA": 0
+    },
+    "base_skills": {
+      "Axe": 6,
+      "Blunt": 6,
+      "Evasion": 5,
+      "Healing": 5,
+      "Heavy Armor": 4,
+      "Long Sword": 6,
+      "Medium Armor": 4,
+      "Polearm": 4,
+      "Scythe": 5,
+      "Shield": 5,
+      "Short Sword": 4,
+      "Tactics": 4,
+      "Two Hand": 6
+    },
+    "name": "classes.warrior.name",
+    "description": "classes.warrior.description"
+  },
+  "Wizard": {
+    "id": "Wizard",
+    "playable": true,
+    "base_attributes": {
+      "STR": 0,
+      "CON": 0,
+      "DEX": 0,
+      "PER": 4,
+      "LEA": 3,
+      "WIL": 8,
+      "MAG": 10,
+      "CHA": 0
+    },
+    "base_skills": {
+      "Alchemy": 4,
+      "Casting": 5,
+      "Light Armor": 4,
+      "Literacy": 6,
+      "Magic Capacity": 6,
+      "Magic Device": 5,
+      "Memorization": 3,
+      "Short Sword": 2,
+      "Stave": 3
+    },
+    "name": "classes.wizard.name",
+    "description": "classes.wizard.description"
+  }
+}}

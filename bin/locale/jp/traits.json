@@ -1,0 +1,425 @@
+{
+  "traits": {
+    "ft_accountant": {
+      "description_1": "あなたは税金の計算に強い[税金7%減]",
+      "description_2": "あなたは税金の計算にとても強い[税金15%減]",
+      "name_0": "見習い会計士",
+      "name_1": "熟練会計士",
+      "display": "会計の技能を磨き税金を減らす"
+    },
+    "ft_attbchr": {
+      "description_1": "あなたはセクシーだ[魅力+4]",
+      "description_2": "あなたはとんでもない色魔だ[魅力+8] ",
+      "name_0": "セクシー",
+      "name_1": "色魔",
+      "display": "セクシーなポーズを学ぶ"
+    },
+    "ft_attbcon": {
+      "description_1": "あなたは我慢強い[耐久+3]",
+      "description_2": "あなたはとても我慢強い[耐久+6]",
+      "description_3": "あなたは恐ろしく我慢強い[耐久+9]",
+      "name_0": "我慢強い",
+      "name_1": "とても我慢強い",
+      "name_2": "恐ろしく我慢強い",
+      "display": "頭を壁にぶつけて耐久力を高める"
+    },
+    "ft_attblck": {
+      "description_1": "あなたは幸運の持ち主だ",
+      "description_2": "あなたは類稀な幸運の持ち主だ",
+      "description_3": "あなたは幸運の女神の寵愛を受けている",
+      "name_0": "幸運の持ち主",
+      "name_1": "類稀な幸運",
+      "name_2": "幸運の女神の寵愛",
+      "display": "流れ星を見て幸運を手にする"
+    },
+    "ft_attblife": {
+      "description_1": "あなたは苦行者の見習いだ[HP+5%]",
+      "description_2": "あなたは立派な苦行者だ[HP+10%]",
+      "description_3": "あなたは熟練した苦行者だ[HP+15%]",
+      "description_4": "あなたは苦行の達人だ[HP+20%]",
+      "description_5": "あなたは伝説的名苦行者だ[HP+25%]",
+      "name_0": "苦行者見習い",
+      "name_1": "苦行者",
+      "name_2": "熟練の苦行者",
+      "name_3": "苦行の達人",
+      "name_4": "伝説的苦行者",
+      "display": "苦行を通じてHPを増やす"
+    },
+    "ft_attbmana": {
+      "description_1": "あなたは魔力の遺伝子を持っている[MP+5%]",
+      "description_2": "あなたは魔力の細胞を持っている[MP+10%]",
+      "description_3": "あなたには魔力の血液が流れている[MP+15%]",
+      "description_4": "あなたの肉体は魔力を帯びている[MP+20%]",
+      "description_5": "あなたは魔力を支配している[MP+25%]",
+      "name_0": "魔力の遺伝子",
+      "name_1": "魔力の細胞",
+      "name_2": "魔力の血液",
+      "name_3": "魔力の肉体",
+      "name_4": "魔力の支配",
+      "display": "遺伝子組み換えを行いMPを増やす"
+    },
+    "ft_attbspd": {
+      "description_1": "あなたは速く走ることができる[速度+5]",
+      "description_2": "あなたは猫よりも速い[速度+10]",
+      "name_0": "俊足",
+      "name_1": "韋駄天",
+      "display": "猫を追いかけて速くなる"
+    },
+    "ft_attbstr": {
+      "description_1": "あなたは腕相撲が強い[筋力+3]",
+      "description_2": "あなたは腕相撲の達人だ[筋力+6]",
+      "description_3": "あなたは腕相撲のチャンピオンだ[筋力+9]",
+      "name_0": "腕相撲",
+      "name_1": "腕相撲の達人",
+      "name_2": "腕相撲のチャンピオン",
+      "display": "腕相撲の特訓で筋力を高める"
+    },
+    "ft_breathfire": {
+      "description_1": "あなたは口から火を噴ける",
+      "name_0": "火炎芸",
+      "display": "酒を飲んでいるうちに火を噴けるようになる"
+    },
+    "ft_dimensionmove": {
+      "description_1": "あなたは空間を曲げられる",
+      "name_0": "空間歪曲",
+      "display": "夢の中で近くへの瞬間移動を思いつく"
+    },
+    "ft_dv": {
+      "description_1": "あなたは見切れる[DV+4]",
+      "description_2": "あなたはかなり見切れる[DV+8]",
+      "description_3": "あなたの見切りは伝説的だ[DV+12]",
+      "name_0": "見極め",
+      "name_1": "見極めの熟練者",
+      "name_2": "見極めの達人",
+      "display": "敵の動きを見極めDVを上昇させる"
+    },
+    "ft_exorcist": {
+      "description_1": "あなたの祈りは呪いの言葉を掻き消す",
+      "name_0": "祈祷師",
+      "display": "祈祷を捧げることで、呪いの言葉の効力を弱める"
+    },
+    "ft_gentleface": {
+      "description_1": "あなたの攻撃は敵を恐怖させない",
+      "name_0": "優しい笑顔",
+      "display": "優しい笑顔を習得し、敵が逃げ出すのを防ぐ"
+    },
+    "ft_leader": {
+      "description_1": "あなたは仲間を一時的に強くできる",
+      "name_0": "指導者",
+      "display": "指導を続けるうちに、仲間を一時的に強くする方法を見つける"
+    },
+    "ft_pv": {
+      "description_1": "あなたの防御は石のように硬い[PV+5]",
+      "description_2": "あなたの守備は鉄壁だ[PV+10]",
+      "description_3": "あなたの防御は鋼のように固い[PV+15]",
+      "name_0": "石の守備",
+      "name_1": "鉄の守備",
+      "name_2": "鋼の守備",
+      "display": "受身を会得しPVを上昇させる"
+    },
+    "ft_quartermaster": {
+      "description_1": "あなたはたまに質の高い補給品を受け取る",
+      "description_2": "あなたは頻繁に質の高い補給品を受け取る",
+      "name_0": "見習い補給係",
+      "name_1": "熟練補給係",
+      "display": "補給係としての経験が、給料物資の品質を上げる"
+    },
+    "ft_resistdark": {
+      "description_1": "あなたは暗闇に慣れている[暗黒耐性強化]",
+      "description_2": "あなたは闇の中で生活できる[暗黒耐性強化]",
+      "name_0": "暗闇への適正",
+      "name_1": "暗闇への強い適正",
+      "display": "地底での生活が暗黒への耐性を高める"
+    },
+    "ft_resistpoison": {
+      "description_1": "あなたは毒に免疫がある[毒耐性強化]",
+      "description_2": "あなたには毒に強い免疫がある[毒耐性強化]",
+      "name_0": "免疫",
+      "name_1": "強い免疫",
+      "display": "貴族の毒見係のおかげで毒への耐性を得る"
+    },
+    "ft_shieldbash": {
+      "description_1": "あなたは盾で攻撃する機会を多く得る",
+      "name_0": "盾殴り",
+      "display": "盾の扱いを身につけ、盾での攻撃機会を増やす"
+    },
+    "ft_skillcasting": {
+      "description_1": "あなたの集中力は高い[詠唱+4]",
+      "description_2": "あなたは極度に集中できる[詠唱+8]",
+      "name_0": "集中",
+      "name_1": "高い集中",
+      "display": "日々瞑想し詠唱技術を高める"
+    },
+    "ft_skilldetection": {
+      "description_1": "あなたは罠に注意している[探知+3]",
+      "description_2": "あなたは罠に警戒している[探知+6]",
+      "name_0": "罠への注意",
+      "name_1": "罠への警戒",
+      "display": "周りを注意深く観察し、罠の発見を容易にする"
+    },
+    "ft_skilldualwield": {
+      "description_1": "あなたは複数の武器を巧みに操る[二刀流+4]",
+      "description_2": "あなたは二刀流を極めている[二刀流+8]",
+      "name_0": "二刀流の習熟",
+      "name_1": "二刀流の達人",
+      "display": "長年の修行により二刀流の技術を磨く"
+    },
+    "ft_skillfaith": {
+      "description_1": "あなたは信仰に篤い[信仰+4]",
+      "description_2": "あなたは猛烈な信者だ[信仰+8]",
+      "name_0": "信者",
+      "name_1": "狂信者",
+      "display": "神官の下で修行し信仰を深める"
+    },
+    "ft_skillmartial": {
+      "description_1": "あなたは格闘技を会得している[格闘+3]",
+      "description_2": "あなたは拳聖だ[格闘+6]",
+      "name_0": "格闘家",
+      "name_1": "拳聖",
+      "display": "ストリートファイトに興じ格闘技の技を得る"
+    },
+    "ft_skillnegotiation": {
+      "description_1": "あなたは交渉が上手い[交渉+4]",
+      "description_2": "あなたの交渉は神ががっている[交渉+8]",
+      "name_0": "交渉上手",
+      "name_1": "交渉の神",
+      "display": "行商人の元で働き交渉の技術を学ぶ"
+    },
+    "ft_stamina": {
+      "description_1": "あなたは持久力がある[スタミナ+]",
+      "description_2": "あなたはかなり持久力がある[スタミナ++]",
+      "description_3": "あなたの持久力は恐ろしい[スタミナ上昇]",
+      "name_0": "短距離走者",
+      "name_1": "中距離走者",
+      "name_2": "長距離走者",
+      "display": "長年の特訓の成果がスタミナを高める"
+    },
+    "ft_touchdrain": {
+      "description_1": "あなたは血を吸うことができる",
+      "name_0": "吸血鬼",
+      "display": "吸血鬼の友人から血の吸い方を学ぶ"
+    },
+    "ft_touchpoison": {
+      "description_1": "あなたは毒を盛ることができる",
+      "name_0": "毒の知恵",
+      "display": "毒の研究の結果、毒の手を覚える"
+    },
+    "ft_touchsleep": {
+      "description_1": "あなたは催眠をかけることができる",
+      "name_0": "催眠術師",
+      "display": "突如として眠りの手を覚える"
+    },
+    "mut_arms": {
+      "description_1": "あなたの腕はひきしまっている[筋力+3]",
+      "description_2": "あなたの腕は強力だ[筋力+6]",
+      "description_3": "あなたの腕は筋肉の塊だ[筋力+9]",
+      "description_-1": "あなたの腕はたるんでいる[筋力-3]",
+      "description_-2": "あなたの腕はとてもたるんでいる[筋力-6]",
+      "description_-3": "あなたの腕には筋肉がない[腕力-9]",
+      "display": "強い腕",
+      "display_neg": "弱い腕",
+      "gain": "あなたの腕の筋肉が増えた。",
+      "lose": "あなたの腕の贅肉が増えた。"
+    },
+    "mut_brain": {
+      "description_1": "あなたの脳は機械化している[暗記+4]",
+      "description_2": "あなたの脳は完璧な機械だ[暗記+8]",
+      "description_-1": "あなたは少しぼけている[暗記-4]",
+      "description_-2": "あなたは痴呆だ[暗記-8]",
+      "display": "脳内コンピュータ",
+      "display_neg": "痴呆",
+      "gain": "あなたの脳は機械化した。",
+      "lose": "あなたの脳は原始化した。"
+    },
+    "mut_cannibalism": {
+      "description_1": "あなたは人肉を食べることに抵抗がない",
+      "display": "カンニバリズム",
+      "gain": "あなたは人肉の味の虜になった。",
+      "lose": "あなたは人肉の味に飽きた。"
+    },
+    "mut_eyes": {
+      "description_1": "あなたは猫の目をしている[感覚+5]",
+      "description_2": "あなたは鷹の目をしている[感覚+10]",
+      "description_-1": "あなたは色弱だ[感覚-5]",
+      "description_-2": "あなたは片目がない[感覚-10]",
+      "display": "鷹の目",
+      "display_neg": "色弱",
+      "gain": "あなたの目は細くなった。",
+      "lose": "あなたの視力は低下した。"
+    },
+    "mut_ironskin": {
+      "description_1": "あなたの皮膚は硬い[PV+3]",
+      "description_2": "あなたの皮膚はとても硬い[PV+6]",
+      "description_3": "あなたは鉄のような皮膚を持っている[PV+9]",
+      "description_-1": "あなたの皮膚は白い[PV-3]",
+      "description_-2": "あなたの皮膚は脆い[PV-6]",
+      "description_-3": "あなたの皮膚は崩れている[PV-9]",
+      "display": "鉄の皮膚",
+      "display_neg": "アルビノ",
+      "gain": "あなたの皮膚は硬くなった。",
+      "lose": "あなたの皮膚は薄くなった。"
+    },
+    "mut_joint": {
+      "description_1": "あなたの関節はしなやかだ[器用+3]",
+      "description_2": "あなたの関節はとてもしなやかだ[器用+6]",
+      "description_3": "あなたの関節は驚くほどしなやかだ[器用+9]",
+      "description_-1": "あなたの関節はきしむ[器用-3]",
+      "description_-2": "あなたは関節痛に悩んでいる[器用-6]",
+      "description_-3": "あなたはひどい関節痛を抱えている[器用-9]",
+      "display": "しなやかな関節",
+      "display_neg": "きしむ関節",
+      "gain": "あなたの関節はしなやかになった。",
+      "lose": "あなたの関節は痛み出した。"
+    },
+    "mut_legs": {
+      "description_1": "あなたの脚はしなやかだ[速度上昇]",
+      "description_2": "あなたの脚はとてもしなやかだ[速度上昇]",
+      "description_3": "あなたの脚は理想的な形をしている[速度上昇]",
+      "description_-1": "あなたの脚はねじれている[速度下降]",
+      "description_-2": "あなたの脚はとてもねじれている[速度下降]",
+      "description_-3": "あなたの脚は折れている[速度下降]",
+      "display": "しなやかな脚",
+      "display_neg": "ねじれた脚",
+      "gain": "あなたの脚はしなやかになった。",
+      "lose": "あなたの脚はねじれた。"
+    },
+    "mut_resistcold": {
+      "description_1": "あなたの皮膚には霜が付いている[冷気耐性強化]",
+      "description_-1": "あなたの皮膚は寒さに弱い[冷気耐性弱化]",
+      "display": "冷気耐性",
+      "display_neg": "冷気弱点",
+      "gain": "あなたの皮膚は冷たくなった。",
+      "lose": "あなたは汗をかきはじめた。"
+    },
+    "mut_resistfire": {
+      "description_1": "あなたの血は滾っている[火炎耐性強化]",
+      "description_-1": "あなたの腕には鳥肌がたっている[火炎耐性弱化]",
+      "display": "火炎耐性",
+      "display_neg": "火炎弱点",
+      "gain": "あなたの血は滾りだした。",
+      "lose": "あなたの腕に鳥肌がたった。"
+    },
+    "mut_resistlightning": {
+      "description_1": "あなたは非電導体だ[電撃耐性強化]",
+      "description_-1": "あなたの身体は電気を良く通す[電撃耐性弱化]",
+      "display": "電撃耐性",
+      "display_neg": "電撃弱点",
+      "gain": "あなたは非電導体になった。",
+      "lose": "あなたの身体は電気を良く通す。"
+    },
+    "mut_resistmagic": {
+      "description_1": "あなたは魔法に耐性がある[魔法耐性強化]",
+      "description_-1": "あなたは魔法に弱い[魔法耐性弱化]",
+      "display": "魔法への耐性",
+      "display_neg": "魔法の弱点",
+      "gain": "あなたは魔法の耐性を得た。",
+      "lose": "あなたは魔法の耐性を失った。"
+    },
+    "mut_resistsound": {
+      "description_1": "あなたの鼓膜は厚い[音耐性強化]",
+      "description_-1": "あなたの鼓膜は薄い[音耐性弱化]",
+      "display": "強い鼓膜",
+      "display_neg": "弱い鼓膜",
+      "gain": "あなたの鼓膜は厚くなった。",
+      "lose": "あなたの鼓膜は薄くなった。"
+    },
+    "mut_trollblood": {
+      "description_1": "あなたの傷跡は再生する[自然治癒強化]",
+      "description_2": "あなたの傷は瞬く間にふさがる[自然治癒強化]",
+      "description_-1": "あなたは血の気が少ない[自然治癒弱化]",
+      "description_-2": "あなたの顔には血の気が全くない[自然治癒弱化]",
+      "display": "トロールの血",
+      "display_neg": "貧血",
+      "gain": "あなたの血液は緑っぽくなった。",
+      "lose": "あなたの血液は薄れた。"
+    },
+    "mut_voice": {
+      "description_1": "あなたは美声を持っている[魅力+5]",
+      "description_2": "あなたの声は全てを魅了する[魅力+10]",
+      "description_-1": "あなたの声はかれている[魅力-5]",
+      "description_-2": "あなたが喋ると皆逃げる[魅力-10]",
+      "display": "美声",
+      "display_neg": "かれた声",
+      "gain": "あなたの声はよく通る。",
+      "lose": "あなたの声はかれた。"
+    },
+    "race_digestion": {
+      "description_1": "あなたの食料の消化は遅い"
+    },
+    "race_evil": {
+      "description_1": "あなたは罪悪感を感じない[カルマ上限-20]"
+    },
+    "race_fairyresist": {
+      "description_1": "あなたは高い耐性をもっている"
+    },
+    "race_fairyweak": {
+      "description_1": "あなたは1s以上の物を装備できない[DV上昇]"
+    },
+    "race_godluck": {
+      "description_1": "あなたの周りでは質の高いエンチャントが生成される"
+    },
+    "race_godprotect": {
+      "description_1": "あなたが受ける物理ダメージは軽減される"
+    },
+    "race_godsanity": {
+      "description_1": "あなたは周囲の狂気を緩和する"
+    },
+    "race_godspells": {
+      "description_1": "あなたの元素魔法は強化されている"
+    },
+    "race_good": {
+      "description_1": "あなたは良い心を持っている[カルマ上限+20]"
+    },
+    "race_magcapacity": {
+      "description_1": "あなたはマナの反動を軽減できる"
+    },
+    "race_material": {
+      "description_1": "あなたはより多く採取できる"
+    },
+    "race_moe": {
+      "description_1": "あなたは萌える"
+    },
+    "race_mutate": {
+      "description_1": "あなたの肉体は刻々と変化する"
+    },
+    "race_resistcold": {
+      "description_1": "あなたは冷気に耐性がある",
+      "description_2": "あなたは冷気にかなりの耐性がある",
+      "description_-1": "あなたは冷気に弱い",
+      "description_-2": "あなたはかなり冷気に弱い"
+    },
+    "race_resistdark": {
+      "description_1": "あなたは暗黒に耐性がある",
+      "description_2": "あなたは暗黒にかなりの耐性がある",
+      "description_-1": "あなたは暗黒に弱い",
+      "description_-2": "あなたはかなり暗黒に弱い"
+    },
+    "race_resistdim": {
+      "description_1": "あなたは朦朧状態にならない"
+    },
+    "race_resistfire": {
+      "description_1": "あなたは火炎に耐性がある",
+      "description_2": "あなたは火炎にかなりの耐性がある",
+      "description_-1": "あなたは火炎に弱い",
+      "description_-2": "あなたはかなり火炎に弱い"
+    },
+    "race_resistmagic": {
+      "description_1": "あなたは魔法に耐性がある",
+      "description_2": "あなたは魔法にかなりの耐性がある",
+      "description_-1": "あなたは魔法に弱い",
+      "description_-2": "あなたはかなり魔法に弱い"
+    },
+    "race_resistpoison": {
+      "description_1": "あなたは毒に耐性がある",
+      "description_2": "あなたは毒にかなりの耐性がある",
+      "description_-1": "あなたは毒に弱い",
+      "description_-2": "あなたはかなり毒に弱い"
+    },
+    "race_skillpoint": {
+      "description_1": "あなたには追加の成長ボーナスが与えられる"
+    },
+    "race_slowether": {
+      "description_1": "あなたのエーテル病の進行は遅い"
+    }
+  }
+}

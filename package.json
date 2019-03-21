@@ -1,0 +1,26 @@
+{
+  "name": "elona",
+  "version": "0.3.0",
+  "description": "A port/re-implementation of Elona using the Electron framework.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-locale": "node ./build/build_locales.js",
+    "watch": "watchify ./src/ElonaJS.js -o ./build/ElonaJS.js",
+    "build": "uglifyjs --compress --mangle -o ./build/ElonaJS.js -- ./build/ElonaJS.js",
+    "doc": "jsdoc ./src/ -r -d ./docs/",
+    "serve": "http-server -p 22331"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "Christopher Opiela",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^3.0.5"
+  }
+}
