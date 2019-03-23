@@ -90,9 +90,9 @@ class BaseMenu{
     }
 
     Setup(params){
-        this._UpdateBase();
         if(!this.options) this.options = new UI.Components.OptionList(this);
         if(this._OnLoad) this._OnLoad(params);
+        this._UpdateBase();
         this.options.Build();
         this.options.UpdateSelector();
         this._SortElements();

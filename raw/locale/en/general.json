@@ -105,23 +105,29 @@
       "wepprefix": "Weaponry: ",
       "attributes": "str,con,dex,ler,wil,mag,cha"
     },
-    "GenderSelect": {
-      "Guide": "What's your gender?",
-      "Title": "Gender Selection",
-      "Section1": "Gender"
+    "genderselect": {
+      "guide": "What's your gender?",
+      "title": "Gender Selection",
+      "section1": "Gender"
     },
-    "ClassSelect": {
-      "Guide": "Your class and race determine the growth rate of your skills and attributes.",
-      "Title": "Class Selection",
-      "Section1": "Class",
-      "Section2": "Detail"
+    "classselect": {
+      "guide": "Your class and race determine the growth rate of your skills and attributes.",
+      "title": "Class Selection",
+      "section1": "Class",
+      "section2": "Detail",
+      "section3": "Attribute Bonuses",
+      "section4": "Trained Skills",
+      "attributes": "${ui.raceselect.attributes}",
+      "wepprefix": "Weaponry: "
     },
-    "AttributeReroll": {
-      "Guide": "You should prepare well, if you want to survive long enough in Irva.",
-      "Title": "Attribute Reroll",
-      "Section1": "Attributes",
-      "Locks": "Locks Left: %{num}",
-      "Disclaimer": "Locked items will not change."
+    "attributeroll": {
+      "guide": "You should prepare well, if you want to survive long enough in Irva.",
+      "title": "Attribute Reroll",
+      "section1": "Attributes",
+      "locks": "Locks Left: %{num}",
+      "disclaimer": "Locked items will not change.",
+      "attributesShort": "${ui.raceselect.attributes}",
+      "attributesLong": "Strength,Consitution,Dexterity,Learning,Will,Magic,Charisma"
     },
     "FeatSelect": {
       "Guide": "Choose your feats wisely.",
@@ -134,13 +140,13 @@
       "Header2": "[Available feats]",
       "Title": "Feats and Traits"
     },
-    "Reroll": "Reroll",
-    "Proceed": "Proceed",
-    "Page": "Page %{cur}/%{max}"
+    "reroll": "Reroll",
+    "proceed": "Proceed",
+    "page": "Page %{cur}/%{max}"
   },
-  "Sexes": {
-    "Male": "Male",
-    "Female": "Female"
+  "sexes": {
+    "male": "Male",
+    "female": "Female"
   },
   "Sys_38": "Level",
   "Sys_41": "Race: ",

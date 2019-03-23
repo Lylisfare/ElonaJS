@@ -8,7 +8,10 @@
 let Menus = {
     LoadingScreen: require("./loadingscreen.js"),
     TitleScreen: require("./titlescreen.js"),
-    RaceSelect: require("./raceselect.js")
+    RaceSelect: require("./raceselect.js"),
+    GenderSelect: require("./genderselect.js"),
+    ClassSelect: require("./classselect.js"),
+    AttributeRoll: require("./attributeroll.js")
 }
 
 module.exports = Menus;

@@ -4,6 +4,7 @@
  * UniComponent - Graphics.Dim, Graphics.Scale
  * Graphics.GetRect
  * Uncomment uihandler
+ * Use race picture in class select
  */
 
 String.prototype.initCap = function () {
@@ -37,11 +38,11 @@ String.prototype.initCap = function () {
     window.Input = ElonaJS.Input;
     Graphics.Init();
     await DB.Load();
-    await Utils.File.LoadFont('OpenSans', 'fonts/OpenSans-Regular.ttf');
+    await Utils.File.LoadFont('OpenSans', './fonts/OpenSans-Regular.ttf');
     UI.Init();
 
     Input.Attach();  
-    UI.LoadMenu("TitleScreen");
+    UI.LoadMenu("AttributeRoll");
  })
 
 /*  function sortObjByKey(value) {

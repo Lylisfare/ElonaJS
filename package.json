@@ -5,8 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build-locale": "node ./build/build_locales.js",
-    "watch": "watchify ./src/ElonaJS.js -o ./build/ElonaJS.js",
+    "build-locale": "node ./raw/build_locales.js",
+    "watch": "watchify ./src/ElonaJS.js --node -o ./build/ElonaJS.js",
     "build": "uglifyjs --compress --mangle -o ./build/ElonaJS.js -- ./build/ElonaJS.js",
     "doc": "jsdoc ./src/ -r -d ./docs/",
     "serve": "http-server -p 22331"

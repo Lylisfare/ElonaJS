@@ -462,6 +462,7 @@ module.exports = i18n;
  * UniComponent - Graphics.Dim, Graphics.Scale
  * Graphics.GetRect
  * Uncomment uihandler
+ * Use race picture in class select
  */
 
 String.prototype.initCap = function () {
@@ -495,11 +496,11 @@ String.prototype.initCap = function () {
     window.Input = ElonaJS.Input;
     Graphics.Init();
     await DB.Load();
-    await Utils.File.LoadFont('OpenSans', 'fonts/OpenSans-Regular.ttf');
+    await Utils.File.LoadFont('OpenSans', './fonts/OpenSans-Regular.ttf');
     UI.Init();
 
     Input.Attach();  
-    UI.LoadMenu("TitleScreen");
+    UI.LoadMenu("AttributeRoll");
  })
 
 /*  function sortObjByKey(value) {
@@ -520,7 +521,7 @@ String.prototype.initCap = function () {
   function orderedJsonStringify(obj) {
     return JSON.stringify(sortObjByKey(obj));
   } */
-},{"./Audio/audiohandler.js":1,"./Databases/Databases.js":2,"./Graphics/Graphics.js":13,"./Input/Input.js":15,"./UI/UI.js":33,"./Utils/Utils.js":35}],8:[function(require,module,exports){
+},{"./Audio/audiohandler.js":1,"./Databases/Databases.js":2,"./Graphics/Graphics.js":13,"./Input/Input.js":15,"./UI/UI.js":36,"./Utils/Utils.js":38}],8:[function(require,module,exports){
 /**
  * A list of composers for images
  * @namespace ElonaJS.Graphics.Composers
@@ -1606,11 +1607,223 @@ module.exports = UniComponent;
 let Menus = {
     LoadingScreen: require("./loadingscreen.js"),
     TitleScreen: require("./titlescreen.js"),
-    RaceSelect: require("./raceselect.js")
+    RaceSelect: require("./raceselect.js"),
+    GenderSelect: require("./genderselect.js"),
+    ClassSelect: require("./classselect.js"),
+    AttributeRoll: require("./attributeroll.js")
 }
 
 module.exports = Menus;
-},{"./loadingscreen.js":30,"./raceselect.js":31,"./titlescreen.js":32}],29:[function(require,module,exports){
+},{"./attributeroll.js":29,"./classselect.js":31,"./genderselect.js":32,"./loadingscreen.js":33,"./raceselect.js":34,"./titlescreen.js":35}],29:[function(require,module,exports){
+let BaseMenu = require("./basemenu.js");
+
+/**
+ * The race select menu.
+ * @name AttributeRoll
+ * @type ElonaJS.UI.Menus.BaseMenu
+ * @memberOf ElonaJS.UI.Menus
+ */
+let AttributeRoll = new BaseMenu();
+
+AttributeRoll.Customize({centered: true, size: {w: 350, h: 330}});
+
+AttributeRoll._OnLoad = function(){
+    if(this.init) {
+        //this._ResetLocks();
+        //this.components["Locks"].text = ElonaJS.Databases.Strings.GetLocale("Sys_29") + this.locks;
+        //this._Reroll();
+        this.options.current = 0;
+        this.options.curpage = 0;
+        return;
+    }
+
+    this.locks = 2;
+
+    new UI.Components.Image({id: "Background", img: "void", alignment: "fill", position: {z: -1}}).Attach(this);
+    new UI.Components.Image({id: "Paper", img: "interface.paper", width: 350, height: 330, shadow: {distance: 10, blur: 0}, position: {z: 0}}).Attach(this);
+    new UI.Components.Image({id: "BG_Deco", img: "cbg3", position: {x: 10, y: 40, z: 1}, width: 175, height: 250, alpha: 0.2}).Attach(this);
+    new UI.Components.Text({id: "Help", alignment: "bottom-left", i18n: "hints.help", position: {x: 30, y: -22}}).Attach(this);
+    new UI.Components.Text({id: "Disclaimer", i18n: "ui.attributeroll.disclaimer", position: {x: 195, y: 38}, size: 9, wrap: {width: 110}}).Attach(this);
+    new UI.Components.Text({id: "Locks", text: i18n("ui.attributeroll.locks", {num: this.locks}), position: {x: 195, y: 65}}).Attach(this);
+
+    new UI.Components.Guide({
+        position: {x: 0, y: 0},
+        id: "Guide",
+        text: {i18n: "ui.attributeroll.guide"}
+    }).Attach(this);
+
+    new UI.Components.PaperHeader({
+        id: "Header",
+        text: {i18n: "ui.attributeroll.title"}
+    }).Attach(this);
+
+    new UI.Components.PaperFooter({
+        id: "Hint",
+        position: {x: 30, y: 300},
+        rect: {width: 275},
+        text: {i18n: "hints.3b"}
+    }).Attach(this);
+
+    new UI.Components.SectionHeader({
+        id: "Attributes",
+        position: {x: 30, y: 40},
+        text: {i18n: "ui.attributeroll.section1"}
+    }).Attach(this);
+
+    let op = [
+        {text: {i18n: "ui.reroll"}},
+        {text: {i18n: "ui.proceed"}}
+    ];
+
+    let fullAttb = i18n("ui.attributeroll.attributesLong").split(',');
+    let attb = i18n("ui.attributeroll.attributesShort").split(',');
+
+    for(let i = 0; i < fullAttb.length; i++){
+        new UI.Components.Text({id: attb[i], position: {x: 225, y: 122 + 22 * i}, val: attb[i]}).Attach(this, "AttbVal");
+        new UI.Components.Image({id: attb[i], position: {x: 200, y: 112 + 22 * i, z: 3}, img: "interface.icon_" + attb[i]}).Attach(this, "AttbImg");
+        op.push({text: {text: fullAttb[i], val: attb[i]}});
+    }
+
+    this.options.Customize({position: {x: 70, y: 70}, spacing: 22});
+    this.options.Set(op);
+
+
+
+}
+
+AttributeRoll._Reroll = function(){
+    let cls = DB.Classes.GetByID("Warrior").base_attributes;
+    let race = DB.Races.GetByID("Yerles").base_attributes;
+    
+
+
+}
+
+/* this.AttachBackground({});
+
+
+this.AttachText({id: "Locks", text: "Locks left: ", x: 195, y: 55});
+this.AttachText({id: "Lock_1", text: "", x: 250, color: "blue", size: 8});
+this.AttachText({id: "Lock_2", text: "", x: 250, color: "blue", size: 8}); */
+
+
+
+module.exports = AttributeRoll;
+
+
+
+
+
+
+
+
+/* 
+    menu._Reroll = function(){
+        let cls = ElonaJS.Databases.Classes.GetByID(this.active.class).base_attributes;
+        let race = ElonaJS.Databases.Races.GetByID(this.active.race).base_attributes;
+        let attr = ElonaJS.Databases.Strings.GetNoLocale("Attributes").split(",");
+    
+        for(let i = 0; i < attr.length; i++){
+            if(this.components.Attb["Att_" + attr[i]].EJS.locked) continue;
+            this.components.Attb["Att_" + attr[i]].text = Math.floor(Math.max(Math.random() * (cls[attr[i]] + race[attr[i]]), (cls[attr[i]] + race[attr[i]])/2) + 1);
+        }
+    };
+
+    menu.SetParameters = function(unit, creation){
+        this.active = unit;
+        this.creation = creation;
+    };
+
+    menu._Setup = function(){
+        this.locks = 2;
+        if(this.init) {
+            this._ResetLocks();
+            this.components["Locks"].text = ElonaJS.Databases.Strings.GetLocale("Sys_29") + this.locks;
+            this._Reroll();
+            this.options.current = 0;
+            this.options.curpage = 0;
+            return;
+        }
+
+
+
+        this.init = true;
+        this.components["Locks"].text = ElonaJS.Databases.Strings.GetLocale("Sys_29") + this.locks;
+        this._Reroll();   
+    }
+
+    menu._OnBack = function(){
+        Graphics.UnloadMenu(this);
+        if(this.creation){
+            Menus.ClassSelect.SetParameters(this.active, true);
+            Graphics.LoadMenu("ClassSelect");
+        }
+    };
+
+    menu._OnSelect = function(){
+        this.sounds.select = "ok1";
+        if(this.options.current == 0) {
+            this._Reroll(); 
+            this._PlaySound("dice");
+        }
+
+        if(this.options.current == 1) {
+            this.sounds.select = "feat";
+            let attblist = ElonaJS.Databases.Strings.GetNoLocale("Attributes").split(',');
+            let stats = {};
+            for(let i = 0; i < attblist.length; i++){
+                let sel = this.components.Attb["Att_" + attblist[i]];
+                stats[sel.EJS.val] = parseInt(sel.text);
+            }
+
+            this.active.SetAttributes(stats);
+            Graphics.UnloadMenu(this);
+
+            if(this.creation){
+                Menus.FeatSelect.SetParameters(this.active, true);
+                Graphics.LoadMenu("FeatSelect");
+            }
+
+            return;
+        }
+
+        if(this.options.current > 1){
+            let cval = this.options.list[this.options.current].val;
+            let celem = this.components.Attb["Att_" + cval].EJS;
+            if(celem.locked){
+                celem.locked = false;
+                this.locks++;
+                let unlock = (this.components["Lock_1"].EJS.val == cval ? this.components["Lock_1"] : this.components["Lock_2"]);
+                unlock.EJS.val = "";
+                unlock.text = "";
+            } else{
+                if(this.locks > 0){
+                    celem.locked = true;
+                    this.locks--;
+                    let tolock = (!this.components["Lock_1"].EJS.val || this.components["Lock_1"].val == "" ? this.components["Lock_1"] : this.components["Lock_2"]);
+                    tolock.EJS.val = cval;
+                    tolock.text = "Locked!";
+                    tolock.EJS.y = celem.y;
+                }
+            }
+        }
+        this.components["Locks"].text = ElonaJS.Databases.Strings.GetLocale("Sys_29") + this.locks;
+        this.ScaleElements();
+    };
+
+    menu._ResetLocks = function(){
+        let attr = ElonaJS.Databases.Strings.GetNoLocale("Attributes").split(",");
+        for(let i = 0; i < attr.length; i++){
+            this.components.Attb["Att_" + attr[i]].EJS.locked = false;
+        }
+        this.components["Lock_1"].text = ""; this.components["Lock_1"].EJS.val = 0;
+        this.components["Lock_2"].text = ""; this.components["Lock_2"].EJS.val = 0;
+    };
+
+
+    return menu;
+})(); */
+},{"./basemenu.js":30}],30:[function(require,module,exports){
 'use strict'
 
 /**
@@ -1703,9 +1916,9 @@ class BaseMenu{
     }
 
     Setup(params){
-        this._UpdateBase();
         if(!this.options) this.options = new UI.Components.OptionList(this);
         if(this._OnLoad) this._OnLoad(params);
+        this._UpdateBase();
         this.options.Build();
         this.options.UpdateSelector();
         this._SortElements();
@@ -1756,7 +1969,297 @@ class BaseMenu{
 }
 
 module.exports = BaseMenu;
-},{}],30:[function(require,module,exports){
+},{}],31:[function(require,module,exports){
+let BaseMenu = require("./basemenu.js");
+
+/**
+ * The race select menu.
+ * @name ClassSelect
+ * @type ElonaJS.UI.Menus.BaseMenu
+ * @memberOf ElonaJS.UI.Menus
+ */
+let ClassSelect = new BaseMenu();
+
+ClassSelect.Customize({centered: true, size: {w: 720, h: 500}});
+ClassSelect.sounds.select = "spell";
+
+ClassSelect._OnLoad = function(){
+    if(this.init){
+        this.options.current = 0;
+        this.options.page = 0;
+        return;
+    }
+
+    this.bgcur = 3;
+    this.bgcounter = 0;
+    this.init = true;
+
+    new UI.Components.Image({id: "Background", img: "void", alignment: "fill", position: {z: -1}}).Attach(this);
+    new UI.Components.Image({id: "Paper", img: "interface.paper", width: 720, height: 500, shadow: {distance: 10, blur: 0}, position: {z: 0}}).Attach(this);
+    new UI.Components.Image({id: "BG_Deco", img: "cbg3", position: {x: 30, y: 40, z: 1}, width: 290, height: 430, alpha: 0.2}).Attach(this);
+    new UI.Components.Text({id: "Desc", position: {x: 210, y: 70}, wrap: {width: 460, spacing: 16}, text: ""}).Attach(this);
+    new UI.Components.Text({id: "Help", alignment: "bottom-left", i18n: "hints.help", position: {x: 30, y: -22}}).Attach(this);
+    new UI.Components.Text({id: "PageNum", position: {x: 640, y: 475}, size: 10}).Attach(this);
+    new UI.Components.Image({id: "CPrev1", img: "character.1", position: {x: 300, y: 45, z: 3}, alpha: 0.2, scale: 2}).Attach(this);
+    new UI.Components.Image({id: "CPrev2", img: "character.2", position: {x: 444, y: 45, z: 3}, alpha: 0.2, scale: 2}).Attach(this);
+
+    new UI.Components.PaperHeader({
+        id: "Header",
+        text: {i18n: "ui.classselect.title"}
+    }).Attach(this);
+
+    new UI.Components.PaperFooter({
+        id: "Hint",
+        position: {x: 35, y: 470},
+        rect: {width: 625},
+        text: {i18n: "hints.3b"}
+    }).Attach(this);
+
+    new UI.Components.SectionHeader({
+        id: "Classes",
+        position: {x: 35, y: 40},
+        text: {i18n: "ui.classselect.section1"}
+    }).Attach(this);
+
+    new UI.Components.SectionHeader({
+        id: "Details",
+        position: {x: 205, y: 40},
+        text: {i18n: "ui.classselect.section2"}
+    }).Attach(this);
+
+    new UI.Components.SectionHeader({
+        id: "AttributeBonuses",
+        position: {x: 205, y: 205},
+        text: {i18n: "ui.classselect.section3"}
+    }).Attach(this);
+
+    new UI.Components.SectionHeader({
+        id: "TrainedSkills",
+        position: {x: 205, y: 285},
+        text: {i18n: "ui.classselect.section4"}
+    }).Attach(this);
+
+    new UI.Components.Guide({
+        position: {x: 0, y: 0},
+        id: "Guide",
+        text: {i18n: "ui.classselect.guide"}
+    }).Attach(this);
+
+
+    let attb = i18n("ui.classselect.attributes").split(",");
+
+    for(let i = 0; i < attb.length; i++){
+        let val = attb[i];
+        new UI.Components.Image({id: val, img: "interface.icon_" + val, position: {x: 210 + 130 * (i%3), y: 225 + 19 * Math.floor(i/3), z: 3}}).Attach(this, "attb_icons");
+        new UI.Components.Text({id: val, position: {x: 230 + 130 * (i%3), y: 225 + 19 * Math.floor(i/3)}}).Attach(this, "attb_text");
+    }
+
+    this._BuildList();
+    this.components.PageNum.SetText(i18n("ui.Page", {cur: this.options.GetPage(), max: this.options.GetMaxPages()}));
+}
+
+ClassSelect._BuildList = function(){
+    if(!this.classes) this.classes = DB.Classes.Search({playable: true});
+    if(!this.csheet) this.csheet = DB.Graphics.GetByID("character").exceptions;
+    let classes = this.classes;
+    let opt = [];
+
+    for(let i = 0; i < classes.length; i++){
+        let no = {text:{}, preview: {}};
+        no.text.i18n = classes[i].name;
+        no.preview.desc = classes[i].description;
+        no.preview.class = classes[i];
+        opt.push(no);
+    }
+
+    this.options.Customize({
+        position: {x: 75, y: 70},
+        perpage: 20
+    });
+
+    this.options.Set(opt);
+}
+
+ClassSelect._PreviewData = function(){
+    let op = this.options.GetCurrentOption();
+    this.components.Desc.SetText(i18n(op.preview.desc));
+    this._FormatAttributes();
+    this._FormatSkills();
+
+    this.bgcounter++;
+
+    if(this.bgcounter > 3){
+        this.bgcounter = 0;
+        (this.bgcur < 8 ? this.bgcur++ : this.bgcur = 1);
+        this.components.BG_Deco.SetImage("cbg" + this.bgcur);
+    }
+
+    this.AlignElements();
+}
+
+ClassSelect._FormatAttributes = function(){
+    let op = this.options.GetCurrentOption();
+    let attb = op.preview.class.base_attributes;
+    let atbStr = i18n("attributes.magnitude");
+
+    for(let i = 0, arr = Object.keys(attb); i < arr.length; i++){
+        let val = arr[i].toLowerCase();
+
+        if(this.components.attb_text[val]){
+            let str;
+            let style = {fill: "black"};
+     
+            if (attb[arr[i]] == 0){str = i18n("attributes.magnitude.none"); style.fill = "rgb(120, 120, 120)";} else
+            if (attb[arr[i]] > 13){str = i18n("attributes.magnitude.best"); style.fill = "rgb(0, 0, 200)";} else
+            if (attb[arr[i]] > 11){str = i18n("attributes.magnitude.great"); style.fill = "rgb(0, 0, 200)";} else
+            if (attb[arr[i]] > 9){str = i18n("attributes.magnitude.good"); style.fill = "rgb(0, 0, 150)";} else
+            if (attb[arr[i]] > 7){str = i18n("attributes.magnitude.not_bad"); style.fill = "rgb(0, 0, 150)";} else
+            if (attb[arr[i]] > 5){str = i18n("attributes.magnitude.normal"); style.fill = "rgb(0, 0, 0)";} else
+            if (attb[arr[i]] > 3){str = i18n("attributes.magnitude.little"); style.fill = "rgb(150, 0, 0)";} else
+            if (attb[arr[i]] > 0){str = i18n("attributes.magnitude.slight"); style.fill = "rgb(200, 0, 0)";}
+
+            this.components.attb_text[val].SetText(val.initCap() + ": " + str);
+            this.components.attb_text[val].UpdateStyle(style);
+        }
+    }
+}
+
+ClassSelect._FormatSkills = function(){
+    let op = this.options.GetCurrentOption();
+    let attb = op.preview.class.base_skills;
+    let o = 1;
+    let nwep = 0;
+    let wpnstr = i18n("ui.classselect.wepprefix");
+
+    for(let i = 0, arr = Object.keys(attb); i < arr.length; i++){
+        let val = arr[i];
+        let skill = DB.Skills.GetByID(val);
+        
+        if(skill.type == "weapon"){
+            if(nwep > 0) wpnstr += ", ";
+            wpnstr += i18n(skill.name).initCap();
+            nwep++;
+            continue;
+        }
+
+        if(!this.components.SkillText){
+            this.components.SkillText = {};
+            this.components.SkillDesc = {};
+            this.components.SkillImages = {};
+        }
+
+        if(this.components.SkillText[o]){
+            this.components.SkillText[o].SetText(i18n(skill.name).initCap());
+            this.components.SkillDesc[o].SetText(i18n(skill.desc1));
+            this.components.SkillImages[o].SetImage("interface.icon_" + skill.attr.toLowerCase());
+        } else{
+            new UI.Components.Text({id: o, i18n: skill.name, position: {x: 230, y: 310 + 16 * o}}).Attach(this, "SkillText");
+            this.components.SkillText[o].SetText(i18n(skill.name).initCap());
+            new UI.Components.Text({id: o, i18n: skill.desc1, position: {x: 340, y: 310 + 16 * o}}).Attach(this, "SkillDesc");
+            new UI.Components.Image({id: o, img: "interface.icon_" + skill.attr.toLowerCase(), position: {x: 210, y: 310 + 16 * o, z: 3}}).Attach(this, "SkillImages");
+        }
+
+        o++;
+    }
+
+    if(!this.components.SkillText[0]){
+        new UI.Components.Text({id: "0", text: wpnstr, position: {x: 230, y: 310}}).Attach(this, "SkillText");
+        new UI.Components.Image({id: "0", img: "interface.icon_str", position: {x: 210, y: 310, z: 3}}).Attach(this, "SkillImages");
+    } else {
+        this.components.SkillText[0].SetText(wpnstr);
+    }
+
+    for(let i = 1, arr = Object.keys(this.components.SkillText); i < arr.length; i++){        
+        if(i < o){
+            this.components.SkillText[i].Show();
+            this.components.SkillDesc[i].Show();
+            this.components.SkillImages[i].Show();
+        } else {
+            this.components.SkillText[i].Hide();
+            this.components.SkillDesc[i].Hide();
+            this.components.SkillImages[i].Hide();
+        }
+    }
+}
+
+ClassSelect._OnSelect = function(){
+    UI.UnloadMenu(this);
+    UI.LoadMenu("GenderSelect")
+}
+
+module.exports = ClassSelect;
+},{"./basemenu.js":30}],32:[function(require,module,exports){
+let BaseMenu = require("./basemenu.js");
+
+/**
+ * The race select menu.
+ * @name RaceSelect
+ * @type ElonaJS.UI.Menus.BaseMenu
+ * @memberOf ElonaJS.UI.Menus
+ */
+let GenderSelect = new BaseMenu();
+
+GenderSelect._OnLoad = function(){
+    if(this.init){
+        this.opions.current = 0;
+        this.options.curpage = 0;
+    }
+
+    this.init = true;
+
+    let op = [];
+    let sexes = i18n("sexes.");
+
+    for(let i = 0; i < sexes.length; i++){
+        op.push({text: {i18n: sexes[i].id}});
+    }
+
+    this.options.Customize({
+        position: {x: 75, y: 60}
+    })
+
+    this.options.Set(op);
+
+    let offset = (sexes.length - 2) * 20;
+
+    this.Customize({centered: true, size: {w: 360, h: 150 + offset}});
+
+    new UI.Components.Image({id: "Background", img: "void", alignment: "fill", position: {z: -1}}).Attach(this);
+    new UI.Components.Image({id: "Paper", img: "interface.paper", width: 360, height: 150 + offset, shadow: {distance: 10, blur: 0}, position: {z: 0}}).Attach(this);
+    new UI.Components.Text({id: "Help", alignment: "bottom-left", i18n: "hints.help", position: {x: 30, y: -22}}).Attach(this);
+
+    new UI.Components.Guide({
+        position: {x: 0, y: 0},
+        id: "Guide",
+        text: {i18n: "ui.genderselect.guide"}
+    }).Attach(this);
+
+    new UI.Components.PaperHeader({
+        id: "Header",
+        text: {i18n: "ui.genderselect.title"}
+    }).Attach(this);
+
+    new UI.Components.PaperFooter({
+        id: "Hint",
+        position: {x: 25, y: 120 + offset},
+        rect: {width: 280},
+        text: {i18n: "hints.3b"}
+    }).Attach(this);
+
+    new UI.Components.SectionHeader({
+        id: "Gender",
+        position: {x: 25, y: 30},
+        text: {i18n: "ui.genderselect.section1"}
+    }).Attach(this);
+}
+
+GenderSelect._OnSelect = function(){
+    UI.UnloadMenu(this);
+    UI.LoadMenu("ClassSelect")
+}
+
+module.exports = GenderSelect;
+},{"./basemenu.js":30}],33:[function(require,module,exports){
 'use strict'
 
 let BaseMenu = require("./basemenu.js");
@@ -1801,7 +2304,7 @@ LoadingScreen._OnExit = function(){
 
 
 module.exports = LoadingScreen;
-},{"./basemenu.js":29}],31:[function(require,module,exports){
+},{"./basemenu.js":30}],34:[function(require,module,exports){
 let BaseMenu = require("./basemenu.js");
 
 /**
@@ -1836,7 +2339,7 @@ RaceSelect._OnLoad = function(){
     new UI.Components.Image({id: "CPrev2", img: "character.2", position: {x: 444, y: 45, z: 3}, alpha: 0.2, scale: 2}).Attach(this);
 
     new UI.Components.PaperHeader({
-        id: "Race",
+        id: "Header",
         text: {i18n: "ui.raceselect.title"}
     }).Attach(this);
 
@@ -1889,10 +2392,6 @@ RaceSelect._OnLoad = function(){
 
     this._BuildList();
     this.components.PageNum.SetText(i18n("ui.Page", {cur: this.options.GetPage(), max: this.options.GetMaxPages()}));
-/*     
- 
-    this.AttachGuide({id: "Guide", text: "Welcome, traveler. I've been looking for you.", ref: "Sys_17"});*/
-
 }
 
 RaceSelect._BuildList = function(){
@@ -2033,6 +2532,11 @@ RaceSelect._FormatSkills = function(){
     }
 }
 
+RaceSelect._OnSelect = function(){
+    UI.UnloadMenu(this);
+    UI.LoadMenu("GenderSelect")
+}
+
 module.exports = RaceSelect;
 
 
@@ -2048,7 +2552,7 @@ module.exports = RaceSelect;
 
     return menu;
 })(); */
-},{"./basemenu.js":29}],32:[function(require,module,exports){
+},{"./basemenu.js":30}],35:[function(require,module,exports){
 'use strict'
 
 let BaseMenu = require("./basemenu.js");
@@ -2113,7 +2617,7 @@ TitleScreen._OnSelect = function(){
 
 
 module.exports = TitleScreen;
-},{"./basemenu.js":29}],33:[function(require,module,exports){
+},{"./basemenu.js":30}],36:[function(require,module,exports){
 let UI = require("./uihandler.js");
 
 UI.Components = require("./Components/Components.js");
@@ -2121,7 +2625,7 @@ UI.Menus = require("./Menus/Menus.js");
 
 
 module.exports = UI;
-},{"./Components/Components.js":16,"./Menus/Menus.js":28,"./uihandler.js":34}],34:[function(require,module,exports){
+},{"./Components/Components.js":16,"./Menus/Menus.js":28,"./uihandler.js":37}],37:[function(require,module,exports){
 /**
  * @namespace ElonaJS.UI
  * @memberOf ElonaJS
@@ -2424,7 +2928,7 @@ _SetCanvasSize: function(val){
 }, */
 
 module.exports = UI;
-},{}],35:[function(require,module,exports){
+},{}],38:[function(require,module,exports){
 'use strict'
 
 /**
@@ -2439,12 +2943,17 @@ let Utils = {
 }
 
 module.exports = Utils;
-},{"./file.js":36,"./math.js":37,"./parse.js":38}],36:[function(require,module,exports){
-(function (process){
+},{"./file.js":39,"./math.js":40,"./parse.js":41}],39:[function(require,module,exports){
 'use strict'
 
 let env = (typeof process === "object" ? "node" : "browser");
 let fs = (env == "node" ? require("fs") : undefined);
+let nodeDir = "./resources/app";
+
+function sanitizePath(str){
+    if(str.charAt(0) == ".") return str.slice(1);
+    return str;
+}
 
 /**
  * @namespace ElonaJS.Utils.File
@@ -2460,8 +2969,9 @@ let file_util = {};
  */
 file_util.GetJSON = async function(path){
     return new Promise((resolve, reject) => {
-        if(this.env == "node"){
-            fs.readFile(path, function(err, data){
+        if(env == "node"){
+            path = sanitizePath(path);
+            fs.readFile(nodeDir + path, function(err, data){
                 if(data) resolve(JSON.parse(data));
                 else resolve(undefined);
             })
@@ -2481,9 +2991,9 @@ file_util.GetJSON = async function(path){
  */
 file_util.LoadFont = async function(name, path){
     return new Promise((resolve, reject) => {
-        if(this.env == "node"){
-            let fs = require("fs");
-            fs.readFile(path, function(err, data){
+        if(env == "node"){
+            path = sanitizePath(path);
+            fs.readFile(nodeDir + path, function(err, data){
                 let nf = new FontFace(name, data);
                 nf.load().then((loaded_face) => {document.fonts.add(loaded_face); resolve()});
             })
@@ -2498,8 +3008,7 @@ file_util.LoadFont = async function(name, path){
 }
 
 module.exports = file_util;
-}).call(this,require('_process'))
-},{"_process":40,"fs":39}],37:[function(require,module,exports){
+},{"fs":undefined}],40:[function(require,module,exports){
 /**
  * A collection of math functions
  * @namespace ElonaJS.Utils.Math
@@ -2532,7 +3041,7 @@ math_util.NearestMultiple = function(divisor, base){
 }
 
 module.exports = math_util;
-},{}],38:[function(require,module,exports){
+},{}],41:[function(require,module,exports){
 'use strict'
 
 /**
@@ -2553,192 +3062,4 @@ Parse.ObjEq = function(a, b){
 
 
 module.exports = Parse;
-},{}],39:[function(require,module,exports){
-
-},{}],40:[function(require,module,exports){
-// shim for using process in browser
-var process = module.exports = {};
-
-// cached from whatever global is present so that test runners that stub it
-// don't break things.  But we need to wrap it in a try catch in case it is
-// wrapped in strict mode code which doesn't define any globals.  It's inside a
-// function because try/catches deoptimize in certain engines.
-
-var cachedSetTimeout;
-var cachedClearTimeout;
-
-function defaultSetTimout() {
-    throw new Error('setTimeout has not been defined');
-}
-function defaultClearTimeout () {
-    throw new Error('clearTimeout has not been defined');
-}
-(function () {
-    try {
-        if (typeof setTimeout === 'function') {
-            cachedSetTimeout = setTimeout;
-        } else {
-            cachedSetTimeout = defaultSetTimout;
-        }
-    } catch (e) {
-        cachedSetTimeout = defaultSetTimout;
-    }
-    try {
-        if (typeof clearTimeout === 'function') {
-            cachedClearTimeout = clearTimeout;
-        } else {
-            cachedClearTimeout = defaultClearTimeout;
-        }
-    } catch (e) {
-        cachedClearTimeout = defaultClearTimeout;
-    }
-} ())
-function runTimeout(fun) {
-    if (cachedSetTimeout === setTimeout) {
-        //normal enviroments in sane situations
-        return setTimeout(fun, 0);
-    }
-    // if setTimeout wasn't available but was latter defined
-    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
-        cachedSetTimeout = setTimeout;
-        return setTimeout(fun, 0);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedSetTimeout(fun, 0);
-    } catch(e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
-            return cachedSetTimeout.call(null, fun, 0);
-        } catch(e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
-            return cachedSetTimeout.call(this, fun, 0);
-        }
-    }
-
-
-}
-function runClearTimeout(marker) {
-    if (cachedClearTimeout === clearTimeout) {
-        //normal enviroments in sane situations
-        return clearTimeout(marker);
-    }
-    // if clearTimeout wasn't available but was latter defined
-    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
-        cachedClearTimeout = clearTimeout;
-        return clearTimeout(marker);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedClearTimeout(marker);
-    } catch (e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
-            return cachedClearTimeout.call(null, marker);
-        } catch (e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
-            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
-            return cachedClearTimeout.call(this, marker);
-        }
-    }
-
-
-
-}
-var queue = [];
-var draining = false;
-var currentQueue;
-var queueIndex = -1;
-
-function cleanUpNextTick() {
-    if (!draining || !currentQueue) {
-        return;
-    }
-    draining = false;
-    if (currentQueue.length) {
-        queue = currentQueue.concat(queue);
-    } else {
-        queueIndex = -1;
-    }
-    if (queue.length) {
-        drainQueue();
-    }
-}
-
-function drainQueue() {
-    if (draining) {
-        return;
-    }
-    var timeout = runTimeout(cleanUpNextTick);
-    draining = true;
-
-    var len = queue.length;
-    while(len) {
-        currentQueue = queue;
-        queue = [];
-        while (++queueIndex < len) {
-            if (currentQueue) {
-                currentQueue[queueIndex].run();
-            }
-        }
-        queueIndex = -1;
-        len = queue.length;
-    }
-    currentQueue = null;
-    draining = false;
-    runClearTimeout(timeout);
-}
-
-process.nextTick = function (fun) {
-    var args = new Array(arguments.length - 1);
-    if (arguments.length > 1) {
-        for (var i = 1; i < arguments.length; i++) {
-            args[i - 1] = arguments[i];
-        }
-    }
-    queue.push(new Item(fun, args));
-    if (queue.length === 1 && !draining) {
-        runTimeout(drainQueue);
-    }
-};
-
-// v8 likes predictible objects
-function Item(fun, array) {
-    this.fun = fun;
-    this.array = array;
-}
-Item.prototype.run = function () {
-    this.fun.apply(null, this.array);
-};
-process.title = 'browser';
-process.browser = true;
-process.env = {};
-process.argv = [];
-process.version = ''; // empty string to avoid regexp issues
-process.versions = {};
-
-function noop() {}
-
-process.on = noop;
-process.addListener = noop;
-process.once = noop;
-process.off = noop;
-process.removeListener = noop;
-process.removeAllListeners = noop;
-process.emit = noop;
-process.prependListener = noop;
-process.prependOnceListener = noop;
-
-process.listeners = function (name) { return [] }
-
-process.binding = function (name) {
-    throw new Error('process.binding is not supported');
-};
-
-process.cwd = function () { return '/' };
-process.chdir = function (dir) {
-    throw new Error('process.chdir is not supported');
-};
-process.umask = function() { return 0; };
-
 },{}]},{},[7]);

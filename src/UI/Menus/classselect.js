@@ -2,16 +2,16 @@ let BaseMenu = require("./basemenu.js");
 
 /**
  * The race select menu.
- * @name RaceSelect
+ * @name ClassSelect
  * @type ElonaJS.UI.Menus.BaseMenu
  * @memberOf ElonaJS.UI.Menus
  */
-let RaceSelect = new BaseMenu();
+let ClassSelect = new BaseMenu();
 
-RaceSelect.Customize({centered: true, size: {w: 720, h: 500}});
-RaceSelect.sounds.select = "spell";
+ClassSelect.Customize({centered: true, size: {w: 720, h: 500}});
+ClassSelect.sounds.select = "spell";
 
-RaceSelect._OnLoad = function(){
+ClassSelect._OnLoad = function(){
     if(this.init){
         this.options.current = 0;
         this.options.page = 0;
@@ -33,7 +33,7 @@ RaceSelect._OnLoad = function(){
 
     new UI.Components.PaperHeader({
         id: "Header",
-        text: {i18n: "ui.raceselect.title"}
+        text: {i18n: "ui.classselect.title"}
     }).Attach(this);
 
     new UI.Components.PaperFooter({
@@ -44,41 +44,40 @@ RaceSelect._OnLoad = function(){
     }).Attach(this);
 
     new UI.Components.SectionHeader({
-        id: "Races",
+        id: "Classes",
         position: {x: 35, y: 40},
-        text: {i18n: "ui.raceselect.section1"}
+        text: {i18n: "ui.classselect.section1"}
     }).Attach(this);
 
     new UI.Components.SectionHeader({
         id: "Details",
         position: {x: 205, y: 40},
-        text: {i18n: "ui.raceselect.section2"}
+        text: {i18n: "ui.classselect.section2"}
     }).Attach(this);
 
     new UI.Components.SectionHeader({
         id: "AttributeBonuses",
         position: {x: 205, y: 205},
-        text: {i18n: "ui.raceselect.section3"}
+        text: {i18n: "ui.classselect.section3"}
     }).Attach(this);
 
     new UI.Components.SectionHeader({
         id: "TrainedSkills",
         position: {x: 205, y: 285},
-        text: {i18n: "ui.raceselect.section4"}
+        text: {i18n: "ui.classselect.section4"}
     }).Attach(this);
 
     new UI.Components.Guide({
         position: {x: 0, y: 0},
         id: "Guide",
-        text: {i18n: "ui.raceselect.guide"}
+        text: {i18n: "ui.classselect.guide"}
     }).Attach(this);
 
 
-    let attb = i18n("ui.raceselect.attributes").split(",");
+    let attb = i18n("ui.classselect.attributes").split(",");
 
     for(let i = 0; i < attb.length; i++){
         let val = attb[i];
-
         new UI.Components.Image({id: val, img: "interface.icon_" + val, position: {x: 210 + 130 * (i%3), y: 225 + 19 * Math.floor(i/3), z: 3}}).Attach(this, "attb_icons");
         new UI.Components.Text({id: val, position: {x: 230 + 130 * (i%3), y: 225 + 19 * Math.floor(i/3)}}).Attach(this, "attb_text");
     }
@@ -87,19 +86,17 @@ RaceSelect._OnLoad = function(){
     this.components.PageNum.SetText(i18n("ui.Page", {cur: this.options.GetPage(), max: this.options.GetMaxPages()}));
 }
 
-RaceSelect._BuildList = function(){
-    if(!this.races) this.races = DB.Races.Search({playable: true});
+ClassSelect._BuildList = function(){
+    if(!this.classes) this.classes = DB.Classes.Search({playable: true});
     if(!this.csheet) this.csheet = DB.Graphics.GetByID("character").exceptions;
-    let races = this.races;
+    let classes = this.classes;
     let opt = [];
 
-    for(let i = 0; i < races.length; i++){
+    for(let i = 0; i < classes.length; i++){
         let no = {text:{}, preview: {}};
-        no.text.i18n = races[i].name;
-        no.preview.desc = races[i].description;
-        no.preview.pic1 = races[i].pic.female;
-        no.preview.pic2 = races[i].pic.male;
-        no.preview.race = races[i];
+        no.text.i18n = classes[i].name;
+        no.preview.desc = classes[i].description;
+        no.preview.class = classes[i];
         opt.push(no);
     }
 
@@ -111,21 +108,9 @@ RaceSelect._BuildList = function(){
     this.options.Set(opt);
 }
 
-RaceSelect._PreviewData = function(){
+ClassSelect._PreviewData = function(){
     let op = this.options.GetCurrentOption();
     this.components.Desc.SetText(i18n(op.preview.desc));
-    this.components.CPrev1.SetImage("character." + op.preview.pic1);
-    this.components.CPrev2.SetImage("character." + op.preview.pic2);
-
-    if(this.csheet[op.preview.pic1]){
-        let offset = (this.csheet[op.preview.pic1].offY ? this.csheet[op.preview.pic1].offY : 0);
-        this.components.CPrev1.SetBasePosition(300, 135 - this.components.CPrev1.GetActualHeight() - offset);
-        this.components.CPrev2.SetBasePosition(444, 135 - this.components.CPrev2.GetActualHeight() - offset);
-    } else {
-        this.components.CPrev1.SetBasePosition(300, 45);
-        this.components.CPrev2.SetBasePosition(444, 45);
-    }
-
     this._FormatAttributes();
     this._FormatSkills();
 
@@ -140,9 +125,9 @@ RaceSelect._PreviewData = function(){
     this.AlignElements();
 }
 
-RaceSelect._FormatAttributes = function(){
+ClassSelect._FormatAttributes = function(){
     let op = this.options.GetCurrentOption();
-    let attb = op.preview.race.base_attributes;
+    let attb = op.preview.class.base_attributes;
     let atbStr = i18n("attributes.magnitude");
 
     for(let i = 0, arr = Object.keys(attb); i < arr.length; i++){
@@ -167,12 +152,12 @@ RaceSelect._FormatAttributes = function(){
     }
 }
 
-RaceSelect._FormatSkills = function(){
+ClassSelect._FormatSkills = function(){
     let op = this.options.GetCurrentOption();
-    let attb = op.preview.race.base_skills;
+    let attb = op.preview.class.base_skills;
     let o = 1;
     let nwep = 0;
-    let wpnstr = i18n("ui.raceselect.wepprefix");
+    let wpnstr = i18n("ui.classselect.wepprefix");
 
     for(let i = 0, arr = Object.keys(attb); i < arr.length; i++){
         let val = arr[i];
@@ -225,23 +210,9 @@ RaceSelect._FormatSkills = function(){
     }
 }
 
-RaceSelect._OnSelect = function(){
+ClassSelect._OnSelect = function(){
     UI.UnloadMenu(this);
     UI.LoadMenu("GenderSelect")
 }
 
-module.exports = RaceSelect;
-
-
-
-/*     menu._OnSelect = function(){
-        this.active.race = this.options.list[this.options.current].val;
-        Graphics.UnloadMenu(this);
-        if(this.creation){
-            Menus.GenderSelect.SetParameters(this.active, true);
-            Graphics.LoadMenu("GenderSelect");
-        }
-    }
-
-    return menu;
-})(); */
+module.exports = ClassSelect;
