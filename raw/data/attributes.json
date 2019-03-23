@@ -1,9 +1,67 @@
 {
     "attributes":{
         "strength": {
-            "full": "attributes.",
-            "short": "STR",
+            "id": "Strength",
+            "full": "attributes.long.strength",
+            "short": "attributes.short.strength",
+            "icon": "interface.icon_str",
             "primary": true
+        },
+        "constitution": {
+            "id": "Constitution",
+            "full": "attributes.long.constitution",
+            "short": "attributes.short.constitution",
+            "icon": "interface.icon_con",
+            "primary": true
+        },
+        "dexterity": {
+            "id": "Dexterity",
+            "full": "attributes.long.dexterity",
+            "short": "attributes.short.dexterity",
+            "icon": "interface.icon_dex",
+            "primary": true
+        },
+        "learning": {
+            "id": "Learning",
+            "full": "attributes.long.learning",
+            "short": "attributes.short.learning",
+            "icon": "interface.icon_ler",
+            "primary": true
+        },
+        "will": {
+            "id": "Will",
+            "full": "attributes.long.will",
+            "short": "attributes.short.will",
+            "icon": "interface.icon_wil",
+            "primary": true
+        },
+        "magic": {
+            "id": "Magic",
+            "full": "attributes.long.magic",
+            "short": "attributes.short.magic",
+            "icon": "interface.icon_mag",
+            "primary": true
+        },
+        "charisma": {
+            "id": "Charisma",
+            "full": "attributes.long.charisma",
+            "short": "attributes.short.charisma",
+            "icon": "interface.icon_cha",
+            "primary": true  
+        },
+        "speed": {
+            "id": "Speed",
+            "full": "attributes.long.speed",
+            "short": "attributes.short.speed",
+            "icon": "",
+            "primary": false  
+        },
+        "luck": {
+            "id": "Luck",
+            "full": "attributes.long.luck",
+            "short": "attributes.short.luck",
+            "icon": "interface.icon_cha",
+            "primary": false 
         }
     }
 }

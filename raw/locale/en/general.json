@@ -10,13 +10,13 @@
       "charisma": "Charisma"
     },
     "short": {
-      "str": "STR",
-      "con": "CON",
-      "dex": "DEX",
-      "ler": "LER",
-      "wil": "WIL",
-      "mag": "MAG",
-      "cha": "CHA"
+      "strength": "STR",
+      "constitution": "CON",
+      "dexterity": "DEX",
+      "learning": "LER",
+      "will": "WIL",
+      "magic": "MAG",
+      "charisma": "CHA"
     },
     "magnitude": {
       "none": "None",

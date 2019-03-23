@@ -58,13 +58,13 @@ AttributeRoll._OnLoad = function(){
         {text: {i18n: "ui.proceed"}}
     ];
 
-    let fullAttb = i18n("ui.attributeroll.attributesLong").split(',');
-    let attb = i18n("ui.attributeroll.attributesShort").split(',');
+    let attb = DB.Attributes.Search({primary: true});
+    let attbID = attb.reduce((acc, cur) => {return (acc.push(cur.id.toLowerCase()) ? acc : null)}, []);
 
-    for(let i = 0; i < fullAttb.length; i++){
-        new UI.Components.Text({id: attb[i], position: {x: 225, y: 122 + 22 * i}, val: attb[i]}).Attach(this, "AttbVal");
-        new UI.Components.Image({id: attb[i], position: {x: 200, y: 112 + 22 * i, z: 3}, img: "interface.icon_" + attb[i]}).Attach(this, "AttbImg");
-        op.push({text: {text: fullAttb[i], val: attb[i]}});
+    for(let i = 0; i < attb.length; i++){
+        new UI.Components.Text({id: attbID[i], position: {x: 225, y: 122 + 22 * i}, val: attbID[i]}).Attach(this, "AttbVal");
+        new UI.Components.Image({id: attbID[i], position: {x: 200, y: 112 + 22 * i, z: 3}, img: attb[i].icon}).Attach(this, "AttbImg");
+        op.push({text: {i18n: attb[i].full, val: attbID[i]}});
     }
 
     this.options.Customize({position: {x: 70, y: 70}, spacing: 22});
@@ -77,7 +77,8 @@ AttributeRoll._OnLoad = function(){
 AttributeRoll._Reroll = function(){
     let cls = DB.Classes.GetByID("Warrior").base_attributes;
     let race = DB.Races.GetByID("Yerles").base_attributes;
-    
+
+
 
 
 }

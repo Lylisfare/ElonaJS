@@ -16,6 +16,7 @@ let Databases = {
     Races: new BaseDB("Races", ["id"], master),
     Classes: new BaseDB("Classes", ["id"], master),
     Skills: new BaseDB("Skills", ["id"], master),
+    Attributes: new BaseDB("Attributes", ["id"], master),
     Graphics: require("./graphics.js"),
     i18n: require("./i18n.js"),
     loki: master
@@ -39,6 +40,7 @@ Databases.Load = async function(){
     this.Races.BatchLoad(a.races);
     this.Classes.BatchLoad(a.classes);
     this.Skills.BatchLoad(a.skills);
+    this.Attributes.BatchLoad(a.attributes);
     await this.i18n.LoadFromJSON("./locale/en.json");
     await this.Graphics.LoadFromJSON("./data/Graphics.JSON");
 }
