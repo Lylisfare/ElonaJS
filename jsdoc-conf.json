@@ -1,0 +1,23 @@
+{
+  "plugins": ["plugins/markdown", "node_modules/better-docs/category"],
+  "markdown": {
+      "parser": "gfm",
+      "hardwrap": true
+  },
+  "templates": {
+      "name": "Doc Template",
+      "footerText": "NHN Entertainment Frontend Development Lab",
+      "logo": {
+        "link": "https://github.com/nhnent/tui.jsdoc-template"
+      }
+  },
+  "opts": {
+    "encoding": "utf8",
+    "recurse": true,
+    "package": "package.json",
+    "template": "node_modules/tui-jsdoc-template"
+  },
+  "tags": {
+    "allowUnknownTags": ["category"]
+  }
+  }

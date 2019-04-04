@@ -22,14 +22,21 @@ class OptionList extends MultiComponent{
         this.page = 0;
         this.list = [];
         this.settings = Object.assign({}, this._defaultList);
-        this.style = $.extend(true, {}, this._defaultStyle);
+        this.style = this._defaultStyle;
         this.menu = menu;
         this.init = false;
         menu.components.OptionList = this;
     }
 
     PageUp(){
-        let tpm = this.page * this.settings.perpage + this.settings.perpage - 1;
+        let opt = this.GetCurrentItem();
+
+        if(opt.IsAdjustable()){
+            opt.ModifyValue(1);
+            return;
+        }
+
+        let tpm = (this.page+1) * this.settings.perpage;
         if(this.list.length > tpm){
             this.page++;
             (this.current + this.settings.perpage >= this.list.length ? this.current = this.list.length - 1 : this.current += this.settings.perpage);
@@ -46,6 +53,13 @@ class OptionList extends MultiComponent{
     }
 
     PageDown(){
+        let opt = this.GetCurrentItem();
+
+        if(opt.IsAdjustable()){
+            opt.ModifyValue(-1);
+            return;
+        }
+
         if(this.page > 0){
             this.page--;
             this.current -= this.settings.perpage;
@@ -62,7 +76,15 @@ class OptionList extends MultiComponent{
         }
     }
 
-
+    JumpToLast(){
+        this.current = this.list.length - 1;
+        this.page = this.GetMaxPages() - 1;
+        this.Build();
+        this.UpdateSelector();
+        this.AlignSelector(this.menu.position);
+        this.menu.AlignElements();
+        
+    }
 
     AlignSelector(base){
         this.set.Selector.Align(base);
@@ -71,8 +93,12 @@ class OptionList extends MultiComponent{
         this.set.Diamond.Scale(Graphics.Scale());
     }
 
-    Customize(params){
+    CustomizeList(params){
         this.settings = Object.assign({}, this._defaultList, params);
+    }
+
+    CustomizeStyle(params){
+        this.style = Object.assign({}, this._defaultStyle, params);
     }
 
     Build(){
@@ -83,7 +109,7 @@ class OptionList extends MultiComponent{
         let endO = Math.min(this.page * this.settings.perpage + this.settings.perpage, numO);
         
         for(let i = strO; i < endO; i++){
-            if(!this.list[i].built) this.list[i] = $.extend(true, {}, this._defaultStyle, this.list[i]);
+            if(!this.list[i].built) this.list[i] = $.extend(true, {}, this.style, this.list[i]);
             let ostr = "Option_" + (i-strO);
 
             this.list[i].keytext.text = String.fromCharCode(97+(i-strO));
@@ -94,8 +120,8 @@ class OptionList extends MultiComponent{
             if(!this.set[ostr]){
                 this.set[ostr] = new UI.Components.Option(this.list[i], this.menu);
             } else {
-                this.set[ostr].Reset(this.list[i]);
                 this.set[ostr].Show();
+                this.set[ostr].Reset(this.list[i]);
             }
         }
 
@@ -123,11 +149,19 @@ class OptionList extends MultiComponent{
     }
 
     GetCurrentItem(){
-        return this.set["Option_" + (this.current % this.settings.optperpage)];
+        return this.set["Option_" + (this.current % this.settings.perpage)];
     }
 
     GetCurrentOption(){
         return this.list[this.current];
+    }
+
+    GetList(){
+        return this.list;
+    }
+
+    GetPageOptions(){
+        return this.list.slice((this.page) * this.settings.perpage, Math.min(this.list.length, (this.page+1) * this.settings.perpage));
     }
 
     GetPage(){
@@ -222,7 +256,9 @@ OptionList.prototype._defaultStyle = {
         z: 3,
     },
     arrow_text: {
-        centered: true
+        centered: true,
+        offset: {x: 0, y: 0},
+        z: 5
     },
     position:{
         x: 0,

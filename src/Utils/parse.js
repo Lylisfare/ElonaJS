@@ -16,5 +16,17 @@ Parse.ObjEq = function(a, b){
     return JSON.stringify(a) == JSON.stringify(b);
 }
 
+Parse.Dim2DInt = function(str){
+    let n = str.replace(" ", "");
+    n = n.split("x");
+
+    if(n.length != 2) return undefined;
+    n[0] = parseInt(n[0]);
+    n[1] = parseInt(n[1]);
+
+    if(isNaN(n[0]) || isNaN(n[1])) return undefined;
+    return n;
+}
+
 
 module.exports = Parse;

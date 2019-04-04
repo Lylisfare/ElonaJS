@@ -37,7 +37,7 @@ TitleScreen._OnLoad = function(){
         position: {x: 25, y: 256}
     }).Attach(this);
 
-    this.options.Customize({position: {x: 70, y: 53}, spacing: 35, perpage: 6});
+    this.options.CustomizeList({position: {x: 70, y: 53}, spacing: 35, perpage: 6});
 
     this.options.Set([
         {text: {i18n: "ui.startmenu.restore"}},
@@ -47,17 +47,20 @@ TitleScreen._OnLoad = function(){
         {text: {text: "Options"}},
         {text: {text: "Debug Menu"}} 
     ]);
-}
+}   
 
 TitleScreen._OnSelect = function(){
     let next, op;
 
     switch(this.options.GetCurrent()){
         case 1: UI.UnloadMenu(this);
-                UI.LoadMenu("RaceSelect")
+                State.Player = new GameObjects.Unit();
+                UI.LoadMenu("RaceSelect", {creation: true, unit: State.Player});
+                break;
+        case 4: UI.UnloadMenu(this);
+                UI.LoadMenu("SettingsMenu", "display");
                 break;
     }
-
 }
 
 

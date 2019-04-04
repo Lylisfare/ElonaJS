@@ -1,17 +1,17 @@
 {"races": {
   "Armor": {
     "base_attributes": {
-      "CHA": 4,
-      "CON": 4,
-      "DEX": 7,
-      "LER": 6,
+      "Charisma": 4,
+      "Constitution": 4,
+      "Dexterity": 7,
+      "Learning": 6,
       "Life": 40,
-      "MAG": 7,
+      "Magic": 7,
       "Mana": 80,
-      "PER": 5,
-      "SPD": 50,
-      "STR": 8,
-      "WIL": 6
+      "Perception": 5,
+      "Speed": 50,
+      "Strength": 8,
+      "Will": 6
     },
     "base_skills": {
       "Lock Picking": 3,
@@ -51,17 +51,17 @@
   },
   "Asura": {
     "base_attributes": {
-      "CHA": 5,
-      "CON": 9,
-      "DEX": 14,
-      "LER": 4,
+      "Charisma": 5,
+      "Constitution": 9,
+      "Dexterity": 14,
+      "Learning": 4,
       "Life": 90,
-      "MAG": 5,
+      "Magic": 5,
       "Mana": 70,
-      "PER": 6,
-      "SPD": 70,
-      "STR": 11,
-      "WIL": 4
+      "Perception": 6,
+      "Speed": 70,
+      "Strength": 11,
+      "Will": 4
     },
     "base_skills": {
       "Anatomy": 4,
@@ -97,17 +97,17 @@
   },
   "Bat": {
     "base_attributes": {
-      "CHA": 2,
-      "CON": 5,
-      "DEX": 9,
-      "LER": 4,
+      "Charisma": 2,
+      "Constitution": 5,
+      "Dexterity": 9,
+      "Learning": 4,
       "Life": 10,
-      "MAG": 6,
+      "Magic": 6,
       "Mana": 80,
-      "PER": 9,
-      "SPD": 140,
-      "STR": 3,
-      "WIL": 3
+      "Perception": 9,
+      "Speed": 140,
+      "Strength": 3,
+      "Will": 3
     },
     "base_skills": {
       "Greater Evasion": 3,
@@ -140,17 +140,17 @@
   },
   "Bear": {
     "base_attributes": {
-      "CHA": 5,
-      "CON": 10,
-      "DEX": 5,
-      "LER": 6,
+      "Charisma": 5,
+      "Constitution": 10,
+      "Dexterity": 5,
+      "Learning": 6,
       "Life": 160,
-      "MAG": 3,
+      "Magic": 3,
       "Mana": 80,
-      "PER": 6,
-      "SPD": 70,
-      "STR": 9,
-      "WIL": 6
+      "Perception": 6,
+      "Speed": 70,
+      "Strength": 9,
+      "Will": 6
     },
     "base_skills": {
       "Eye of Mind": 3,
@@ -189,17 +189,17 @@
   },
   "Beetle": {
     "base_attributes": {
-      "CHA": 3,
-      "CON": 6,
-      "DEX": 5,
-      "LER": 4,
+      "Charisma": 3,
+      "Constitution": 6,
+      "Dexterity": 5,
+      "Learning": 4,
       "Life": 80,
-      "MAG": 4,
+      "Magic": 4,
       "Mana": 80,
-      "PER": 7,
-      "SPD": 75,
-      "STR": 5,
-      "WIL": 5
+      "Perception": 7,
+      "Speed": 75,
+      "Strength": 5,
+      "Will": 5
     },
     "base_skills": {
       "Detection": 3,
@@ -233,17 +233,17 @@
   },
   "Bike": {
     "base_attributes": {
-      "CHA": 11,
-      "CON": 13,
-      "DEX": 4,
-      "LER": 4,
+      "Charisma": 11,
+      "Constitution": 13,
+      "Dexterity": 4,
+      "Learning": 4,
       "Life": 170,
-      "MAG": 3,
+      "Magic": 3,
       "Mana": 60,
-      "PER": 3,
-      "SPD": 155,
-      "STR": 11,
-      "WIL": 5
+      "Perception": 3,
+      "Speed": 155,
+      "Strength": 11,
+      "Will": 5
     },
     "base_skills": {
       "Disarm Trap": 3,
@@ -283,17 +283,17 @@
   },
   "Cat": {
     "base_attributes": {
-      "CHA": 12,
-      "CON": 7,
-      "DEX": 7,
-      "LER": 4,
+      "Charisma": 12,
+      "Constitution": 7,
+      "Dexterity": 7,
+      "Learning": 4,
       "Life": 120,
-      "MAG": 7,
+      "Magic": 7,
       "Mana": 120,
-      "PER": 7,
-      "SPD": 110,
-      "STR": 6,
-      "WIL": 4
+      "Perception": 7,
+      "Speed": 110,
+      "Strength": 6,
+      "Will": 4
     },
     "base_skills": {
       "Evasion": 2,
@@ -333,17 +333,17 @@
   },
   "Catgod": {
     "base_attributes": {
-      "CHA": 25,
-      "CON": 13,
-      "DEX": 21,
-      "LER": 8,
+      "Charisma": 25,
+      "Constitution": 13,
+      "Dexterity": 21,
+      "Learning": 8,
       "Life": 120,
-      "MAG": 12,
+      "Magic": 12,
       "Mana": 80,
-      "PER": 28,
-      "SPD": 500,
-      "STR": 12,
-      "WIL": 13
+      "Perception": 28,
+      "Speed": 500,
+      "Strength": 12,
+      "Will": 13
     },
     "base_skills": {
       "Evasion": 3,
@@ -384,17 +384,17 @@
   },
   "Catsister": {
     "base_attributes": {
-      "CHA": 22,
-      "CON": 5,
-      "DEX": 13,
-      "LER": 8,
+      "Charisma": 22,
+      "Constitution": 5,
+      "Dexterity": 13,
+      "Learning": 8,
       "Life": 30,
-      "MAG": 13,
+      "Magic": 13,
       "Mana": 100,
-      "PER": 15,
-      "SPD": 200,
-      "STR": 7,
-      "WIL": 10
+      "Perception": 15,
+      "Speed": 200,
+      "Strength": 7,
+      "Will": 10
     },
     "base_skills": {
       "Martial Arts": 4,
@@ -436,17 +436,17 @@
   },
   "Centipede": {
     "base_attributes": {
-      "CHA": 2,
-      "CON": 5,
-      "DEX": 5,
-      "LER": 3,
+      "Charisma": 2,
+      "Constitution": 5,
+      "Dexterity": 5,
+      "Learning": 3,
       "Life": 90,
-      "MAG": 2,
+      "Magic": 2,
       "Mana": 80,
-      "PER": 6,
-      "SPD": 70,
-      "STR": 6,
-      "WIL": 2
+      "Perception": 6,
+      "Speed": 70,
+      "Strength": 6,
+      "Will": 2
     },
     "base_skills": {
       "Eye of Mind": 3,
@@ -480,17 +480,17 @@
   },
   "Cerberus": {
     "base_attributes": {
-      "CHA": 4,
-      "CON": 9,
-      "DEX": 10,
-      "LER": 6,
+      "Charisma": 4,
+      "Constitution": 9,
+      "Dexterity": 10,
+      "Learning": 6,
       "Life": 160,
-      "MAG": 7,
+      "Magic": 7,
       "Mana": 80,
-      "PER": 11,
-      "SPD": 85,
-      "STR": 11,
-      "WIL": 8
+      "Perception": 11,
+      "Speed": 85,
+      "Strength": 11,
+      "Will": 8
     },
     "base_skills": {
       "Detection": 3,
@@ -529,17 +529,17 @@
   },
   "Chicken": {
     "base_attributes": {
-      "CHA": 7,
-      "CON": 8,
-      "DEX": 10,
-      "LER": 4,
+      "Charisma": 7,
+      "Constitution": 8,
+      "Dexterity": 10,
+      "Learning": 4,
       "Life": 80,
-      "MAG": 5,
+      "Magic": 5,
       "Mana": 80,
-      "PER": 11,
-      "SPD": 60,
-      "STR": 5,
-      "WIL": 4
+      "Perception": 11,
+      "Speed": 60,
+      "Strength": 5,
+      "Will": 4
     },
     "base_skills": {
       "Anatomy": 3,
@@ -573,17 +573,17 @@
   },
   "Crab": {
     "base_attributes": {
-      "CHA": 3,
-      "CON": 6,
-      "DEX": 7,
-      "LER": 3,
+      "Charisma": 3,
+      "Constitution": 6,
+      "Dexterity": 7,
+      "Learning": 3,
       "Life": 60,
-      "MAG": 4,
+      "Magic": 4,
       "Mana": 80,
-      "PER": 7,
-      "SPD": 70,
-      "STR": 6,
-      "WIL": 4
+      "Perception": 7,
+      "Speed": 70,
+      "Strength": 6,
+      "Will": 4
     },
     "base_skills": {
       "Disarm Trap": 2,
@@ -620,17 +620,17 @@
   },
   "Cupid": {
     "base_attributes": {
-      "CHA": 8,
-      "CON": 7,
-      "DEX": 9,
-      "LER": 8,
+      "Charisma": 8,
+      "Constitution": 7,
+      "Dexterity": 9,
+      "Learning": 8,
       "Life": 80,
-      "MAG": 12,
+      "Magic": 12,
       "Mana": 130,
-      "PER": 8,
-      "SPD": 80,
-      "STR": 6,
-      "WIL": 7
+      "Perception": 8,
+      "Speed": 80,
+      "Strength": 6,
+      "Will": 7
     },
     "base_skills": {
       "Control Magic": 3,
@@ -668,17 +668,17 @@
   },
   "Dinosaur": {
     "base_attributes": {
-      "CHA": 5,
-      "CON": 10,
-      "DEX": 6,
-      "LER": 4,
+      "Charisma": 5,
+      "Constitution": 10,
+      "Dexterity": 6,
+      "Learning": 4,
       "Life": 140,
-      "MAG": 6,
+      "Magic": 6,
       "Mana": 80,
-      "PER": 5,
-      "SPD": 120,
-      "STR": 8,
-      "WIL": 5
+      "Perception": 5,
+      "Speed": 120,
+      "Strength": 8,
+      "Will": 5
     },
     "base_skills": {
       "Greater Evasion": 2,
@@ -714,17 +714,17 @@
   },
   "Dog": {
     "base_attributes": {
-      "CHA": 7,
-      "CON": 8,
-      "DEX": 7,
-      "LER": 8,
+      "Charisma": 7,
+      "Constitution": 8,
+      "Dexterity": 7,
+      "Learning": 8,
       "Life": 120,
-      "MAG": 7,
+      "Magic": 7,
       "Mana": 80,
-      "PER": 7,
-      "SPD": 85,
-      "STR": 7,
-      "WIL": 7
+      "Perception": 7,
+      "Speed": 85,
+      "Strength": 7,
+      "Will": 7
     },
     "base_skills": {
       "Detection": 3,
@@ -764,17 +764,17 @@
   },
   "Dragon": {
     "base_attributes": {
-      "CHA": 9,
-      "CON": 15,
-      "DEX": 10,
-      "LER": 10,
+      "Charisma": 9,
+      "Constitution": 15,
+      "Dexterity": 10,
+      "Learning": 10,
       "Life": 220,
-      "MAG": 13,
+      "Magic": 13,
       "Mana": 80,
-      "PER": 9,
-      "SPD": 70,
-      "STR": 13,
-      "WIL": 9
+      "Perception": 9,
+      "Speed": 70,
+      "Strength": 13,
+      "Will": 9
     },
     "base_skills": {
       "Jeweler": 3,
@@ -810,17 +810,17 @@
   },
   "Drake": {
     "base_attributes": {
-      "CHA": 7,
-      "CON": 12,
-      "DEX": 11,
-      "LER": 6,
+      "Charisma": 7,
+      "Constitution": 12,
+      "Dexterity": 11,
+      "Learning": 6,
       "Life": 160,
-      "MAG": 8,
+      "Magic": 8,
       "Mana": 80,
-      "PER": 8,
-      "SPD": 85,
-      "STR": 11,
-      "WIL": 9
+      "Perception": 8,
+      "Speed": 85,
+      "Strength": 11,
+      "Will": 9
     },
     "base_skills": {
       "Fishing": 2,
@@ -856,17 +856,17 @@
   },
   "Dwarf": {
     "base_attributes": {
-      "CHA": 6,
-      "CON": 11,
-      "DEX": 8,
-      "LER": 6,
+      "Charisma": 6,
+      "Constitution": 11,
+      "Dexterity": 8,
+      "Learning": 6,
       "Life": 100,
-      "MAG": 6,
+      "Magic": 6,
       "Mana": 100,
-      "PER": 6,
-      "SPD": 70,
-      "STR": 10,
-      "WIL": 7
+      "Perception": 6,
+      "Speed": 70,
+      "Strength": 10,
+      "Will": 7
     },
     "base_skills": {
       "Cooking": 4,
@@ -909,17 +909,17 @@
   },
   "Elea": {
     "base_attributes": {
-      "CHA": 10,
-      "CON": 6,
-      "DEX": 8,
-      "LER": 8,
+      "Charisma": 10,
+      "Constitution": 6,
+      "Dexterity": 8,
+      "Learning": 8,
       "Life": 90,
-      "MAG": 13,
+      "Magic": 13,
       "Mana": 110,
-      "PER": 8,
-      "SPD": 70,
-      "STR": 6,
-      "WIL": 12
+      "Perception": 8,
+      "Speed": 70,
+      "Strength": 6,
+      "Will": 12
     },
     "base_skills": {
       "Casting": 2,
@@ -962,17 +962,17 @@
   },
   "Ent": {
     "base_attributes": {
-      "CHA": 2,
-      "CON": 12,
-      "DEX": 4,
-      "LER": 2,
+      "Charisma": 2,
+      "Constitution": 12,
+      "Dexterity": 4,
+      "Learning": 2,
       "Life": 170,
-      "MAG": 6,
+      "Magic": 6,
       "Mana": 80,
-      "PER": 6,
-      "SPD": 50,
-      "STR": 9,
-      "WIL": 3
+      "Perception": 6,
+      "Speed": 50,
+      "Strength": 9,
+      "Will": 3
     },
     "base_skills": {
       "Carpentry": 4,
@@ -1009,17 +1009,17 @@
   },
   "Eulderna": {
     "base_attributes": {
-      "CHA": 8,
-      "CON": 7,
-      "DEX": 7,
-      "LER": 8,
+      "Charisma": 8,
+      "Constitution": 7,
+      "Dexterity": 7,
+      "Learning": 8,
       "Life": 100,
-      "MAG": 12,
+      "Magic": 12,
       "Mana": 100,
-      "PER": 10,
-      "SPD": 70,
-      "STR": 6,
-      "WIL": 10
+      "Perception": 10,
+      "Speed": 70,
+      "Strength": 6,
+      "Will": 10
     },
     "base_skills": {
       "Casting": 5,
@@ -1062,17 +1062,17 @@
   },
   "Eye": {
     "base_attributes": {
-      "CHA": 4,
-      "CON": 9,
-      "DEX": 4,
-      "LER": 4,
+      "Charisma": 4,
+      "Constitution": 9,
+      "Dexterity": 4,
+      "Learning": 4,
       "Life": 100,
-      "MAG": 10,
+      "Magic": 10,
       "Mana": 80,
-      "PER": 6,
-      "SPD": 25,
-      "STR": 3,
-      "WIL": 7
+      "Perception": 6,
+      "Speed": 25,
+      "Strength": 3,
+      "Will": 7
     },
     "base_skills": {
       "Anatomy": 3,
@@ -1106,17 +1106,17 @@
   },
   "Fairy": {
     "base_attributes": {
-      "CHA": 12,
-      "CON": 4,
-      "DEX": 9,
-      "LER": 8,
+      "Charisma": 12,
+      "Constitution": 4,
+      "Dexterity": 9,
+      "Learning": 8,
       "Life": 40,
-      "MAG": 13,
+      "Magic": 13,
       "Mana": 130,
-      "PER": 10,
-      "SPD": 120,
-      "STR": 3,
-      "WIL": 8
+      "Perception": 10,
+      "Speed": 120,
+      "Strength": 3,
+      "Will": 8
     },
     "base_skills": {
       "Casting": 5,
@@ -1159,17 +1159,17 @@
   },
   "Frog": {
     "base_attributes": {
-      "CHA": 6,
-      "CON": 6,
-      "DEX": 6,
-      "LER": 5,
+      "Charisma": 6,
+      "Constitution": 6,
+      "Dexterity": 6,
+      "Learning": 5,
       "Life": 80,
-      "MAG": 5,
+      "Magic": 5,
       "Mana": 80,
-      "PER": 8,
-      "SPD": 60,
-      "STR": 6,
-      "WIL": 5
+      "Perception": 8,
+      "Speed": 60,
+      "Strength": 6,
+      "Will": 5
     },
     "base_skills": {
       "Investing": 2,
@@ -1203,17 +1203,17 @@
   },
   "Ghost": {
     "base_attributes": {
-      "CHA": 11,
-      "CON": 8,
-      "DEX": 6,
-      "LER": 7,
+      "Charisma": 11,
+      "Constitution": 8,
+      "Dexterity": 6,
+      "Learning": 7,
       "Life": 60,
-      "MAG": 11,
+      "Magic": 11,
       "Mana": 80,
-      "PER": 14,
-      "SPD": 60,
-      "STR": 4,
-      "WIL": 6
+      "Perception": 14,
+      "Speed": 60,
+      "Strength": 4,
+      "Will": 6
     },
     "base_skills": {
       "Magic Capacity": 4,
@@ -1252,17 +1252,17 @@
   },
   "Giant": {
     "base_attributes": {
-      "CHA": 3,
-      "CON": 14,
-      "DEX": 9,
-      "LER": 8,
+      "Charisma": 3,
+      "Constitution": 14,
+      "Dexterity": 9,
+      "Learning": 8,
       "Life": 200,
-      "MAG": 6,
+      "Magic": 6,
       "Mana": 80,
-      "PER": 4,
-      "SPD": 60,
-      "STR": 12,
-      "WIL": 5
+      "Perception": 4,
+      "Speed": 60,
+      "Strength": 12,
+      "Will": 5
     },
     "base_skills": {
       "Anatomy": 3,
@@ -1301,17 +1301,17 @@
   },
   "Goblin": {
     "base_attributes": {
-      "CHA": 4,
-      "CON": 8,
-      "DEX": 5,
-      "LER": 8,
+      "Charisma": 4,
+      "Constitution": 8,
+      "Dexterity": 5,
+      "Learning": 8,
       "Life": 110,
-      "MAG": 7,
+      "Magic": 7,
       "Mana": 90,
-      "PER": 5,
-      "SPD": 70,
-      "STR": 8,
-      "WIL": 7
+      "Perception": 5,
+      "Speed": 70,
+      "Strength": 8,
+      "Will": 7
     },
     "base_skills": {
       "Eye of Mind": 3,
@@ -1355,17 +1355,17 @@
   },
   "God": {
     "base_attributes": {
-      "CHA": 21,
-      "CON": 13,
-      "DEX": 19,
-      "LER": 16,
+      "Charisma": 21,
+      "Constitution": 13,
+      "Dexterity": 19,
+      "Learning": 16,
       "Life": 200,
-      "MAG": 24,
+      "Magic": 24,
       "Mana": 100,
-      "PER": 17,
-      "SPD": 150,
-      "STR": 17,
-      "WIL": 25
+      "Perception": 17,
+      "Speed": 150,
+      "Strength": 17,
+      "Will": 25
     },
     "base_skills": {
       "Bow": 7,
@@ -1405,17 +1405,17 @@
   },
   "Golem": {
     "base_attributes": {
-      "CHA": 3,
-      "CON": 14,
-      "DEX": 4,
-      "LER": 4,
+      "Charisma": 3,
+      "Constitution": 14,
+      "Dexterity": 4,
+      "Learning": 4,
       "Life": 150,
-      "MAG": 6,
+      "Magic": 6,
       "Mana": 70,
-      "PER": 5,
-      "SPD": 45,
-      "STR": 10,
-      "WIL": 9
+      "Perception": 5,
+      "Speed": 45,
+      "Strength": 10,
+      "Will": 9
     },
     "base_skills": {
       "Martial Arts": 4,
@@ -1457,17 +1457,17 @@
   },
   "Hand": {
     "base_attributes": {
-      "CHA": 2,
-      "CON": 9,
-      "DEX": 9,
-      "LER": 8,
+      "Charisma": 2,
+      "Constitution": 9,
+      "Dexterity": 9,
+      "Learning": 8,
       "Life": 100,
-      "MAG": 5,
+      "Magic": 5,
       "Mana": 80,
-      "PER": 4,
-      "SPD": 70,
-      "STR": 8,
-      "WIL": 6
+      "Perception": 4,
+      "Speed": 70,
+      "Strength": 8,
+      "Will": 6
     },
     "base_skills": {
       "Eye of Mind": 4,
@@ -1502,17 +1502,17 @@
   },
   "Harpy": {
     "base_attributes": {
-      "CHA": 4,
-      "CON": 6,
-      "DEX": 9,
-      "LER": 6,
+      "Charisma": 4,
+      "Constitution": 6,
+      "Dexterity": 9,
+      "Learning": 6,
       "Life": 90,
-      "MAG": 9,
+      "Magic": 9,
       "Mana": 100,
-      "PER": 9,
-      "SPD": 80,
-      "STR": 8,
-      "WIL": 8
+      "Perception": 9,
+      "Speed": 80,
+      "Strength": 8,
+      "Will": 8
     },
     "base_skills": {
       "Magic Capacity": 3,
@@ -1550,17 +1550,17 @@
   },
   "Horse": {
     "base_attributes": {
-      "CHA": 6,
-      "CON": 8,
-      "DEX": 4,
-      "LER": 4,
+      "Charisma": 6,
+      "Constitution": 8,
+      "Dexterity": 4,
+      "Learning": 4,
       "Life": 150,
-      "MAG": 3,
+      "Magic": 3,
       "Mana": 50,
-      "PER": 5,
-      "SPD": 125,
-      "STR": 9,
-      "WIL": 4
+      "Perception": 5,
+      "Speed": 125,
+      "Strength": 9,
+      "Will": 4
     },
     "base_skills": {
       "Healing": 4,
@@ -1594,17 +1594,17 @@
   },
   "Hound": {
     "base_attributes": {
-      "CHA": 3,
-      "CON": 9,
-      "DEX": 11,
-      "LER": 5,
+      "Charisma": 3,
+      "Constitution": 9,
+      "Dexterity": 11,
+      "Learning": 5,
       "Life": 100,
-      "MAG": 3,
+      "Magic": 3,
       "Mana": 80,
-      "PER": 10,
-      "SPD": 90,
-      "STR": 8,
-      "WIL": 4
+      "Perception": 10,
+      "Speed": 90,
+      "Strength": 8,
+      "Will": 4
     },
     "base_skills": {
       "Detection": 4,
@@ -1642,17 +1642,17 @@
   },
   "Imp": {
     "base_attributes": {
-      "CHA": 3,
-      "CON": 6,
-      "DEX": 8,
-      "LER": 8,
+      "Charisma": 3,
+      "Constitution": 6,
+      "Dexterity": 8,
+      "Learning": 8,
       "Life": 70,
-      "MAG": 7,
+      "Magic": 7,
       "Mana": 80,
-      "PER": 8,
-      "SPD": 70,
-      "STR": 5,
-      "WIL": 4
+      "Perception": 8,
+      "Speed": 70,
+      "Strength": 5,
+      "Will": 4
     },
     "base_skills": {
       "Control Magic": 3,
@@ -1689,17 +1689,17 @@
   },
   "Juere": {
     "base_attributes": {
-      "CHA": 11,
-      "CON": 8,
-      "DEX": 12,
-      "LER": 10,
+      "Charisma": 11,
+      "Constitution": 8,
+      "Dexterity": 12,
+      "Learning": 10,
       "Life": 100,
-      "MAG": 8,
+      "Magic": 8,
       "Mana": 100,
-      "PER": 10,
-      "SPD": 70,
-      "STR": 7,
-      "WIL": 8
+      "Perception": 10,
+      "Speed": 70,
+      "Strength": 7,
+      "Will": 8
     },
     "base_skills": {
       "Lock Picking": 2,
@@ -1743,17 +1743,17 @@
   },
   "Kobolt": {
     "base_attributes": {
-      "CHA": 2,
-      "CON": 6,
-      "DEX": 5,
-      "LER": 2,
+      "Charisma": 2,
+      "Constitution": 6,
+      "Dexterity": 5,
+      "Learning": 2,
       "Life": 90,
-      "MAG": 4,
+      "Magic": 4,
       "Mana": 80,
-      "PER": 3,
-      "SPD": 70,
-      "STR": 8,
-      "WIL": 2
+      "Perception": 3,
+      "Speed": 70,
+      "Strength": 8,
+      "Will": 2
     },
     "base_skills": {
       "Magic Device": 3,
@@ -1795,17 +1795,17 @@
   },
   "Lich": {
     "base_attributes": {
-      "CHA": 4,
-      "CON": 8,
-      "DEX": 7,
-      "LER": 10,
+      "Charisma": 4,
+      "Constitution": 8,
+      "Dexterity": 7,
+      "Learning": 10,
       "Life": 80,
-      "MAG": 15,
+      "Magic": 15,
       "Mana": 140,
-      "PER": 10,
-      "SPD": 70,
-      "STR": 5,
-      "WIL": 13
+      "Perception": 10,
+      "Speed": 70,
+      "Strength": 5,
+      "Will": 13
     },
     "base_skills": {
       "Casting": 3,
@@ -1848,17 +1848,17 @@
   },
   "Lizardman": {
     "base_attributes": {
-      "CHA": 3,
-      "CON": 5,
-      "DEX": 6,
-      "LER": 4,
+      "Charisma": 3,
+      "Constitution": 5,
+      "Dexterity": 6,
+      "Learning": 4,
       "Life": 120,
-      "MAG": 5,
+      "Magic": 5,
       "Mana": 70,
-      "PER": 7,
-      "SPD": 80,
-      "STR": 7,
-      "WIL": 4
+      "Perception": 7,
+      "Speed": 80,
+      "Strength": 7,
+      "Will": 4
     },
     "base_skills": {
       "Evasion": 2,
@@ -1900,17 +1900,17 @@
   },
   "Machine": {
     "base_attributes": {
-      "CHA": 6,
-      "CON": 10,
-      "DEX": 7,
-      "LER": 5,
+      "Charisma": 6,
+      "Constitution": 10,
+      "Dexterity": 7,
+      "Learning": 5,
       "Life": 100,
-      "MAG": 5,
+      "Magic": 5,
       "Mana": 80,
-      "PER": 9,
-      "SPD": 65,
-      "STR": 7,
-      "WIL": 12
+      "Perception": 9,
+      "Speed": 65,
+      "Strength": 7,
+      "Will": 12
     },
     "base_skills": {
       "Disarm Trap": 3,
@@ -1953,17 +1953,17 @@
   },
   "Machinegod": {
     "base_attributes": {
-      "CHA": 10,
-      "CON": 14,
-      "DEX": 11,
-      "LER": 12,
+      "Charisma": 10,
+      "Constitution": 14,
+      "Dexterity": 11,
+      "Learning": 12,
       "Life": 200,
-      "MAG": 8,
+      "Magic": 8,
       "Mana": 80,
-      "PER": 24,
-      "SPD": 70,
-      "STR": 15,
-      "WIL": 15
+      "Perception": 24,
+      "Speed": 70,
+      "Strength": 15,
+      "Will": 15
     },
     "base_skills": {
       "Firearm": 30,
@@ -2002,17 +2002,17 @@
   },
   "Mandrake": {
     "base_attributes": {
-      "CHA": 4,
-      "CON": 6,
-      "DEX": 5,
-      "LER": 8,
+      "Charisma": 4,
+      "Constitution": 6,
+      "Dexterity": 5,
+      "Learning": 8,
       "Life": 70,
-      "MAG": 10,
+      "Magic": 10,
       "Mana": 80,
-      "PER": 10,
-      "SPD": 60,
-      "STR": 5,
-      "WIL": 8
+      "Perception": 10,
+      "Speed": 60,
+      "Strength": 5,
+      "Will": 8
     },
     "base_skills": {
       "Literacy": 2,
@@ -2048,17 +2048,17 @@
   },
   "Medusa": {
     "base_attributes": {
-      "CHA": 5,
-      "CON": 6,
-      "DEX": 8,
-      "LER": 7,
+      "Charisma": 5,
+      "Constitution": 6,
+      "Dexterity": 8,
+      "Learning": 7,
       "Life": 100,
-      "MAG": 11,
+      "Magic": 11,
       "Mana": 110,
-      "PER": 7,
-      "SPD": 70,
-      "STR": 7,
-      "WIL": 9
+      "Perception": 7,
+      "Speed": 70,
+      "Strength": 7,
+      "Will": 9
     },
     "base_skills": {
       "Control Magic": 3,
@@ -2096,17 +2096,17 @@
   },
   "Metal": {
     "base_attributes": {
-      "CHA": 16,
-      "CON": 1,
-      "DEX": 3,
-      "LER": 2,
+      "Charisma": 16,
+      "Constitution": 1,
+      "Dexterity": 3,
+      "Learning": 2,
       "Life": 1,
-      "MAG": 4,
+      "Magic": 4,
       "Mana": 100,
-      "PER": 32,
-      "SPD": 640,
-      "STR": 4,
-      "WIL": 4
+      "Perception": 32,
+      "Speed": 640,
+      "Strength": 4,
+      "Will": 4
     },
     "base_skills": {
       "Greater Evasion": 6,
@@ -2142,17 +2142,17 @@
   },
   "Minotaur": {
     "base_attributes": {
-      "CHA": 4,
-      "CON": 8,
-      "DEX": 3,
-      "LER": 3,
+      "Charisma": 4,
+      "Constitution": 8,
+      "Dexterity": 3,
+      "Learning": 3,
       "Life": 160,
-      "MAG": 7,
+      "Magic": 7,
       "Mana": 60,
-      "PER": 4,
-      "SPD": 65,
-      "STR": 12,
-      "WIL": 4
+      "Perception": 4,
+      "Speed": 65,
+      "Strength": 12,
+      "Will": 4
     },
     "base_skills": {
       "Eye of Mind": 3,
@@ -2191,17 +2191,17 @@
   },
   "Mushroom": {
     "base_attributes": {
-      "CHA": 4,
-      "CON": 7,
-      "DEX": 4,
-      "LER": 4,
+      "Charisma": 4,
+      "Constitution": 7,
+      "Dexterity": 4,
+      "Learning": 4,
       "Life": 50,
-      "MAG": 10,
+      "Magic": 10,
       "Mana": 80,
-      "PER": 8,
-      "SPD": 60,
-      "STR": 5,
-      "WIL": 8
+      "Perception": 8,
+      "Speed": 60,
+      "Strength": 5,
+      "Will": 8
     },
     "base_skills": {
       "Alchemy": 2,
@@ -2236,17 +2236,17 @@
   },
   "Mutant": {
     "base_attributes": {
-      "CHA": 1,
-      "CON": 5,
-      "DEX": 5,
-      "LER": 7,
+      "Charisma": 1,
+      "Constitution": 5,
+      "Dexterity": 5,
+      "Learning": 7,
       "Life": 100,
-      "MAG": 7,
+      "Magic": 7,
       "Mana": 100,
-      "PER": 7,
-      "SPD": 70,
-      "STR": 9,
-      "WIL": 9
+      "Perception": 7,
+      "Speed": 70,
+      "Strength": 9,
+      "Will": 9
     },
     "base_skills": {
       "Healing": 4,
@@ -2281,17 +2281,17 @@
   },
   "Norland": {
     "base_attributes": {
-      "CHA": 6,
-      "CON": 8,
-      "DEX": 6,
-      "LER": 7,
+      "Charisma": 6,
+      "Constitution": 8,
+      "Dexterity": 6,
+      "Learning": 7,
       "Life": 100,
-      "MAG": 7,
+      "Magic": 7,
       "Mana": 90,
-      "PER": 6,
-      "SPD": 70,
-      "STR": 8,
-      "WIL": 9
+      "Perception": 6,
+      "Speed": 70,
+      "Strength": 8,
+      "Will": 9
     },
     "base_skills": {
       "Casting": 3,
@@ -2335,17 +2335,17 @@
   },
   "Orc": {
     "base_attributes": {
-      "CHA": 2,
-      "CON": 6,
-      "DEX": 3,
-      "LER": 2,
+      "Charisma": 2,
+      "Constitution": 6,
+      "Dexterity": 3,
+      "Learning": 2,
       "Life": 130,
-      "MAG": 4,
+      "Magic": 4,
       "Mana": 80,
-      "PER": 2,
-      "SPD": 70,
-      "STR": 5,
-      "WIL": 3
+      "Perception": 2,
+      "Speed": 70,
+      "Strength": 5,
+      "Will": 3
     },
     "base_skills": {
       "Healing": 3,
@@ -2387,17 +2387,17 @@
   },
   "Phantom": {
     "base_attributes": {
-      "CHA": 4,
-      "CON": 6,
-      "DEX": 8,
-      "LER": 6,
+      "Charisma": 4,
+      "Constitution": 6,
+      "Dexterity": 8,
+      "Learning": 6,
       "Life": 60,
-      "MAG": 9,
+      "Magic": 9,
       "Mana": 90,
-      "PER": 7,
-      "SPD": 85,
-      "STR": 6,
-      "WIL": 6
+      "Perception": 7,
+      "Speed": 85,
+      "Strength": 6,
+      "Will": 6
     },
     "base_skills": {
       "Disarm Trap": 3,
@@ -2435,17 +2435,17 @@
   },
   "Piece": {
     "base_attributes": {
-      "CHA": 4,
-      "CON": 7,
-      "DEX": 6,
-      "LER": 5,
+      "Charisma": 4,
+      "Constitution": 7,
+      "Dexterity": 6,
+      "Learning": 5,
       "Life": 120,
-      "MAG": 10,
+      "Magic": 10,
       "Mana": 80,
-      "PER": 4,
-      "SPD": 70,
-      "STR": 9,
-      "WIL": 9
+      "Perception": 4,
+      "Speed": 70,
+      "Strength": 9,
+      "Will": 9
     },
     "base_skills": {
       "Literacy": 3,
@@ -2486,17 +2486,17 @@
   },
   "Quickling": {
     "base_attributes": {
-      "CHA": 7,
-      "CON": 4,
-      "DEX": 18,
-      "LER": 5,
+      "Charisma": 7,
+      "Constitution": 4,
+      "Dexterity": 18,
+      "Learning": 5,
       "Life": 3,
-      "MAG": 9,
+      "Magic": 9,
       "Mana": 40,
-      "PER": 16,
-      "SPD": 750,
-      "STR": 2,
-      "WIL": 8
+      "Perception": 16,
+      "Speed": 750,
+      "Strength": 2,
+      "Will": 8
     },
     "base_skills": {
       "Evasion": 7,
@@ -2537,17 +2537,17 @@
   },
   "Rabbit": {
     "base_attributes": {
-      "CHA": 10,
-      "CON": 4,
-      "DEX": 6,
-      "LER": 5,
+      "Charisma": 10,
+      "Constitution": 4,
+      "Dexterity": 6,
+      "Learning": 5,
       "Life": 90,
-      "MAG": 4,
+      "Magic": 4,
       "Mana": 80,
-      "PER": 11,
-      "SPD": 100,
-      "STR": 5,
-      "WIL": 4
+      "Perception": 11,
+      "Speed": 100,
+      "Strength": 5,
+      "Will": 4
     },
     "base_skills": {
       "Martial Arts": 1,
@@ -2584,17 +2584,17 @@
   },
   "Rat": {
     "base_attributes": {
-      "CHA": 3,
-      "CON": 4,
-      "DEX": 8,
-      "LER": 3,
+      "Charisma": 3,
+      "Constitution": 4,
+      "Dexterity": 8,
+      "Learning": 3,
       "Life": 80,
-      "MAG": 2,
+      "Magic": 2,
       "Mana": 80,
-      "PER": 10,
-      "SPD": 75,
-      "STR": 5,
-      "WIL": 3
+      "Perception": 10,
+      "Speed": 75,
+      "Strength": 5,
+      "Will": 3
     },
     "base_skills": {
       "Anatomy": 2,
@@ -2631,17 +2631,17 @@
   },
   "Rock": {
     "base_attributes": {
-      "CHA": 10,
-      "CON": 22,
-      "DEX": 3,
-      "LER": 2,
+      "Charisma": 10,
+      "Constitution": 22,
+      "Dexterity": 3,
+      "Learning": 2,
       "Life": 40,
-      "MAG": 4,
+      "Magic": 4,
       "Mana": 50,
-      "PER": 8,
-      "SPD": 70,
-      "STR": 8,
-      "WIL": 3
+      "Perception": 8,
+      "Speed": 70,
+      "Strength": 8,
+      "Will": 3
     },
     "base_skills": {
       "Martial Arts": 1,
@@ -2675,17 +2675,17 @@
   },
   "Roran": {
     "base_attributes": {
-      "CHA": 10,
-      "CON": 6,
-      "DEX": 5,
-      "LER": 7,
+      "Charisma": 10,
+      "Constitution": 6,
+      "Dexterity": 5,
+      "Learning": 7,
       "Life": 100,
-      "MAG": 7,
+      "Magic": 7,
       "Mana": 80,
-      "PER": 7,
-      "SPD": 95,
-      "STR": 4,
-      "WIL": 6
+      "Perception": 7,
+      "Speed": 95,
+      "Strength": 4,
+      "Will": 6
     },
     "base_skills": {
       "Investing": 2,
@@ -2728,17 +2728,17 @@
   },
   "Servant": {
     "base_attributes": {
-      "CHA": 6,
-      "CON": 6,
-      "DEX": 6,
-      "LER": 6,
+      "Charisma": 6,
+      "Constitution": 6,
+      "Dexterity": 6,
+      "Learning": 6,
       "Life": 90,
-      "MAG": 6,
+      "Magic": 6,
       "Mana": 150,
-      "PER": 6,
-      "SPD": 100,
-      "STR": 6,
-      "WIL": 6
+      "Perception": 6,
+      "Speed": 100,
+      "Strength": 6,
+      "Will": 6
     },
     "base_skills": {
       "Casting": 4,
@@ -2785,17 +2785,17 @@
   },
   "Sheep": {
     "base_attributes": {
-      "CHA": 8,
-      "CON": 6,
-      "DEX": 5,
-      "LER": 4,
+      "Charisma": 8,
+      "Constitution": 6,
+      "Dexterity": 5,
+      "Learning": 4,
       "Life": 130,
-      "MAG": 4,
+      "Magic": 4,
       "Mana": 80,
-      "PER": 6,
-      "SPD": 60,
-      "STR": 6,
-      "WIL": 5
+      "Perception": 6,
+      "Speed": 60,
+      "Strength": 6,
+      "Will": 5
     },
     "base_skills": {
       "Anatomy": 3,
@@ -2834,17 +2834,17 @@
   },
   "Shell": {
     "base_attributes": {
-      "CHA": 4,
-      "CON": 7,
-      "DEX": 5,
-      "LER": 4,
+      "Charisma": 4,
+      "Constitution": 7,
+      "Dexterity": 5,
+      "Learning": 4,
       "Life": 100,
-      "MAG": 3,
+      "Magic": 3,
       "Mana": 80,
-      "PER": 4,
-      "SPD": 20,
-      "STR": 7,
-      "WIL": 5
+      "Perception": 4,
+      "Speed": 20,
+      "Strength": 7,
+      "Will": 5
     },
     "base_skills": {
       "Martial Arts": 1,
@@ -2878,17 +2878,17 @@
   },
   "Skeleton": {
     "base_attributes": {
-      "CHA": 4,
-      "CON": 7,
-      "DEX": 8,
-      "LER": 4,
+      "Charisma": 4,
+      "Constitution": 7,
+      "Dexterity": 8,
+      "Learning": 4,
       "Life": 100,
-      "MAG": 9,
+      "Magic": 9,
       "Mana": 80,
-      "PER": 6,
-      "SPD": 70,
-      "STR": 8,
-      "WIL": 6
+      "Perception": 6,
+      "Speed": 70,
+      "Strength": 8,
+      "Will": 6
     },
     "base_skills": {
       "Lock Picking": 3,
@@ -2931,17 +2931,17 @@
   },
   "Slime": {
     "base_attributes": {
-      "CHA": 13,
-      "CON": 5,
-      "DEX": 7,
-      "LER": 6,
+      "Charisma": 13,
+      "Constitution": 5,
+      "Dexterity": 7,
+      "Learning": 6,
       "Life": 80,
-      "MAG": 4,
+      "Magic": 4,
       "Mana": 100,
-      "PER": 5,
-      "SPD": 55,
-      "STR": 4,
-      "WIL": 8
+      "Perception": 5,
+      "Speed": 55,
+      "Strength": 4,
+      "Will": 8
     },
     "base_skills": {
       "Evasion": 2,
@@ -2975,17 +2975,17 @@
   },
   "Snail": {
     "base_attributes": {
-      "CHA": 4,
-      "CON": 5,
-      "DEX": 3,
-      "LER": 3,
+      "Charisma": 4,
+      "Constitution": 5,
+      "Dexterity": 3,
+      "Learning": 3,
       "Life": 100,
-      "MAG": 2,
+      "Magic": 2,
       "Mana": 80,
-      "PER": 6,
-      "SPD": 25,
-      "STR": 4,
-      "WIL": 4
+      "Perception": 6,
+      "Speed": 25,
+      "Strength": 4,
+      "Will": 4
     },
     "base_skills": {
       "Martial Arts": 1,
@@ -3018,17 +3018,17 @@
   },
   "Snake": {
     "base_attributes": {
-      "CHA": 4,
-      "CON": 9,
-      "DEX": 8,
-      "LER": 4,
+      "Charisma": 4,
+      "Constitution": 9,
+      "Dexterity": 8,
+      "Learning": 4,
       "Life": 100,
-      "MAG": 6,
+      "Magic": 6,
       "Mana": 80,
-      "PER": 10,
-      "SPD": 70,
-      "STR": 6,
-      "WIL": 6
+      "Perception": 10,
+      "Speed": 70,
+      "Strength": 6,
+      "Will": 6
     },
     "base_skills": {
       "Martial Arts": 2,
@@ -3061,17 +3061,17 @@
   },
   "Spider": {
     "base_attributes": {
-      "CHA": 4,
-      "CON": 5,
-      "DEX": 9,
-      "LER": 5,
+      "Charisma": 4,
+      "Constitution": 5,
+      "Dexterity": 9,
+      "Learning": 5,
       "Life": 50,
-      "MAG": 8,
+      "Magic": 8,
       "Mana": 80,
-      "PER": 12,
-      "SPD": 120,
-      "STR": 5,
-      "WIL": 6
+      "Perception": 12,
+      "Speed": 120,
+      "Strength": 5,
+      "Will": 6
     },
     "base_skills": {
       "Anatomy": 5,
@@ -3105,17 +3105,17 @@
   },
   "Spirit": {
     "base_attributes": {
-      "CHA": 4,
-      "CON": 9,
-      "DEX": 5,
-      "LER": 8,
+      "Charisma": 4,
+      "Constitution": 9,
+      "Dexterity": 5,
+      "Learning": 8,
       "Life": 100,
-      "MAG": 13,
+      "Magic": 13,
       "Mana": 80,
-      "PER": 7,
-      "SPD": 60,
-      "STR": 5,
-      "WIL": 10
+      "Perception": 7,
+      "Speed": 60,
+      "Strength": 5,
+      "Will": 10
     },
     "base_skills": {
       "Casting": 3,
@@ -3154,17 +3154,17 @@
   },
   "Stalker": {
     "base_attributes": {
-      "CHA": 3,
-      "CON": 8,
-      "DEX": 5,
-      "LER": 7,
+      "Charisma": 3,
+      "Constitution": 8,
+      "Dexterity": 5,
+      "Learning": 7,
       "Life": 120,
-      "MAG": 9,
+      "Magic": 9,
       "Mana": 140,
-      "PER": 11,
-      "SPD": 100,
-      "STR": 9,
-      "WIL": 6
+      "Perception": 11,
+      "Speed": 100,
+      "Strength": 9,
+      "Will": 6
     },
     "base_skills": {
       "Eye of Mind": 3,
@@ -3201,17 +3201,17 @@
   },
   "Troll": {
     "base_attributes": {
-      "CHA": 3,
-      "CON": 9,
-      "DEX": 1,
-      "LER": 2,
+      "Charisma": 3,
+      "Constitution": 9,
+      "Dexterity": 1,
+      "Learning": 2,
       "Life": 90,
-      "MAG": 3,
+      "Magic": 3,
       "Mana": 80,
-      "PER": 2,
-      "SPD": 60,
-      "STR": 10,
-      "WIL": 2
+      "Perception": 2,
+      "Speed": 60,
+      "Strength": 10,
+      "Will": 2
     },
     "base_skills": {
       "Healing": 40,
@@ -3249,17 +3249,17 @@
   },
   "Undeadgod": {
     "base_attributes": {
-      "CHA": 7,
-      "CON": 13,
-      "DEX": 14,
-      "LER": 16,
+      "Charisma": 7,
+      "Constitution": 13,
+      "Dexterity": 14,
+      "Learning": 16,
       "Life": 150,
-      "MAG": 28,
+      "Magic": 28,
       "Mana": 500,
-      "PER": 18,
-      "SPD": 110,
-      "STR": 10,
-      "WIL": 18
+      "Perception": 18,
+      "Speed": 110,
+      "Strength": 10,
+      "Will": 18
     },
     "base_skills": {
       "Control Magic": 3,
@@ -3297,17 +3297,17 @@
   },
   "Wasp": {
     "base_attributes": {
-      "CHA": 2,
-      "CON": 6,
-      "DEX": 13,
-      "LER": 4,
+      "Charisma": 2,
+      "Constitution": 6,
+      "Dexterity": 13,
+      "Learning": 4,
       "Life": 50,
-      "MAG": 3,
+      "Magic": 3,
       "Mana": 80,
-      "PER": 11,
-      "SPD": 100,
-      "STR": 7,
-      "WIL": 6
+      "Perception": 11,
+      "Speed": 100,
+      "Strength": 7,
+      "Will": 6
     },
     "base_skills": {
       "Greater Evasion": 2,
@@ -3340,17 +3340,17 @@
   },
   "Wisp": {
     "base_attributes": {
-      "CHA": 4,
-      "CON": 10,
-      "DEX": 10,
-      "LER": 10,
+      "Charisma": 4,
+      "Constitution": 10,
+      "Dexterity": 10,
+      "Learning": 10,
       "Life": 150,
-      "MAG": 15,
+      "Magic": 15,
       "Mana": 150,
-      "PER": 20,
-      "SPD": 35,
-      "STR": 5,
-      "WIL": 15
+      "Perception": 20,
+      "Speed": 35,
+      "Strength": 5,
+      "Will": 15
     },
     "base_skills": {
       "Control Magic": 3,
@@ -3384,17 +3384,17 @@
   },
   "Wolf": {
     "base_attributes": {
-      "CHA": 6,
-      "CON": 8,
-      "DEX": 6,
-      "LER": 7,
+      "Charisma": 6,
+      "Constitution": 8,
+      "Dexterity": 6,
+      "Learning": 7,
       "Life": 100,
-      "MAG": 4,
+      "Magic": 4,
       "Mana": 80,
-      "PER": 11,
-      "SPD": 80,
-      "STR": 8,
-      "WIL": 8
+      "Perception": 11,
+      "Speed": 80,
+      "Strength": 8,
+      "Will": 8
     },
     "base_skills": {
       "Evasion": 2,
@@ -3433,17 +3433,17 @@
   },
   "Wyvern": {
     "base_attributes": {
-      "CHA": 4,
-      "CON": 13,
-      "DEX": 8,
-      "LER": 5,
+      "Charisma": 4,
+      "Constitution": 13,
+      "Dexterity": 8,
+      "Learning": 5,
       "Life": 190,
-      "MAG": 8,
+      "Magic": 8,
       "Mana": 80,
-      "PER": 9,
-      "SPD": 70,
-      "STR": 11,
-      "WIL": 7
+      "Perception": 9,
+      "Speed": 70,
+      "Strength": 11,
+      "Will": 7
     },
     "base_skills": {
       "Literacy": 3,
@@ -3479,17 +3479,17 @@
   },
   "Yeek": {
     "base_attributes": {
-      "CHA": 6,
-      "CON": 7,
-      "DEX": 6,
-      "LER": 6,
+      "Charisma": 6,
+      "Constitution": 7,
+      "Dexterity": 6,
+      "Learning": 6,
       "Life": 80,
-      "MAG": 6,
+      "Magic": 6,
       "Mana": 90,
-      "PER": 7,
-      "SPD": 90,
-      "STR": 4,
-      "WIL": 4
+      "Perception": 7,
+      "Speed": 90,
+      "Strength": 4,
+      "Will": 4
     },
     "base_skills": {
       "Martial Arts": 1,
@@ -3531,17 +3531,17 @@
   },
   "Yerles": {
     "base_attributes": {
-      "CHA": 7,
-      "CON": 8,
-      "DEX": 8,
-      "LER": 12,
+      "Charisma": 7,
+      "Constitution": 8,
+      "Dexterity": 8,
+      "Learning": 12,
       "Life": 110,
-      "MAG": 8,
+      "Magic": 8,
       "Mana": 90,
-      "PER": 8,
-      "SPD": 70,
-      "STR": 7,
-      "WIL": 8
+      "Perception": 8,
+      "Speed": 70,
+      "Strength": 7,
+      "Will": 8
     },
     "base_skills": {
       "Firearm": 5,
@@ -3585,17 +3585,17 @@
   },
   "Yith": {
     "base_attributes": {
-      "CHA": 11,
-      "CON": 14,
-      "DEX": 9,
-      "LER": 6,
+      "Charisma": 11,
+      "Constitution": 14,
+      "Dexterity": 9,
+      "Learning": 6,
       "Life": 150,
-      "MAG": 11,
+      "Magic": 11,
       "Mana": 200,
-      "PER": 15,
-      "SPD": 70,
-      "STR": 13,
-      "WIL": 5
+      "Perception": 15,
+      "Speed": 70,
+      "Strength": 13,
+      "Will": 5
     },
     "base_skills": {
       "Control Magic": 4,
@@ -3631,17 +3631,17 @@
   },
   "Zombie": {
     "base_attributes": {
-      "CHA": 2,
-      "CON": 8,
-      "DEX": 2,
-      "LER": 1,
+      "Charisma": 2,
+      "Constitution": 8,
+      "Dexterity": 2,
+      "Learning": 1,
       "Life": 120,
-      "MAG": 6,
+      "Magic": 6,
       "Mana": 100,
-      "PER": 2,
-      "SPD": 45,
-      "STR": 10,
-      "WIL": 6
+      "Perception": 2,
+      "Speed": 45,
+      "Strength": 10,
+      "Will": 6
     },
     "base_skills": {
       "Cooking": 3,

@@ -14,6 +14,11 @@ String.prototype.initCap = function () {
  };
 
  $(document).ready(async () => {
+  if(typeof process === 'object'){
+    window.electron = require('electron')
+    window.__baseDir = window.__dirname + "\\assets\\";
+  }
+
     /**
      * @namespace ElonaJS
      * @property {ElonaJS.Databases} Databases A collection of data databases used by the game.
@@ -27,22 +32,38 @@ String.prototype.initCap = function () {
         Databases: require("./Databases/Databases.js"),
         UI: require("./UI/UI.js"),
         Utils: require("./Utils/Utils.js"),
-        Input: require("./Input/Input.js")
+        Input: require("./Input/Input.js"),
+        GameObjects: require("./GameObjects/GameObjects.js"),
+        State: require("./State/State.js")
     }
+
     window.Graphics = ElonaJS.Graphics;
     window.Utils = ElonaJS.Utils;
     window.DB = ElonaJS.Databases;
     window.ElonaJS = ElonaJS;
     window.UI = ElonaJS.UI;
-    window.Utils = ElonaJS.Utils;
     window.Input = ElonaJS.Input;
-    Graphics.Init();
-    await DB.Load();
-    await Utils.File.LoadFont('OpenSans', './fonts/OpenSans-Regular.ttf');
-    UI.Init();
+    window.Sys = {env :(typeof process === "object" ? "node" : "browser")};
+    window.GameObjects = ElonaJS.GameObjects;
+    window.State = ElonaJS.State;
 
+    await Utils.File.LoadFont('OpenSans', './fonts/OpenSans-Regular.ttf');
+    await DB.Graphics.Register({id: "loadlg", path: "media/graphics/loading.png"});    
+    Graphics.Init();
+    UI.Init();
+    UI.ShowLS();
+    UI.Menus.LoadingScreen.Message("Loading data...");
+    await DB.Load();
+    UI.Resize();
+    $(window).resize(function(){
+      UI.Resize();
+    });
     Input.Attach();  
-    UI.LoadMenu("AttributeRoll");
+    UI.Menus.LoadingScreen.Message("Done!", true);
+    UI.HideLS(true);
+   
+    UI.LoadMenu("TitleScreen");
+    UI.Resize();
  })
 
 /*  function sortObjByKey(value) {

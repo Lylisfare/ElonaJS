@@ -1,29 +1,40 @@
 let BaseMenu = require("./basemenu.js");
 
-/**
- * The race select menu.
- * @name RaceSelect
- * @type ElonaJS.UI.Menus.BaseMenu
- * @memberOf ElonaJS.UI.Menus
- */
+/** 
+ * The Gender Selection menu. Displays a list of genders to choose from. When this menu is loaded, it must be passed an object containing the unit to be modified. On selection, the menu will set the unit's gender, then either exit or continue along the character creation process if the flag is set.
+ * @name GenderSelect
+ * @extends ElonaJS.UI.Menus.BaseMenu
+ * @memberof! ElonaJS.UI.Menus
+*/
 let GenderSelect = new BaseMenu();
 
-GenderSelect._OnLoad = function(){
+/**
+ * @name _OnLoad
+ * @param {Object} parameters
+ * @param {Boolean} parameters.creation Whether the unit will be newly created
+ * @param {ElonaJS.GameObjects.Unit} parameters.unit The unit to be modified
+ * @memberof! ElonaJS.UI.Menus.GenderSelect
+ * @function
+ */
+GenderSelect._OnLoad = function(parameters){
+    this.parameters = parameters;
     if(this.init){
-        this.opions.current = 0;
+        this.options.current = 0;
         this.options.curpage = 0;
+        return;
     }
 
     this.init = true;
 
     let op = [];
-    let sexes = i18n("sexes.");
+
+    let sexes = DB.Misc.Search({"tag": "gender"});
 
     for(let i = 0; i < sexes.length; i++){
-        op.push({text: {i18n: sexes[i].id}});
+        op.push({text: {i18n: sexes[i].name}, data: sexes[i].id});
     }
 
-    this.options.Customize({
+    this.options.CustomizeList({
         position: {x: 75, y: 60}
     })
 
@@ -63,8 +74,15 @@ GenderSelect._OnLoad = function(){
 }
 
 GenderSelect._OnSelect = function(){
+    this.parameters.unit.SetGender(this.options.GetCurrentOption().data);
     UI.UnloadMenu(this);
-    UI.LoadMenu("ClassSelect")
+    if(this.parameters.creation) UI.LoadMenu("ClassSelect", this.parameters);
 }
+
+GenderSelect._OnBack = function(){
+    UI.UnloadMenu(this);
+    if(this.parameters.creation) UI.LoadMenu("RaceSelect", this.parameters);
+}
+
 
 module.exports = GenderSelect;

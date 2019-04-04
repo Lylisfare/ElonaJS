@@ -1,3 +1,8 @@
+'use strict';
+
+let AttributeSet = require("./attributeset.js");
+let TraitSet = require("./traitset.js");
+
 class Unit{
     constructor(){
         this.name = "Debug";
@@ -11,11 +16,29 @@ class Unit{
         this.god = "Eyth of Infidel";
         this.guild = "None";
         this.fame = 0;
-        this.traits = {
-        };
-        this.attributes = {};
+        this._traits = new TraitSet();
+        this._attributes = new AttributeSet();
     }
+
+    Traits(){return this._traits;}
+    Attributes(){return this._attributes;}
+
+
+
+    //Temporary, will go away at some point
+    GetClass(){return this.class}
+    GetGender(){return this.sex}
+    GetRace(){return this.race}
+    SetClass(name){this.class = name;}
+    SetGender(name){this.sex = name;}
+    SetRace(name){this.race = name;}
+    
+    GetAttribute(id){return this.attributes.Get(id);}
+    GetAttributes(){return this.attributes;}
+
 }
+
+module.exports = Unit;
 
 
 

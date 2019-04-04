@@ -51,6 +51,19 @@ UI.Init = function(){
     App.stage.addChild(this._masterContainer);
 }
 
+UI._lsFade = function(){
+    this._ls.container.alpha -= 0.01;
+    if(this._ls.container.alpha <= 0){
+        App.ticker.remove(this._lsFade, this);
+    }
+}
+
+UI.HideLS = function(fade){
+    if(fade){
+        App.ticker.add(this._lsFade, this);
+   } else  this._ls.container.visible = false;
+}
+
 /**
  * Displays the loading screen
  * @memberOf ElonaJS.UI
@@ -144,6 +157,45 @@ UI._ResetContainers = function(){
     //this._masterContainer.addChild(this._mapContainer);
 }
 
+UI.Resize = function(){
+    this._SetResolution();
+    this._ResizeCanvas();
+    
+    
+    //for(let i = 0; i < this._menuStack.length; i++) if(this._menuStack[i].Resize) this._menuStack[i].Resize();
+    //UI.Menus.Ripple.Resize();
+}
+
+
+UI._SetResolution = function(){
+    let dims = Utils.Parse.Dim2DInt(Settings.GetByID("canvas_resolution").value);
+
+    if(Settings.GetByID("adaptive_res").value == false){
+        App.renderer.resize(dims[0], dims[1]);
+        this._canvas.width = dims[0];
+        this._canvas.height = dims[1];
+    } else {
+        App.renderer.resize(parseInt(this._canvas.style.width), parseInt(this._canvas.style.height));
+    }
+}
+
+UI._ResizeCanvas = function(){
+    let dims = Utils.Parse.Dim2DInt(Settings.GetByID("canvas_size").value);
+
+    if(Settings.GetByID("adaptive_res").value == false){
+        if(Sys.env == "node"){
+            electron.ipcRenderer.send('resize', dims[0], dims[1]);
+        } 
+
+        this._canvas.style.width = dims[0] + "px";
+        this._canvas.style.height = dims[1] + "px";
+    } else {
+        this._canvas.style.width = window.innerWidth + "px";
+        this._canvas.style.height = window.innerHeight + "px";
+    }
+
+    this._SetResolution();
+}
 
 
 /* 

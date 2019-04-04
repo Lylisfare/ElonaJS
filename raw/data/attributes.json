@@ -42,6 +42,13 @@
             "icon": "interface.icon_mag",
             "primary": true
         },
+        "perception": {
+            "id": "Perception",
+            "full": "attributes.long.perception",
+            "short": "attributes.short.perception",
+            "icon": "interface.icon_per",
+            "primary": true
+        },
         "charisma": {
             "id": "Charisma",
             "full": "attributes.long.charisma",

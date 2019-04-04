@@ -2,6 +2,7 @@ class MultiComponent{
     constructor(params){
         this.params = $.extend(true, {}, this._default, params);
         this.id = params.id;
+        this.hidden = false;
         this.set = {};
     }
 
@@ -23,6 +24,11 @@ class MultiComponent{
         for(let i = 0, keys = Object.keys(this.set); i < keys.length; i++){
             this.set[keys[i]].Hide();
         }
+        this.hidden = true;
+    }
+
+    IsHidden(){
+        return this.hidden;
     }
 
     Scale(scale){
@@ -35,6 +41,7 @@ class MultiComponent{
         for(let i = 0, keys = Object.keys(this.set); i < keys.length; i++){
             this.set[keys[i]].Show();
         }
+        this.hidden = false;
     }
 
 

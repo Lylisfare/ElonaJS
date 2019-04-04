@@ -41,6 +41,7 @@ let UniComponent = require("./unicomponent.js");
   * @memberOf ElonaJS.UI.Components
   * @property {TextParams} _default The default parameters for a text
   * @property {TextParams} params The parameters of the text
+  * @category UIComponents
   */
 class UIText extends UniComponent {
     /**
@@ -49,6 +50,14 @@ class UIText extends UniComponent {
     constructor(params){
         super(params);
         this.sprite = Graphics.Spriting.GetText(this.params);
+        if(this.params.i18n) this.sprite.text = i18n(this.params.i18n);
+    }
+
+    GetText(){
+        return this.sprite.text;
+    }
+
+    RefreshI18n(){
         if(this.params.i18n) this.sprite.text = i18n(this.params.i18n);
     }
 

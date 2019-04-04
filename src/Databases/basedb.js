@@ -17,7 +17,7 @@ class BaseDB{
     constructor(name, indexes, master, cast){
         this.last = null;
         this.castAs = cast;
-        if(master) this.db = master.addCollection(name, indexes);
+        if(master) this.db = master.addCollection(name, {indices: indexes});
     }
 
     /**
@@ -74,7 +74,7 @@ class BaseDB{
      * @param {Object} obj The object to add
      */
     Register(obj){
-        if(this.baseClass) this.db.insert(new this.baseClass(obj));
+        if(this.castAs) this.db.insert(new this.castAs(obj));
         else this.db.insert(obj);
     }
 
@@ -107,7 +107,7 @@ class BaseDB{
      * @param {LokiDB} master The master LokiDB object 
      */
     SetDB(name, indexes, master){
-        this.db = master.addCollection(name, indexes);
+        this.db = master.addCollection(name, {indices: indexes});
     }
 }
 

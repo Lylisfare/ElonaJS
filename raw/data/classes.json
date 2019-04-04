@@ -3,14 +3,14 @@
     "id": "Archer",
     "playable": true,
     "base_attributes": {
-      "STR": 6,
-      "CON": 4,
-      "DEX": 8,
-      "PER": 5,
-      "LER": 2,
-      "WIL": 0,
-      "MAG": 0,
-      "CHA": 0
+      "Strength": 6,
+      "Constitution": 4,
+      "Dexterity": 8,
+      "Perception": 5,
+      "Learning": 2,
+      "Will": 0,
+      "Magic": 0,
+      "Charisma": 0
     },
     "base_skills": {
       "Axe": 3,
@@ -30,14 +30,14 @@
     "id": "Claymore",
     "playable": true,
     "base_attributes": {
-      "STR": 9,
-      "CON": 3,
-      "DEX": 7,
-      "PER": 6,
-      "LER": 0,
-      "WIL": 0,
-      "MAG": 4,
-      "CHA": 0
+      "Strength": 9,
+      "Constitution": 3,
+      "Dexterity": 7,
+      "Perception": 6,
+      "Learning": 0,
+      "Will": 0,
+      "Magic": 4,
+      "Charisma": 0
     },
     "base_skills": {
       "Evasion": 7,
@@ -56,14 +56,14 @@
     "id": "Farmer",
     "playable": true,
     "base_attributes": {
-      "STR": 5,
-      "CON": 5,
-      "DEX": 2,
-      "PER": 0,
-      "LER": 8,
-      "WIL": 5,
-      "MAG": 0,
-      "CHA": 0
+      "Strength": 5,
+      "Constitution": 5,
+      "Dexterity": 2,
+      "Perception": 0,
+      "Learning": 8,
+      "Will": 5,
+      "Magic": 0,
+      "Charisma": 0
     },
     "base_skills": {
       "Anatomy": 7,
@@ -83,14 +83,14 @@
     "id": "Gunner",
     "playable": false,
     "base_attributes": {
-      "STR": 0,
-      "CON": 2,
-      "DEX": 5,
-      "PER": 8,
-      "LER": 5,
-      "WIL": 4,
-      "MAG": 3,
-      "CHA": 0
+      "Strength": 0,
+      "Constitution": 2,
+      "Dexterity": 5,
+      "Perception": 8,
+      "Learning": 5,
+      "Will": 4,
+      "Magic": 3,
+      "Charisma": 0
     },
     "base_skills": {
       "Evasion": 4,
@@ -106,14 +106,14 @@
     "id": "Pianist",
     "playable": true,
     "base_attributes": {
-      "STR": 6,
-      "CON": 0,
-      "DEX": 4,
-      "PER": 5,
-      "LER": 6,
-      "WIL": 0,
-      "MAG": 4,
-      "CHA": 8
+      "Strength": 6,
+      "Constitution": 0,
+      "Dexterity": 4,
+      "Perception": 5,
+      "Learning": 6,
+      "Will": 0,
+      "Magic": 4,
+      "Charisma": 8
     },
     "base_skills": {
       "Weight Lifting": 19,
@@ -132,14 +132,14 @@
     "id": "Predator",
     "playable": false,
     "base_attributes": {
-      "STR": 8,
-      "CON": 11,
-      "DEX": 8,
-      "PER": 0,
-      "LER": 0,
-      "WIL": 0,
-      "MAG": 0,
-      "CHA": 0
+      "Strength": 8,
+      "Constitution": 11,
+      "Dexterity": 8,
+      "Perception": 0,
+      "Learning": 0,
+      "Will": 0,
+      "Magic": 0,
+      "Charisma": 0
     },
     "base_skills": {
       "Tactics": 4
@@ -151,14 +151,14 @@
     "id": "Priest",
     "playable": true,
     "base_attributes": {
-      "STR": 2,
-      "CON": 2,
-      "DEX": 0,
-      "PER": 2,
-      "LER": 2,
-      "WIL": 10,
-      "MAG": 7,
-      "CHA": 2
+      "Strength": 2,
+      "Constitution": 2,
+      "Dexterity": 0,
+      "Perception": 2,
+      "Learning": 2,
+      "Will": 10,
+      "Magic": 7,
+      "Charisma": 2
     },
     "base_skills": {
       "Blunt": 3,
@@ -178,14 +178,14 @@
     "id": "Thief",
     "playable": true,
     "base_attributes": {
-      "STR": 4,
-      "CON": 4,
-      "DEX": 8,
-      "PER": 5,
-      "LER": 4,
-      "WIL": 0,
-      "MAG": 0,
-      "CHA": 0
+      "Strength": 4,
+      "Constitution": 4,
+      "Dexterity": 8,
+      "Perception": 5,
+      "Learning": 4,
+      "Will": 0,
+      "Magic": 0,
+      "Charisma": 0
     },
     "base_skills": {
       "Bow": 3,
@@ -206,14 +206,14 @@
     "id": "Tourist",
     "playable": true,
     "base_attributes": {
-      "STR": 0,
-      "CON": 0,
-      "DEX": 0,
-      "PER": 0,
-      "LER": 0,
-      "WIL": 0,
-      "MAG": 0,
-      "CHA": 0
+      "Strength": 0,
+      "Constitution": 0,
+      "Dexterity": 0,
+      "Perception": 0,
+      "Learning": 0,
+      "Will": 0,
+      "Magic": 0,
+      "Charisma": 0
     },
     "base_skills": {
       "Fishing": 5,
@@ -226,14 +226,14 @@
     "id": "Warmage",
     "playable": true,
     "base_attributes": {
-      "STR": 6,
-      "CON": 6,
-      "DEX": 2,
-      "PER": 0,
-      "LER": 0,
-      "WIL": 4,
-      "MAG": 7,
-      "CHA": 0
+      "Strength": 6,
+      "Constitution": 6,
+      "Dexterity": 2,
+      "Perception": 0,
+      "Learning": 0,
+      "Will": 4,
+      "Magic": 7,
+      "Charisma": 0
     },
     "base_skills": {
       "Casting": 4,
@@ -253,14 +253,14 @@
     "id": "Warrior",
     "playable": true,
     "base_attributes": {
-      "STR": 10,
-      "DEX": 2,
-      "CON": 10,
-      "PER": 0,
-      "LER": 0,
-      "WIL": 3,
-      "MAG": 0,
-      "CHA": 0
+      "Strength": 10,
+      "Dexterity": 2,
+      "Constitution": 10,
+      "Perception": 0,
+      "Learning": 0,
+      "Will": 3,
+      "Magic": 0,
+      "Charisma": 0
     },
     "base_skills": {
       "Axe": 6,
@@ -284,14 +284,14 @@
     "id": "Wizard",
     "playable": true,
     "base_attributes": {
-      "STR": 0,
-      "CON": 0,
-      "DEX": 0,
-      "PER": 4,
-      "LER": 3,
-      "WIL": 8,
-      "MAG": 10,
-      "CHA": 0
+      "Strength": 0,
+      "Constitution": 0,
+      "Dexterity": 0,
+      "Perception": 4,
+      "Learning": 3,
+      "Will": 8,
+      "Magic": 10,
+      "Charisma": 0
     },
     "base_skills": {
       "Alchemy": 4,

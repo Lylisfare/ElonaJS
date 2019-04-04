@@ -21,6 +21,17 @@ class BaseMenu{
         this.options = null;
     }
 
+    /**
+     * Performs setup of the menu
+     * @abstract
+     */
+    _OnLoad(){}
+
+    /**
+     * Adds a sprite to the menu's container
+     * @function
+     * @param sprite 
+     */
     AddSprite(sprite){
         this.container.addChild(sprite);
     }
@@ -73,14 +84,14 @@ class BaseMenu{
                 this._PlaySound(this.sounds.page);
                 this.options.AlignSelector(this.position);
                 if(this._PreviewData) this._PreviewData();
-                if(this.components.PageNum) this.components.PageNum.SetText(i18n("ui.Page", {cur: this.options.GetPage(), max: this.options.GetMaxPages()}));
+                this._UpdatePage();
                 break;
             case "key_right":
                 this.options.PageUp();
                 this._PlaySound(this.sounds.page);
                 this.options.AlignSelector(this.position);
                 if(this._PreviewData) this._PreviewData();
-                if(this.components.PageNum) this.components.PageNum.SetText(i18n("ui.Page", {cur: this.options.GetPage(), max: this.options.GetMaxPages()}));
+                this._UpdatePage();
                 break;
         }
     }
@@ -95,6 +106,7 @@ class BaseMenu{
         this._UpdateBase();
         this.options.Build();
         this.options.UpdateSelector();
+        this._UpdatePage();
         this._SortElements();
         this.AlignElements();
 
@@ -135,10 +147,15 @@ class BaseMenu{
 
     _UpdateBase(){
         if(this.centered){
-            let dims = {x: 800, y: 600};
+            let dims = Graphics.GetWindowDimensions();
             this.position.x = (dims.x - this.size.w) / 2;
             this.position.y = (dims.y - this.size.h) / 2;
         }
+    }
+
+    _UpdatePage(){
+        if(this.components.PageNum) this.components.PageNum.SetText(i18n("ui.page", {cur: this.options.GetPage(), max: this.options.GetMaxPages()}));
+        if(this._OnPageChange) this._OnPageChange();
     }
 }
 

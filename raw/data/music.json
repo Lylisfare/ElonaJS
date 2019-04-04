@@ -1,1 +1,188 @@
-{"music":{"AnoSora":{"id":"AnoSora","path":"./media/music/AnoSora.webm"},"battle1":{"id":"battle1","path":"./media/music/battle1.webm"},"battle3":{"id":"battle3","path":"./media/music/battle3.webm"},"climax":{"id":"climax","path":"./media/music/climax.webm"},"cobalt":{"id":"cobalt","path":"./media/music/cobalt.webm"},"dwarf":{"id":"dwarf","path":"./media/music/dwarf.webm"},"epi1coda":{"id":"epi1coda","path":"./media/music/epi1coda.webm"},"fanfare":{"id":"fanfare","path":"./media/music/fanfare.webm"},"fantasy01":{"id":"fantasy01","path":"./media/music/fantasy01.webm"},"fantasy03":{"id":"fantasy03","path":"./media/music/fantasy03.webm"},"fantasy04":{"id":"fantasy04","path":"./media/music/fantasy04.webm"},"field1_d":{"id":"field1_d","path":"./media/music/field1_d.webm"},"gm_on":{"id":"gm_on","path":"./media/music/gm_on.webm"},"happymarch":{"id":"happymarch","path":"./media/music/happymarch.webm"},"main2":{"id":"main2","path":"./media/music/main2.webm"},"memory":{"id":"memory","path":"./media/music/memory.webm"},"memory2":{"id":"memory2","path":"./media/music/memory2.webm"},"morning_breeze":{"id":"morning_breeze","path":"./media/music/morning_breeze.webm"},"orc01":{"id":"orc01","path":"./media/music/orc01.webm"},"orc02":{"id":"orc02","path":"./media/music/orc02.webm"},"orc03":{"id":"orc03","path":"./media/music/orc03.webm"},"orc04":{"id":"orc04","path":"./media/music/orc04.webm"},"orc05":{"id":"orc05","path":"./media/music/orc05.webm"},"orc06":{"id":"orc06","path":"./media/music/orc06.webm"},"pinch2":{"id":"pinch2","path":"./media/music/pinch2.webm"},"pop01":{"id":"pop01","path":"./media/music/pop01.webm"},"pop03":{"id":"pop03","path":"./media/music/pop03.webm"},"PSML035":{"id":"PSML035","path":"./media/music/PSML035.webm"},"PSML047":{"id":"PSML047","path":"./media/music/PSML047.webm"},"PSML052":{"id":"PSML052","path":"./media/music/PSML052.webm"},"PSML060":{"id":"PSML060","path":"./media/music/PSML060.webm"},"PSML507":{"id":"PSML507","path":"./media/music/PSML507.webm"},"PSML514":{"id":"PSML514","path":"./media/music/PSML514.webm"},"PSML515":{"id":"PSML515","path":"./media/music/PSML515.webm"},"PSML516":{"id":"PSML516","path":"./media/music/PSML516.webm"},"PSML522":{"id":"PSML522","path":"./media/music/PSML522.webm"},"ruins1":{"id":"ruins1","path":"./media/music/ruins1.webm"},"soraochi":{"id":"soraochi","path":"./media/music/soraochi.webm"},"town2l":{"id":"town2l","path":"./media/music/town2l.webm"},"victory":{"id":"victory","path":"./media/music/victory.webm"},"Village":{"id":"Village","path":"./media/music/Village.webm"},"xp_epilogue1":{"id":"xp_epilogue1","path":"./media/music/xp_epilogue1.webm"},"xp_field2":{"id":"xp_field2","path":"./media/music/xp_field2.webm"},"xp_field4":{"id":"xp_field4","path":"./media/music/xp_field4.webm"},"xp_field7":{"id":"xp_field7","path":"./media/music/xp_field7.webm"},"xp_shrine2":{"id":"xp_shrine2","path":"./media/music/xp_shrine2.webm"}}}
+{
+    "music": {
+        "AnoSora": {
+            "id": "AnoSora",
+            "path": "./media/music/AnoSora.webm"
+        },
+        "battle1": {
+            "id": "battle1",
+            "path": "./media/music/battle1.webm"
+        },
+        "battle3": {
+            "id": "battle3",
+            "path": "./media/music/battle3.webm"
+        },
+        "climax": {
+            "id": "climax",
+            "path": "./media/music/climax.webm"
+        },
+        "cobalt": {
+            "id": "cobalt",
+            "path": "./media/music/cobalt.webm"
+        },
+        "dwarf": {
+            "id": "dwarf",
+            "path": "./media/music/dwarf.webm"
+        },
+        "epi1coda": {
+            "id": "epi1coda",
+            "path": "./media/music/epi1coda.webm"
+        },
+        "fanfare": {
+            "id": "fanfare",
+            "path": "./media/music/fanfare.webm"
+        },
+        "fantasy01": {
+            "id": "fantasy01",
+            "path": "./media/music/fantasy01.webm"
+        },
+        "fantasy03": {
+            "id": "fantasy03",
+            "path": "./media/music/fantasy03.webm"
+        },
+        "fantasy04": {
+            "id": "fantasy04",
+            "path": "./media/music/fantasy04.webm"
+        },
+        "field1_d": {
+            "id": "field1_d",
+            "path": "./media/music/field1_d.webm"
+        },
+        "gm_on": {
+            "id": "gm_on",
+            "path": "./media/music/gm_on.webm"
+        },
+        "happymarch": {
+            "id": "happymarch",
+            "path": "./media/music/happymarch.webm"
+        },
+        "main2": {
+            "id": "main2",
+            "path": "./media/music/main2.webm"
+        },
+        "memory": {
+            "id": "memory",
+            "path": "./media/music/memory.webm"
+        },
+        "memory2": {
+            "id": "memory2",
+            "path": "./media/music/memory2.webm"
+        },
+        "morning_breeze": {
+            "id": "morning_breeze",
+            "path": "./media/music/morning_breeze.webm"
+        },
+        "orc01": {
+            "id": "orc01",
+            "path": "./media/music/orc01.webm"
+        },
+        "orc02": {
+            "id": "orc02",
+            "path": "./media/music/orc02.webm"
+        },
+        "orc03": {
+            "id": "orc03",
+            "path": "./media/music/orc03.webm"
+        },
+        "orc04": {
+            "id": "orc04",
+            "path": "./media/music/orc04.webm"
+        },
+        "orc05": {
+            "id": "orc05",
+            "path": "./media/music/orc05.webm"
+        },
+        "orc06": {
+            "id": "orc06",
+            "path": "./media/music/orc06.webm"
+        },
+        "pinch2": {
+            "id": "pinch2",
+            "path": "./media/music/pinch2.webm"
+        },
+        "pop01": {
+            "id": "pop01",
+            "path": "./media/music/pop01.webm"
+        },
+        "pop03": {
+            "id": "pop03",
+            "path": "./media/music/pop03.webm"
+        },
+        "PSML035": {
+            "id": "PSML035",
+            "path": "./media/music/PSML035.webm"
+        },
+        "PSML047": {
+            "id": "PSML047",
+            "path": "./media/music/PSML047.webm"
+        },
+        "PSML052": {
+            "id": "PSML052",
+            "path": "./media/music/PSML052.webm"
+        },
+        "PSML060": {
+            "id": "PSML060",
+            "path": "./media/music/PSML060.webm"
+        },
+        "PSML507": {
+            "id": "PSML507",
+            "path": "./media/music/PSML507.webm"
+        },
+        "PSML514": {
+            "id": "PSML514",
+            "path": "./media/music/PSML514.webm"
+        },
+        "PSML515": {
+            "id": "PSML515",
+            "path": "./media/music/PSML515.webm"
+        },
+        "PSML516": {
+            "id": "PSML516",
+            "path": "./media/music/PSML516.webm"
+        },
+        "PSML522": {
+            "id": "PSML522",
+            "path": "./media/music/PSML522.webm"
+        },
+        "ruins1": {
+            "id": "ruins1",
+            "path": "./media/music/ruins1.webm"
+        },
+        "soraochi": {
+            "id": "soraochi",
+            "path": "./media/music/soraochi.webm"
+        },
+        "town2l": {
+            "id": "town2l",
+            "path": "./media/music/town2l.webm"
+        },
+        "victory": {
+            "id": "victory",
+            "path": "./media/music/victory.webm"
+        },
+        "Village": {
+            "id": "Village",
+            "path": "./media/music/Village.webm"
+        },
+        "xp_epilogue1": {
+            "id": "xp_epilogue1",
+            "path": "./media/music/xp_epilogue1.webm"
+        },
+        "xp_field2": {
+            "id": "xp_field2",
+            "path": "./media/music/xp_field2.webm"
+        },
+        "xp_field4": {
+            "id": "xp_field4",
+            "path": "./media/music/xp_field4.webm"
+        },
+        "xp_field7": {
+            "id": "xp_field7",
+            "path": "./media/music/xp_field7.webm"
+        },
+        "xp_shrine2": {
+            "id": "xp_shrine2",
+            "path": "./media/music/xp_shrine2.webm"
+        }
+    }
+}

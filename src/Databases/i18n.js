@@ -19,35 +19,33 @@ let i18n = new BaseDB("i18n");
  */
 i18n.Get = function(id, params){
     let lv = this.db.findOne({id: id});
-    if(lv && !params) return this._ReplaceReferences(id, lv.value, null);
-    if(lv){
-        let keys = Object.keys(params)
-        let str;
+    if(lv) lv = lv.value;
 
-        for(let i = 0; i < keys.length; i++){
-            let val = params[keys[i]];
-            if(typeof val === "string") params[keys[i]] = this._ReplaceReferences(id, val, params);
-        }
+    if(!lv) {
+        lv = this.db.find({id: {"$contains" : id}});
+        if(lv) return lv;
+        return null;
+    }
+
+    if(!params) return this._ReplaceReferences(id, lv);
+
+    if(lv){
+        let keys = Object.keys(params);
 
         if(params.count !== undefined && params.count != 1){
             let nv = this.db.findOne({id: id + "_plural"});
-            if(nv) str = nv.value;
+            if(nv) lv = nv.value;
         }
 
-        if(!str) str = lv.value;
-
-        str = this._ReplaceReferences(id, str, params);
-
-        for(let i = 0; i < keys.length; i++) {                
-            str = str.replace("%{" + keys[i] + "}", params[keys[i]]);
+        for(let i = 0; i < keys.length; i++){
+            let val = params[keys[i]];
+            lv = lv.replace("%{" + keys[i] + "}", val);
         }
 
-        return str;
+        lv = this._ReplaceReferences(id, lv, params);
+
+        return lv;
     }
-
-    lv = this.db.find({id: {"$contains" : id}});
-    if(lv) return lv;
-    return null;
 }
 
 i18n.GetObj = function(id, params){
@@ -77,7 +75,7 @@ i18n._ParseAndRegister = function(data, prefix = ""){
     let arr = Object.keys(data);
 
     for(let i = 0; i < arr.length; i++){
-        if(typeof data[arr[i]] == "object") this._ParseAndRegister(data[arr[i]], prefix + arr[i] + ".");
+        if(typeof data[arr[i]] == "object" && data[arr[i]].constructor !== Array) this._ParseAndRegister(data[arr[i]], prefix + arr[i] + ".");
         else {
             let toInsert = {id: prefix + arr[i], value: data[arr[i]]};
             this.db.insert(toInsert);
@@ -86,7 +84,7 @@ i18n._ParseAndRegister = function(data, prefix = ""){
 }
 
 i18n._ReplaceReferences = function(id, str, params){
-    let matches = /(?<=\${).*(?=})/.exec(str);
+    let matches = str.match(/(?<=\${)(.*?)(?=\})/g);
     if(matches !== null){
         for(let i = 0; i < matches.length; i++){
             if(matches[i] != id) str = str.replace("${" + matches[i] + "}", this.Get(matches[i], params));

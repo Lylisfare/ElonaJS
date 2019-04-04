@@ -1,0 +1,20 @@
+{
+    "settings": {
+        "adaptive_res": {
+            "name": "Adaptive Resolution",
+            "description": "Match canvas resolution to canvas size, and canvas size to window."
+        },
+        "canvas_size": {
+            "name": "Canvas Size",
+            "description": "Size of the canvas on the screen. Ignored if adaptive resolution is enabled."
+        },
+        "canvas_resolution": {
+            "name": "Canvas Resolution",
+            "description": "The internal size of the canvas. Ignored if adaptive resolution is enabled."
+        },
+        "fullscreen": {
+            "name": "Fullscreen",
+            "description": "Toggles fullscreen. Only works when using Electron; in browser, hit F11 instead."
+        }
+    }
+}

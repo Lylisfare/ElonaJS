@@ -2,12 +2,12 @@
 
 let env = (typeof process === "object" ? "node" : "browser");
 let fs = (env == "node" ? require("fs") : undefined);
-let nodeDir = "./resources/app";
 
 function sanitizePath(str){
     if(str.charAt(0) == ".") return str.slice(1);
     return str;
 }
+
 
 /**
  * @namespace ElonaJS.Utils.File
@@ -24,8 +24,8 @@ let file_util = {};
 file_util.GetJSON = async function(path){
     return new Promise((resolve, reject) => {
         if(env == "node"){
-            path = sanitizePath(path);
-            fs.readFile(nodeDir + path, function(err, data){
+            path = __baseDir + sanitizePath(path)
+            fs.readFile(path, function(err, data){
                 if(data) resolve(JSON.parse(data));
                 else resolve(undefined);
             })
@@ -46,8 +46,8 @@ file_util.GetJSON = async function(path){
 file_util.LoadFont = async function(name, path){
     return new Promise((resolve, reject) => {
         if(env == "node"){
-            path = sanitizePath(path);
-            fs.readFile(nodeDir + path, function(err, data){
+            path = __baseDir + sanitizePath(path)
+            fs.readFile(path, function(err, data){
                 let nf = new FontFace(name, data);
                 nf.load().then((loaded_face) => {document.fonts.add(loaded_face); resolve()});
             })

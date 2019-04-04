@@ -1,425 +1,725 @@
 {
   "traits": {
     "ft_accountant": {
-      "description_1": "You can set expenses off against tax. [TAX-7%]",
-      "description_2": "You are good at setting expenses off against tax. [TAX-15%]",
-      "name_0": "Apprentice Accountant",
-      "name_1": "Expert Accountant",
-      "display": "Working as an accountant reduces your tax payment."
+      "name": {
+        "0": "Apprentice Accountant",
+        "1": "Expert Accountant"
+      },
+      "description": {
+        "1": "You can set expenses off against tax. [TAX-7%]",
+        "2": "You are good at setting expenses off against tax. [TAX-15%]"
+      },
+      "display": {
+        "1": "Working as an accountant reduces your tax payment."
+      }
     },
     "ft_attbchr": {
-      "description_1": "You are sexy. [CHR+4]",
-      "description_2": "You are a lady killer. [CHR+8]",
-      "name_0": "Sexy",
-      "name_1": "Lady Killer",
-      "display": "You learn sexy poses."
+      "name": {
+        "0": "Sexy",
+        "1": "Lady Killer"
+      },
+      "description": {
+        "1": "You are sexy. [CHR+4]",
+        "2": "You are a lady killer. [CHR+8]"
+      },
+      "display": {
+        "1": "You learn sexy poses."
+      }
     },
     "ft_attbcon": {
-      "description_1": "You are tough. [CON+3]",
-      "description_2": "You are pretty tough. [CON+6]",
-      "description_3": "You are awfully tough. [CON+9]",
-      "name_0": "Tough",
-      "name_1": "Pretty Tough",
-      "name_2": "Awfully Tough",
-      "display": "Pushing your head against a wall makes you tougher."
+      "name": {
+        "0": "Tough",
+        "1": "Pretty Tough",
+        "2": "Awfully Tough"
+      },
+      "description": {
+        "1": "You are tough. [CON+3]",
+        "2": "You are pretty tough. [CON+6]",
+        "3": "You are awfully tough. [CON+9]"
+      },
+      "display": {
+        "1": "Pushing your head against a wall makes you tougher."
+      }
     },
     "ft_attblck": {
-      "description_1": "You are lucky",
-      "description_2": "You can rely on a good dose of luck.",
-      "description_3": "The goddess of luck smiles on you.",
-      "name_0": "Lucky",
-      "name_1": "Incredibly Lucky",
-      "name_2": "Goddess of Luck",
-      "display": "Sighting a falling star brings you luck."
+      "name": {
+        "0": "Lucky",
+        "1": "Incredibly Lucky",
+        "2": "Goddess of Luck"
+      },
+      "description": {
+        "1": "You are lucky.",
+        "2": "You can rely on a good dose of luck.",
+        "3": "The goddess of luck smiles on you."
+      },
+      "display": {
+        "1": "Sighting a falling star brings you luck."
+      }
     },
     "ft_attblife": {
-      "description_1": "You are an apprentice of an ascetic. [HP+5%]",
-      "description_2": "You are a journeyman of an ascetic. [HP+10%]",
-      "description_3": "You are an expert of an ascetic. [HP+15%]",
-      "description_4": "You are a master of an ascetic. [HP+20%]",
-      "description_5": "You are an legendary ascetic. [HP+25%]",
-      "name_0": "Apprentice Ascetic",
-      "name_1": "Journeyman Ascetic",
-      "name_2": "Expert Ascetic",
-      "name_3": "Master Ascetic",
-      "name_4": "Legendary Ascetic",
-      "display": "Being an ascetic increases your HP."
+      "name": {
+        "0": "Apprentice Ascetic",
+        "1": "Journeyman Ascetic",
+        "2": "Expert Ascetic",
+        "3": "Master Ascetic",
+        "4": "Legendary Ascetic"
+      },
+      "description": {
+        "1": "You are an apprentice of an ascetic. [HP+5%]",
+        "2": "You are a journeyman of an ascetic. [HP+10%]",
+        "3": "You are an expert of an ascetic. [HP+15%]",
+        "4": "You are a master of an ascetic. [HP+20%]",
+        "5": "You are an legendary ascetic. [HP+25%]"
+      },
+      "display": {
+        "1": "Being an ascetic increases your HP."
+      }
     },
     "ft_attbmana": {
-      "description_1": "Your genes contain magic. [MP+5%]",
-      "description_2": "Your cells contain magica [MP+10%]",
-      "description_3": "Your blood contain magic [MP+15%]",
-      "description_4": "Your body is made of magic. [MP+20%]",
-      "description_5": "Magic dominats your entire body. [MP+25%",
-      "name_0": "Magical Gene",
-      "name_1": "Magical Cell",
-      "name_2": "Magical Blood",
-      "name_3": "Magic Body",
-      "name_4": "Magic Being",
-      "display": "You gain MP by using gene manipulation."
+      "name": {
+        "0": "Magical Gene",
+        "1": "Magical Cell",
+        "2": "Magical Blood",
+        "3": "Magic Body",
+        "4": "Magic Being"
+      },
+      "description": {
+        "1": "Your genes contain magic. [MP+5%]",
+        "2": "Your cells contain magica [MP+10%]",
+        "3": "Your blood contain magic [MP+15%]",
+        "4": "Your body is made of magic. [MP+20%]",
+        "5": "Magic dominats your entire body. [MP+25%]"
+      },
+      "display": {
+        "1": "You gain MP by using gene manipulation."
+      }
     },
     "ft_attbspd": {
-      "description_1": "You can run fast. [SPD+5]",
-      "description_2": "You can run faster than a cat. [SPD+10]",
-      "name_0": "Agile",
-      "name_1": "Very Agile",
-      "display": "Chasing cats increases your speed."
+      "name": {
+        "0": "Agile",
+        "1": "Very Agile"
+      },
+      "description": {
+        "1": "You can run fast. [SPD+5]",
+        "2": "You can run faster than a cat. [SPD+10]"
+      },
+      "display": {
+        "1": "Chasing cats increases your speed."
+      }
     },
     "ft_attbstr": {
-      "description_1": "You are an arm wrestler. [STR+3]",
-      "description_2": "You are a good arm wrestler. [STR+6]",
-      "description_3": "You are a master of arm wrestling. [STR+9]",
-      "name_0": "Arm Wrestler",
-      "name_1": "Adept Arm Wrestler",
-      "name_2": "Master Arm Wrestler",
-      "display": "Training arm wrestling increases your strength."
+      "name": {
+        "0": "Arm Wrestler",
+        "1": "Adept Arm Wrestler",
+        "2": "Master Arm Wrestler"
+      },
+      "description": {
+        "1": "You are an arm wrestler. [STR+3]",
+        "2": "You are a good arm wrestler. [STR+6]",
+        "3": "You are a master of arm wrestling. [STR+9]"
+      },
+      "display": {
+        "1": "Training arm wrestling increases your strength."
+      }
     },
     "ft_breathfire": {
-      "description_1": "You can breath fire.",
-      "name_0": "Fire Breath",
-      "display": "Too much drinking makes you want to breath fire."
+      "name": {
+        "0": "Fire Breath"
+      },
+      "description": {
+        "1": "You can breath fire."
+      },
+      "display": {
+        "1": "Too much drinking makes you want to breath fire."
+      }
     },
     "ft_dimensionmove": {
-      "description_1": "You can insta-teleport to nearby tiles.",
-      "name_0": "Dimensional Move",
-      "display": "You hit upon an idea of insta-teleport from a dream."
+      "name": {
+        "0": "Dimensional Move"
+      },
+      "description": {
+        "1": "You can insta-teleport to nearby tiles."
+      },
+      "display": {
+        "1": "You hit upon an idea of insta-teleport from a dream."
+      }
     },
     "ft_dv": {
-      "description_1": "You can somewhat dodge enemy attacks. [DV+4]",
-      "description_2": "You can dodge enemy attacks. [DV+8]",
-      "description_3": "You can really dodge enemy attacks. [DV+12]",
-      "name_0": "Dodge",
-      "name_1": "Improved Dodge",
-      "name_2": "Greater Dodge",
-      "display": "You learn how to dodge attacks."
+      "name": {
+        "0": "Dodge",
+        "1": "Improved Dodge",
+        "2": "Greater Dodge"
+      },
+      "description": {
+        "1": "You can somewhat dodge enemy attacks. [DV+4]",
+        "2": "You can dodge enemy attacks. [DV+8]",
+        "3": "You can really dodge enemy attacks. [DV+12]"
+      },
+      "display": {
+        "1": "You learn how to dodge attacks."
+      }
     },
     "ft_exorcist": {
-      "description_1": "Your prayer nullifies cursed whisperings.",
-      "name_0": "Exorcist",
-      "display": "Your prayer weakens the power of cursed whisperings."
+      "name": {
+        "0": "Exorcist"
+      },
+      "description": {
+        "1": "Your prayer nullifies cursed whisperings."
+      },
+      "display": {
+        "1": "Your prayer weakens the power of cursed whisperings."
+      }
     },
     "ft_gentleface": {
-      "description_1": "Your attacks don't cause enemies to run.",
-      "name_0": "Gentle Face",
-      "display": "Your gentle face prevents your enemies from escaping."
+      "name": {
+        "0": "Gentle Face"
+      },
+      "description": {
+        "1": "Your attacks don't cause enemies to run."
+      },
+      "display": {
+        "1": "Your gentle face prevents your enemies from escaping."
+      }
     },
     "ft_leader": {
-      "description_1": "You can temporally strengthen your allies.",
-      "name_0": "Natural Leader",
-      "display": "You find how to strengthen your allies for a short time."
+      "name": {
+        "0": "Natural Leader"
+      },
+      "description": {
+        "1": "You can temporally strengthen your allies."
+      },
+      "display": {
+        "1": "You find how to strengthen your allies for a short time."
+      }
     },
     "ft_pv": {
-      "description_1": "Your defense is as hard as stone. [PV+5]",
-      "description_2": "Your defense is as hard as iron. [PV+10]",
-      "description_3": "Your defense is as hard as steel. [PV+15]",
-      "name_0": "Stone Defense",
-      "name_1": "Iron Defense",
-      "name_2": "Steel Defense",
-      "display": "You establish your own defensive style."
+      "name": {
+        "0": "Stone Defense",
+        "1": "Iron Defense",
+        "2": "Steel Defense"
+      },
+      "description": {
+        "1": "Your defense is as hard as stone. [PV+5]",
+        "2": "Your defense is as hard as iron. [PV+10]",
+        "3": "Your defense is as hard as steel. [PV+15]"
+      },
+      "display": {
+        "1": "You establish your own defensive style."
+      }
     },
     "ft_quartermaster": {
-      "description_1": "You sometimes receive quality supplies.",
-      "description_2": "You frequently receive quality supplies.",
-      "name_0": "Apprentice Quartermaster",
-      "name_1": "Expert Quartermaster",
-      "display": "Working as a quartermaster gives you better payoff."
+      "name": {
+        "0": "Apprentice Quartermaster",
+        "1": "Expert Quartermaster"
+      },
+      "description": {
+        "1": "You sometimes receive quality supplies.",
+        "2": "You frequently receive quality supplies."
+      },
+      "display": {
+        "1": "Working as a quartermaster gives you better payoff."
+      }
     },
     "ft_resistdark": {
-      "description_1": "You don't fear darkness. [RES Darkness+]",
-      "description_2": "You can dance in darkness. [RES Darkness++]",
-      "name_0": "Conquer Darkness",
-      "name_1": "Conquer Deep Darkness",
-      "display": "Living in darkness makes you resistant to darkness."
+      "name": {
+        "0": "Conquer Darkness",
+        "1": "Conquer Deep Darkness"
+      },
+      "description": {
+        "1": "You don't fear darkness. [RES Darkness+]",
+        "2": "You can dance in darkness. [RES Darkness++]"
+      },
+      "display": {
+        "1": "Living in darkness makes you resistant to darkness."
+      }
     },
     "ft_resistpoison": {
-      "description_1": "You have a torerance to poison. [RES Poison+]",
-      "description_2": "You have a strong tolerance to poison. [RES Poison++]",
-      "name_0": "Poison Tolerance",
-      "name_1": "More Poison Tolerance",
-      "display": "Being a taster for a noble grants you resistance to poison."
+      "name": {
+        "0": "Poison Tolerance",
+        "1": "More Poison Tolerance"
+      },
+      "description": {
+        "1": "You have a torerance to poison. [RES Poison+]",
+        "2": "You have a strong tolerance to poison. [RES Poison++]"
+      },
+      "display": {
+        "1": "Being a taster for a noble grants you resistance to poison."
+      }
     },
     "ft_shieldbash": {
-      "description_1": "You can bash with your shield more frequently.",
-      "name_0": "Shield Bash",
-      "display": "Mastering shield increases your chance of shield bash."
+      "name": {
+        "0": "Shield Bash"
+      },
+      "description": {
+        "1": "You can bash with your shield more frequently."
+      },
+      "display": {
+        "1": "Mastering shield increases your chance of shield bash."
+      }
     },
     "ft_skillcasting": {
-      "description_1": "You concentrate while casting. [Casting+4]",
-      "description_2": "You concentrate more while casting. [Casting+8]",
-      "name_0": "Concentration",
-      "name_1": "More Concentration",
-      "display": "Daily meditation increases your casting skill."
+      "name": {
+        "0": "Concentration",
+        "1": "More Concentration"
+      },
+      "description": {
+        "1": "You concentrate while casting. [Casting+4]",
+        "2": "You concentrate more while casting. [Casting+8]"
+      },
+      "display": {
+        "1": "Daily meditation increases your casting skill."
+      }
     },
     "ft_skilldetection": {
-      "description_1": "You are cautious about traps. [Detection+3]",
-      "description_2": "You are very cautious about traps. [Detection+6]",
-      "name_0": "Careful",
-      "name_1": "Very Careful",
-      "display": "You search around carefully to spot traps."
+      "name": {
+        "0": "Careful",
+        "1": "Very Careful"
+      },
+      "description": {
+        "1": "You are cautious about traps. [Detection+3]",
+        "2": "You are very cautious about traps. [Detection+6]"
+      },
+      "display": {
+        "1": "You search around carefully to spot traps."
+      }
     },
     "ft_skilldualwield": {
-      "description_1": "You can handle multiple weapons. [Dual Wield+4]",
-      "description_2": "You mastered multiple weapon style. [Two Wield+8]",
-      "name_0": "Ambidextrous",
-      "name_1": "Improved Ambidextrous",
-      "display": "Years of training increases your two weapon fighting skill."
+      "name": {
+        "0": "Ambidextrous",
+        "1": "Improved Ambidextrous"
+      },
+      "description": {
+        "1": "You can handle multiple weapons. [Dual Wield+4]",
+        "2": "You mastered multiple weapon style. [Two Wield+8]"
+      },
+      "display": {
+        "1": "Years of training increases your two weapon fighting skill."
+      }
     },
     "ft_skillfaith": {
-      "description_1": "You really believe in god. [Faith+4]",
-      "description_2": "You are a zealot. [Faith+8]",
-      "name_0": "Believer",
-      "name_1": "Zealot",
-      "display": "Training under a priest deepens your faith."
+      "name": {
+        "0": "Believer",
+        "1": "Zealot"
+      },
+      "description": {
+        "1": "You really believe in god. [Faith+4]",
+        "2": "You are a zealot. [Faith+8]"
+      },
+      "display": {
+        "1": "Training under a priest deepens your faith."
+      }
     },
     "ft_skillmartial": {
-      "description_1": "You know martial arts. [Martial Arts+3]",
-      "description_2": "You mastered martial arts. [Martial Arts+6]",
-      "name_0": "Martial Artist",
-      "name_1": "Ken-Sei",
-      "display": "You learn tricks of martial arts from fighting in streets."
+      "name": {
+        "0": "Martial Artist",
+        "1": "Ken-Sei"
+      },
+      "description": {
+        "1": "You know martial arts. [Martial Arts+3]",
+        "2": "You mastered martial arts. [Martial Arts+6]"
+      },
+      "display": {
+        "1": "You learn tricks of martial arts from fighting in streets."
+      }
     },
     "ft_skillnegotiation": {
-      "description_1": "You are a negotiator. [Negotiation+4]",
-      "description_2": "You are a great negotiator. [Negotiation+8]",
-      "name_0": "Negotiator",
-      "name_1": "Great Negotiator",
-      "display": "Working under a trader improves your negotiation skill."
+      "name": {
+        "0": "Negotiator",
+        "1": "Great Negotiator"
+      },
+      "description": {
+        "1": "You are a negotiator. [Negotiation+4]",
+        "2": "You are a great negotiator. [Negotiation+8]"
+      },
+      "display": {
+        "1": "Working under a trader improves your negotiation skill."
+      }
     },
     "ft_stamina": {
-      "description_1": "You have good stamina. [Stamina+]",
-      "description_2": "You have very good stamina. [Stamina++]",
-      "description_3": "You have outstanding stamina. [Stamina+++]",
-      "name_0": "Short Distance Runner",
-      "name_1": "Middle Distance Runner",
-      "name_2": "Long Distance Runner",
-      "display": "Years of training strengthens your stamina."
+      "name": {
+        "0": "Short Distance Runner",
+        "1": "Middle Distance Runner",
+        "2": "Long Distance Runner"
+      },
+      "description": {
+        "1": "You have good stamina. [Stamina+]",
+        "2": "You have very good stamina. [Stamina++]",
+        "3": "You have outstanding stamina. [Stamina+++]"
+      },
+      "display": {
+        "1": "Years of training strengthens your stamina."
+      }
     },
     "ft_touchdrain": {
-      "description_1": "You can suck blood now.",
-      "name_0": "Vampiric Ability",
-      "display": "Your vampire friend teaches you how to suck blood."
+      "name": {
+        "0": "Vampiric Ability"
+      },
+      "description": {
+        "1": "You can suck blood now."
+      },
+      "display": {
+        "1": "Your vampire friend teaches you how to suck blood."
+      }
     },
     "ft_touchpoison": {
-      "description_1": "You can poison a creature.",
-      "name_0": "Poison Nail",
-      "display": "Researching poisons leads you to a method to poison others."
+      "name": {
+        "0": "Poison Nail"
+      },
+      "description": {
+        "1": "You can poison a creature."
+      },
+      "display": {
+        "1": "Researching poisons leads you to a method to poison others."
+      }
     },
     "ft_touchsleep": {
-      "description_1": "You can hypnotize single target.",
-      "name_0": "Hypnotism",
-      "display": "Suddenly, you know how to make everyone sleep."
+      "name": {
+        "0": "Hypnotism"
+      },
+      "description": {
+        "1": "You can hypnotize single target."
+      },
+      "display": {
+        "1": "Suddenly, you know how to make everyone sleep."
+      }
     },
     "mut_arms": {
-      "description_1": "You have well-knit arms. [STR+3]",
-      "description_2": "You have well-muscled arms. [STR+6]",
-      "description_3": "You have ideal arms. [STR+9]",
-      "description_-1": "Your arms are thin. [STR-3]",
-      "description_-2": "Your arms are very thin. [STR-6]",
-      "description_-3": "Your arms are just decorative. [STR-9]",
-      "display": "Strong Arm",
-      "display_neg": "Weak Arm",
-      "gain": "Your arms grow stronger.",
-      "lose": "Your arms become thin."
+      "description": {
+        "1": "You have well-knit arms. [STR+3]",
+        "2": "You have well-muscled arms. [STR+6]",
+        "3": "You have ideal arms. [STR+9]",
+        "-3": "Your arms are just decorative. [STR-9]",
+        "-2": "Your arms are very thin. [STR-6]",
+        "-1": "Your arms are thin. [STR-3]"
+      },
+      "onchange": {
+        "1": "Your arms grow stronger.",
+        "-1": "Your arms become thin."
+      },
+      "display": {
+        "1": "Strong Arm",
+        "-1": "Weak Arm"
+      }
     },
     "mut_brain": {
-      "description_1": "Your brain is mechanized.[Memorization+4]",
-      "description_2": "Your brain is fully mechanized.[Memorization+8]",
-      "description_-1": "You are stupid.[Memorization-4]",
-      "description_-2": "You are really stupid.[Memorization-8]",
-      "display": "Brain Computer",
-      "display_neg": "Stupid",
-      "gain": "Your brain is mechanized!",
-      "lose": "Your brain degenerates."
+      "description": {
+        "1": "Your brain is mechanized.[Memorization+4]",
+        "2": "Your brain is fully mechanized.[Memorization+8]",
+        "-2": "You are really stupid.[Memorization-8]",
+        "-1": "You are stupid.[Memorization-4]"
+      },
+      "onchange": {
+        "1": "Your brain is mechanized!",
+        "-1": "Your brain degenerates."
+      },
+      "display": {
+        "1": "Brain Computer",
+        "-1": "Stupid"
+      }
     },
     "mut_cannibalism": {
-      "description_1": "You have no trouble eating human flesh.",
-      "display": "Cannibalism",
-      "gain": "You are charmed by the flavor of human flesh.",
-      "lose": "You can no longer accept human flesh."
+      "description": {
+        "1": "You have no trouble eating human flesh."
+      },
+      "onchange": {
+        "1": "You are charmed by the flavor of human flesh.",
+        "-1": "You can no longer accept human flesh."
+      },
+      "display": {
+        "1": "Cannibalism"
+      }
     },
     "mut_eyes": {
-      "description_1": "You have the eyes of a cat. [PER+5]",
-      "description_2": "You have the eyes of a hawk. [PER+10]",
-      "description_-1": "You are partially color-blind. [PER-5]",
-      "description_-2": "You are blind in one eye. [PER-10]",
-      "display": "Hawk Eye",
-      "display_neg": "Color Blind",
-      "gain": "Your eyes glow.",
-      "lose": "Your sight is weakened."
+      "description": {
+        "1": "You have the eyes of a cat. [PER+5]",
+        "2": "You have the eyes of a hawk. [PER+10]",
+        "-2": "You are blind in one eye. [PER-10]",
+        "-1": "You are partially color-blind. [PER-5]"
+      },
+      "onchange": {
+        "1": "Your eyes glow.",
+        "-1": "Your sight is weakened."
+      },
+      "display": {
+        "1": "Hawk Eye",
+        "-1": "Color Blind"
+      }
     },
     "mut_ironskin": {
-      "description_1": "Your skin is hard. [PV+3]",
-      "description_2": "Your skin is very hard. [PV+6]",
-      "description_3": "Your skin is as hard as iron. [PV+9]",
-      "description_-1": "Your skin is white. [PV-3]",
-      "description_-2": "Your skin is fragile. [PV-6]",
-      "description_-3": "Your skin is collapsing. [PV-9]",
-      "display": "Iron Skin",
-      "display_neg": "Albino",
-      "gain": "Your skin becomes harder.",
-      "lose": "Your skin becomes pale."
+      "description": {
+        "1": "Your skin is hard. [PV+3]",
+        "2": "Your skin is very hard. [PV+6]",
+        "3": "Your skin is as hard as iron. [PV+9]",
+        "-3": "Your skin is collapsing. [PV-9]",
+        "-2": "Your skin is fragile. [PV-6]",
+        "-1": "Your skin is white. [PV-3]"
+      },
+      "onchange": {
+        "1": "Your skin becomes harder.",
+        "-1": "Your skin becomes pale."
+      },
+      "display": {
+        "1": "Iron Skin",
+        "-1": "Albino"
+      }
     },
     "mut_joint": {
-      "description_1": "Your joints are flexible. [DEX+3]",
-      "description_2": "Your joints are very flexible. [DEX+6]",
-      "description_3": "Your joints are incredibly flexible. [DEX+9]",
-      "description_-1": "Your joints creak. [DEX-3]",
-      "description_-2": "You are worrying about your joint creakings. [DEX-6]",
-      "description_-3": "You have terrible joint creakings. [DEX-9]",
-      "display": "Flexible Joint",
-      "display_neg": "Creaking Joint",
-      "gain": "Your joints become flexible.",
-      "lose": "Your joints creak."
+      "description": {
+        "1": "Your joints are flexible. [DEX+3]",
+        "2": "Your joints are very flexible. [DEX+6]",
+        "3": "Your joints are incredibly flexible. [DEX+9]",
+        "-3": "You have terrible joint creakings. [DEX-9]",
+        "-2": "You are worrying about your joint creakings. [DEX-6]",
+        "-1": "Your joints creak. [DEX-3]"
+      },
+      "onchange": {
+        "1": "Your joints become flexible.",
+        "-1": "Your joints creak."
+      },
+      "display": {
+        "1": "Flexible Joint",
+        "-1": "Creaking Joint"
+      }
     },
     "mut_legs": {
-      "description_1": "You have lithe legs. [SPD+5]",
-      "description_2": "You have very lithe legs. [SPD+10]",
-      "description_3": "You have ideal legs. [SPD+15]",
-      "description_-1": "Your legs are twisted. [SPD-5]",
-      "description_-2": "Your legs are very twisted. [SPD-10]",
-      "description_-3": "Your legs are broken. [SPD-15]",
-      "display": "Lithe Leg",
-      "display_neg": "Twisted Leg",
-      "gain": "Your legs become lithe.",
-      "lose": "Your legs are twisted!"
+      "description": {
+        "1": "You have lithe legs. [SPD+5]",
+        "2": "You have very lithe legs. [SPD+10]",
+        "3": "You have ideal legs. [SPD+15]",
+        "-3": "Your legs are broken. [SPD-15]",
+        "-2": "Your legs are very twisted. [SPD-10]",
+        "-1": "Your legs are twisted. [SPD-5]"
+      },
+      "onchange": {
+        "1": "Your legs become lithe.",
+        "-1": "Your legs are twisted!"
+      },
+      "display": {
+        "1": "Lithe Leg",
+        "-1": "Twisted Leg"
+      }
     },
     "mut_resistcold": {
-      "description_1": "Your skin is covered by frost.[RES Cold+]",
-      "description_-1": "Your skin is sheer.[RES Cold-]",
-      "display": "Cold Res+",
-      "display_neg": "Cold Res-",
-      "gain": "You feel hot-headed.",
-      "lose": "You shiver."
+      "description": {
+        "1": "Your skin is covered by frost.[RES Cold+]",
+        "-1": "Your skin is sheer.[RES Cold-]"
+      },
+      "onchange": {
+        "1": "You feel hot-headed.",
+        "-1": "You shiver."
+      },
+      "display": {
+        "1": "Cold Res+",
+        "-1": "Cold Res-"
+      }
     },
     "mut_resistfire": {
-      "description_1": "Your blood is boiling. [RES Fire+]",
-      "description_-1": "Your skin gets gooseflesh.[RES Fire-]",
-      "display": "Fire Res+",
-      "display_neg": "Fire Res-",
-      "gain": "Your blood starts to boil.",
-      "lose": "Your skin gets gooseflesh."
+      "description": {
+        "1": "Your blood is boiling. [RES Fire+]",
+        "-1": "Your skin gets gooseflesh.[RES Fire-]"
+      },
+      "onchange": {
+        "1": "Your blood starts to boil.",
+        "-1": "Your skin gets gooseflesh."
+      },
+      "display": {
+        "1": "Fire Res+",
+        "-1": "Fire Res-"
+      }
     },
     "mut_resistlightning": {
-      "description_1": "You have resistance to lightning.[RES Lightning+]",
-      "description_-1": "You have weakness to lightning.[RES Lightning-]",
-      "display": "Lightning Res+",
-      "display_neg": "Lightning Res-",
-      "gain": "You gain resistance to lightning.",
-      "lose": "You lose resistance to lightning."
+      "description": {
+        "1": "You have resistance to lightning.[RES Lightning+]",
+        "-1": "You have weakness to lightning.[RES Lightning-]"
+      },
+      "onchange": {
+        "1": "You gain resistance to lightning.",
+        "-1": "You lose resistance to lightning."
+      },
+      "display": {
+        "1": "Lightning Res+",
+        "-1": "Lightning Res-"
+      }
     },
     "mut_resistmagic": {
-      "description_1": "You have resistance to magic.[RES Magic+]",
-      "description_-1": "You have weakness to magic.[RES Magic-]",
-      "display": "Magic Res+",
-      "display_neg": "Magic Res-",
-      "gain": "You gain resistance to magic.",
-      "lose": "You lose resistance to magic."
+      "description": {
+        "1": "You have resistance to magic.[RES Magic+]",
+        "-1": "You have weakness to magic.[RES Magic-]"
+      },
+      "onchange": {
+        "1": "You gain resistance to magic.",
+        "-1": "You lose resistance to magic."
+      },
+      "display": {
+        "1": "Magic Res+",
+        "-1": "Magic Res-"
+      }
     },
     "mut_resistsound": {
-      "description_1": "Your eardrums are thick.[RES Sound+]",
-      "description_-1": "Your eardrums are thin.[RES Sound-]",
-      "display": "Sound Res+",
-      "display_neg": "Sound Res-",
-      "gain": "Your eardrums become thick.",
-      "lose": "Your eardrums become thin."
+      "description": {
+        "1": "Your eardrums are thick.[RES Sound+]",
+        "-1": "Your eardrums are thin.[RES Sound-]"
+      },
+      "onchange": {
+        "1": "Your eardrums become thick.",
+        "-1": "Your eardrums become thin."
+      },
+      "display": {
+        "1": "Sound Res+",
+        "-1": "Sound Res-"
+      }
     },
     "mut_trollblood": {
-      "description_1": "Your wounds regenerate rapidly. [Regeneration+]",
-      "description_2": "Your wounds regenerate instantly. [Regeneration++]",
-      "description_-1": "You suffer from anemia. [Regeneration-]",
-      "description_-2": "You constantly have an attack of anemia. [Regeneration--]",
-      "display": "Troll Blood",
-      "display_neg": "Anemia",
-      "gain": "Suddenly your blood become greenish!",
-      "lose": "Your metabolism slows down."
+      "description": {
+        "1": "Your wounds regenerate rapidly. [Regeneration+]",
+        "2": "Your wounds regenerate instantly. [Regeneration++]",
+        "-2": "You constantly have an attack of anemia. [Regeneration--]",
+        "-1": "You suffer from anemia. [Regeneration-]"
+      },
+      "onchange": {
+        "1": "Suddenly your blood become greenish!",
+        "-1": "Your metabolism slows down."
+      },
+      "display": {
+        "1": "Troll Blood",
+        "-1": "Anemia"
+      }
     },
     "mut_voice": {
-      "description_1": "Your voice is sweet.[CHR+5]",
-      "description_2": "Your voice charms everyone.[CHR+10]",
-      "description_-1": "Your voice is hasky.[CHR-5]",
-      "description_-2": "Everyone is frightened when you talk.[CHR-10]",
-      "display": "Sweet Voice",
-      "display_neg": "Husky Voice",
-      "gain": "Your voice becomes lovely.",
-      "lose": "Your voice becomes scary."
+      "description": {
+        "1": "Your voice is sweet.[CHR+5]",
+        "2": "Your voice charms everyone.[CHR+10]",
+        "-2": "Everyone is frightened when you talk.[CHR-10]",
+        "-1": "Your voice is hasky.[CHR-5]"
+      },
+      "onchange": {
+        "1": "Your voice becomes lovely.",
+        "-1": "Your voice becomes scary."
+      },
+      "display": {
+        "1": "Sweet Voice",
+        "-1": "Husky Voice"
+      }
     },
     "race_digestion": {
-      "description_1": "Your digestion is slow."
+      "description": {
+        "1": "Your digestion is slow."
+      }
     },
     "race_evil": {
-      "description_1": "You don't feel guilty. [Karma limit -20]"
+      "description": {
+        "1": "You don't feel guilty. [Karma limit -20]"
+      }
     },
     "race_fairyresist": {
-      "description_1": "You have outstanding resistances."
+      "description": {
+        "1": "You have outstanding resistances."
+      }
     },
     "race_fairyweak": {
-      "description_1": "You can't wear equipment weight more than 1s. [DV++]"
+      "description": {
+        "1": "You can't wear equipment weight more than 1s. [DV++]"
+      }
     },
     "race_godluck": {
-      "description_1": "Quality stuff are generated around you."
+      "description": {
+        "1": "Quality stuff are generated around you."
+      }
     },
     "race_godprotect": {
-      "description_1": "You are given physical damage reduction."
+      "description": {
+        "1": "You are given physical damage reduction."
+      }
     },
     "race_godsanity": {
-      "description_1": "You are surrounded by an aura that cures sanity."
+      "description": {
+        "1": "You are surrounded by an aura that cures sanity."
+      }
     },
     "race_godspells": {
-      "description_1": "Elemental spells you cast are empowered."
+      "description": {
+        "1": "Elemental spells you cast are empowered."
+      }
     },
     "race_good": {
-      "description_1": "You are a good man. [Karma limit +20]"
+      "description": {
+        "1": "You are a good man. [Karma limit +20]"
+      }
     },
     "race_magcapacity": {
-      "description_1": "You take less damage from mana reactions."
+      "description": {
+        "1": "You take less damage from mana reactions."
+      }
     },
     "race_material": {
-      "description_1": "You can gather more materials."
+      "description": {
+        "1": "You can gather more materials."
+      }
     },
     "race_moe": {
-      "description_1": "You are moe."
+      "description": {
+        "1": "You are moe."
+      }
     },
     "race_mutate": {
-      "description_1": "Your body is changing every moment."
+      "description": {
+        "1": "Your body is changing every moment."
+      }
     },
     "race_resistcold": {
-      "description_1": "You have resistance to cold.",
-      "description_2": "You have strong resistance to cold.",
-      "description_-1": "You have weakness to cold.",
-      "description_-2": "You have strong weakness to cold."
+      "description": {
+        "1": "You have resistance to cold.",
+        "2": "You have strong resistance to cold.",
+        "-2": "You have strong weakness to cold.",
+        "-1": "You have weakness to cold."
+      }
     },
     "race_resistdark": {
-      "description_1": "You have resistance to darkness.",
-      "description_2": "You have strong resistance to darkness.",
-      "description_-1": "You have weakness to darkness.",
-      "description_-2": "You have strong weakness to darkness."
+      "description": {
+        "1": "You have resistance to darkness.",
+        "2": "You have strong resistance to darkness.",
+        "-2": "You have strong weakness to darkness.",
+        "-1": "You have weakness to darkness."
+      }
     },
     "race_resistdim": {
-      "description_1": "You won't be dim."
+      "description": {
+        "1": "You won't be dim."
+      }
     },
     "race_resistfire": {
-      "description_1": "You have resistance to fire.",
-      "description_2": "You have strong resistance to fire.",
-      "description_-1": "You have weakness to fire.",
-      "description_-2": "You have strong weakness to fire."
+      "description": {
+        "1": "You have resistance to fire.",
+        "2": "You have strong resistance to fire.",
+        "-2": "You have strong weakness to fire.",
+        "-1": "You have weakness to fire."
+      }
     },
     "race_resistmagic": {
-      "description_1": "You have resistance to magic.",
-      "description_2": "You have strong resistance to magic.",
-      "description_-1": "You have weakness to magic.",
-      "description_-2": "You have strong weakness to magic."
+      "description": {
+        "1": "You have resistance to magic.",
+        "2": "You have strong resistance to magic.",
+        "-2": "You have strong weakness to magic.",
+        "-1": "You have weakness to magic."
+      }
     },
     "race_resistpoison": {
-      "description_1": "You have resistance to poison.",
-      "description_2": "You have strong resistance to poison.",
-      "description_-1": "You have weakness to poison.",
-      "description_-2": "You have strong weakness to poison."
+      "description": {
+        "1": "You have resistance to poison.",
+        "2": "You have strong resistance to poison.",
+        "-2": "You have strong weakness to poison.",
+        "-1": "You have weakness to poison."
+      }
     },
     "race_skillpoint": {
-      "description_1": "You receive extra bonus points."
+      "description": {
+        "1": "You receive extra bonus points."
+      }
     },
     "race_slowether": {
-      "description_1": "Your body slows the Ether Disease progress."
+      "description": {
+        "1": "Your body slows the Ether Disease progress."
+      }
     }
   }
 }

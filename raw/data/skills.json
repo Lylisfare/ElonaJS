@@ -1,21 +1,21 @@
 {
   "skills": {
     "alchemy": {
-      "attr": "LER",
+      "attr": "Learning",
       "desc1": "skills.alchemy.desc1",
       "desc2": "skills.alchemy.desc2",
       "id": "Alchemy",
       "name": "skills.alchemy.name"
     },
     "anatomy": {
-      "attr": "LER",
+      "attr": "Learning",
       "desc1": "skills.anatomy.desc1",
       "desc2": "skills.anatomy.desc2",
       "id": "Anatomy",
       "name": "skills.anatomy.name"
     },
     "axe": {
-      "attr": "STR",
+      "attr": "Strength",
       "desc1": "skills.axe.desc1",
       "desc2": "skills.axe.desc2",
       "id": "Axe",
@@ -23,7 +23,7 @@
       "type": "weapon"
     },
     "blunt": {
-      "attr": "CON",
+      "attr": "Constitution",
       "desc1": "skills.blunt.desc1",
       "desc2": "skills.blunt.desc2",
       "id": "Blunt",
@@ -31,7 +31,7 @@
       "type": "weapon"
     },
     "bow": {
-      "attr": "DEX",
+      "attr": "Dexterity",
       "desc1": "skills.bow.desc1",
       "desc2": "skills.bow.desc2",
       "id": "Bow",
@@ -39,35 +39,35 @@
       "type": "weapon"
     },
     "carpentry": {
-      "attr": "CON",
+      "attr": "Constitution",
       "desc1": "skills.carpentry.desc1",
       "desc2": "skills.carpentry.desc2",
       "id": "Carpentry",
       "name": "skills.carpentry.name"
     },
     "casting": {
-      "attr": "MAG",
+      "attr": "Magic",
       "desc1": "skills.casting.desc1",
       "desc2": "skills.casting.desc2",
       "id": "Casting",
       "name": "skills.casting.name"
     },
     "control magic": {
-      "attr": "MAG",
+      "attr": "Magic",
       "desc1": "skills.control magic.desc1",
       "desc2": "skills.control magic.desc2",
       "id": "Control Magic",
       "name": "skills.control magic.name"
     },
     "cooking": {
-      "attr": "LER",
+      "attr": "Learning",
       "desc1": "skills.cooking.desc1",
       "desc2": "skills.cooking.desc2",
       "id": "Cooking",
       "name": "skills.cooking.name"
     },
     "crossbow": {
-      "attr": "DEX",
+      "attr": "Dexterity",
       "desc1": "skills.crossbow.desc1",
       "desc2": "skills.crossbow.desc2",
       "id": "Crossbow",
@@ -75,49 +75,49 @@
       "type": "weapon"
     },
     "detection": {
-      "attr": "PER",
+      "attr": "Perception",
       "desc1": "skills.detection.desc1",
       "desc2": "skills.detection.desc2",
       "id": "Detection",
       "name": "skills.detection.name"
     },
     "disarm trap": {
-      "attr": "DEX",
+      "attr": "Dexterity",
       "desc1": "skills.disarm trap.desc1",
       "desc2": "skills.disarm trap.desc2",
       "id": "Disarm Trap",
       "name": "skills.disarm trap.name"
     },
     "dual wield": {
-      "attr": "DEX",
+      "attr": "Dexterity",
       "desc1": "skills.dual wield.desc1",
       "desc2": "skills.dual wield.desc2",
       "id": "Dual Wield",
       "name": "skills.dual wield.name"
     },
     "evasion": {
-      "attr": "DEX",
+      "attr": "Dexterity",
       "desc1": "skills.evasion.desc1",
       "desc2": "skills.evasion.desc2",
       "id": "Evasion",
       "name": "skills.evasion.name"
     },
     "eye of mind": {
-      "attr": "PER",
+      "attr": "Perception",
       "desc1": "skills.eye of mind.desc1",
       "desc2": "skills.eye of mind.desc2",
       "id": "Eye of Mind",
       "name": "skills.eye of mind.name"
     },
     "faith": {
-      "attr": "WIL",
+      "attr": "Will",
       "desc1": "skills.faith.desc1",
       "desc2": "skills.faith.desc2",
       "id": "Faith",
       "name": "skills.faith.name"
     },
     "firearm": {
-      "attr": "PER",
+      "attr": "Perception",
       "desc1": "skills.firearm.desc1",
       "desc2": "skills.firearm.desc2",
       "id": "Firearm",
@@ -125,84 +125,84 @@
       "type": "weapon"
     },
     "fishing": {
-      "attr": "PER",
+      "attr": "Perception",
       "desc1": "skills.fishing.desc1",
       "desc2": "skills.fishing.desc2",
       "id": "Fishing",
       "name": "skills.fishing.name"
     },
     "gardening": {
-      "attr": "LER",
+      "attr": "Learning",
       "desc1": "skills.gardening.desc1",
       "desc2": "skills.gardening.desc2",
       "id": "Gardening",
       "name": "skills.gardening.name"
     },
     "gene engineer": {
-      "attr": "LER",
+      "attr": "Learning",
       "desc1": "skills.gene engineer.desc1",
       "desc2": "skills.gene engineer.desc2",
       "id": "Gene engineer",
       "name": "skills.gene engineer.name"
     },
     "greater evasion": {
-      "attr": "PER",
+      "attr": "Perception",
       "desc1": "skills.greater evasion.desc1",
       "desc2": "skills.greater evasion.desc2",
       "id": "Greater Evasion",
       "name": "skills.greater evasion.name"
     },
     "healing": {
-      "attr": "CON",
+      "attr": "Constitution",
       "desc1": "skills.healing.desc1",
       "desc2": "skills.healing.desc2",
       "id": "Healing",
       "name": "skills.healing.name"
     },
     "heavy armor": {
-      "attr": "CON",
+      "attr": "Constitution",
       "desc1": "skills.heavy armor.desc1",
       "desc2": "skills.heavy armor.desc2",
       "id": "Heavy Armor",
       "name": "skills.heavy armor.name"
     },
     "investing": {
-      "attr": "CHA",
+      "attr": "Charisma",
       "desc1": "skills.investing.desc1",
       "desc2": "skills.investing.desc2",
       "id": "Investing",
       "name": "skills.investing.name"
     },
     "jeweler": {
-      "attr": "DEX",
+      "attr": "Dexterity",
       "desc1": "skills.jeweler.desc1",
       "desc2": "skills.jeweler.desc2",
       "id": "Jeweler",
       "name": "skills.jeweler.name"
     },
     "light armor": {
-      "attr": "DEX",
+      "attr": "Dexterity",
       "desc1": "skills.light armor.desc1",
       "desc2": "skills.light armor.desc2",
       "id": "Light Armor",
       "name": "skills.light armor.name"
     },
     "literacy": {
-      "attr": "LER",
+      "attr": "Learning",
       "desc1": "skills.literacy.desc1",
       "desc2": "skills.literacy.desc2",
       "id": "Literacy",
       "name": "skills.literacy.name"
     },
     "lock picking": {
-      "attr": "DEX",
+      "attr": "Dexterity",
       "desc1": "skills.lock picking.desc1",
       "desc2": "skills.lock picking.desc2",
       "id": "Lock Picking",
       "name": "skills.lock picking.name"
     },
     "long sword": {
-      "attr": "STR",
+      "attr": "Strength",
       "desc1": "skills.long sword.desc1",
       "desc2": "skills.long sword.desc2",
       "id": "Long Sword",
@@ -210,28 +210,28 @@
       "type": "weapon"
     },
     "magic capacity": {
-      "attr": "WIL",
+      "attr": "Will",
       "desc1": "skills.magic capacity.desc1",
       "desc2": "skills.magic capacity.desc2",
       "id": "Magic Capacity",
       "name": "skills.magic capacity.name"
     },
     "magic device": {
-      "attr": "MAG",
+      "attr": "Magic",
       "desc1": "skills.magic device.desc1",
       "desc2": "skills.magic device.desc2",
       "id": "Magic Device",
       "name": "skills.magic device.name"
     },
     "marksman": {
-      "attr": "PER",
+      "attr": "Perception",
       "desc1": "skills.marksman.desc1",
       "desc2": "skills.marksman.desc2",
       "id": "Marksman",
       "name": "skills.marksman.name"
     },
     "martial arts": {
-      "attr": "STR",
+      "attr": "Strength",
       "desc1": "skills.martial arts.desc1",
       "desc2": "skills.martial arts.desc2",
       "id": "Martial Arts",
@@ -239,56 +239,56 @@
       "type": "weapon"
     },
     "meditation": {
-      "attr": "MAG",
+      "attr": "Magic",
       "desc1": "skills.meditation.desc1",
       "desc2": "skills.meditation.desc2",
       "id": "Meditation",
       "name": "skills.meditation.name"
     },
     "medium armor": {
-      "attr": "CON",
+      "attr": "Constitution",
       "desc1": "skills.medium armor.desc1",
       "desc2": "skills.medium armor.desc2",
       "id": "Medium Armor",
       "name": "skills.medium armor.name"
     },
     "memorization": {
-      "attr": "LER",
+      "attr": "Learning",
       "desc1": "skills.memorization.desc1",
       "desc2": "skills.memorization.desc2",
       "id": "Memorization",
       "name": "skills.memorization.name"
     },
     "mining": {
-      "attr": "CON",
+      "attr": "Constitution",
       "desc1": "skills.mining.desc1",
       "desc2": "skills.mining.desc2",
       "id": "Mining",
       "name": "skills.mining.name"
     },
     "negotiation": {
-      "attr": "CHA",
+      "attr": "Charisma",
       "desc1": "skills.negotiation.desc1",
       "desc2": "skills.negotiation.desc2",
       "id": "Negotiation",
       "name": "skills.negotiation.name"
     },
     "performer": {
-      "attr": "CHA",
+      "attr": "Charisma",
       "desc1": "skills.performer.desc1",
       "desc2": "skills.performer.desc2",
       "id": "Performer",
       "name": "skills.performer.name"
     },
     "pickpocket": {
-      "attr": "DEX",
+      "attr": "Dexterity",
       "desc1": "skills.pickpocket.desc1",
       "desc2": "skills.pickpocket.desc2",
       "id": "Pickpocket",
       "name": "skills.pickpocket.name"
     },
     "polearm": {
-      "attr": "CON",
+      "attr": "Constitution",
       "desc1": "skills.polearm.desc1",
       "desc2": "skills.polearm.desc2",
       "id": "Polearm",
@@ -296,14 +296,14 @@
       "type": "weapon"
     },
     "riding": {
-      "attr": "WIL",
+      "attr": "Will",
       "desc1": "skills.riding.desc1",
       "desc2": "skills.riding.desc2",
       "id": "Riding",
       "name": "skills.riding.name"
     },
     "scythe": {
-      "attr": "STR",
+      "attr": "Strength",
       "desc1": "skills.scythe.desc1",
       "desc2": "skills.scythe.desc2",
       "id": "Scythe",
@@ -311,21 +311,21 @@
       "type": "weapon"
     },
     "sense quality": {
-      "attr": "PER",
+      "attr": "Perception",
       "desc1": "skills.sense quality.desc1",
       "desc2": "skills.sense quality.desc2",
       "id": "Sense Quality",
       "name": "skills.sense quality.name"
     },
     "shield": {
-      "attr": "CON",
+      "attr": "Constitution",
       "desc1": "skills.shield.desc1",
       "desc2": "skills.shield.desc2",
       "id": "Shield",
       "name": "skills.shield.name"
     },
     "short sword": {
-      "attr": "DEX",
+      "attr": "Dexterity",
       "desc1": "skills.short sword.desc1",
       "desc2": "skills.short sword.desc2",
       "id": "Short Sword",
@@ -333,7 +333,7 @@
       "type": "weapon"
     },
     "stave": {
-      "attr": "CON",
+      "attr": "Constitution",
       "desc1": "skills.stave.desc1",
       "desc2": "skills.stave.desc2",
       "id": "Stave",
@@ -341,28 +341,28 @@
       "type": "weapon"
     },
     "stealth": {
-      "attr": "PER",
+      "attr": "Perception",
       "desc1": "skills.stealth.desc1",
       "desc2": "skills.stealth.desc2",
       "id": "Stealth",
       "name": "skills.stealth.name"
     },
     "tactics": {
-      "attr": "STR",
+      "attr": "Strength",
       "desc1": "skills.tactics.desc1",
       "desc2": "skills.tactics.desc2",
       "id": "Tactics",
       "name": "skills.tactics.name"
     },
     "tailoring": {
-      "attr": "DEX",
+      "attr": "Dexterity",
       "desc1": "skills.tailoring.desc1",
       "desc2": "skills.tailoring.desc2",
       "id": "Tailoring",
       "name": "skills.tailoring.name"
     },
     "throwing": {
-      "attr": "DEX",
+      "attr": "Dexterity",
       "desc1": "skills.throwing.desc1",
       "desc2": "skills.throwing.desc2",
       "id": "Throwing",
@@ -370,21 +370,21 @@
       "type": "weapon"
     },
     "traveling": {
-      "attr": "WIL",
+      "attr": "Will",
       "desc1": "skills.traveling.desc1",
       "desc2": "skills.traveling.desc2",
       "id": "Traveling",
       "name": "skills.traveling.name"
     },
     "two hand": {
-      "attr": "STR",
+      "attr": "Strength",
       "desc1": "skills.two hand.desc1",
       "desc2": "skills.two hand.desc2",
       "id": "Two Hand",
       "name": "skills.two hand.name"
     },
     "weight lifting": {
-      "attr": "STR",
+      "attr": "Strength",
       "desc1": "skills.weight lifting.desc1",
       "desc2": "skills.weight lifting.desc2",
       "id": "Weight Lifting",

@@ -1,253 +1,253 @@
 {
-    "skills": {
-      "alchemy": {
-        "name": "alchemy",
-        "desc1": "Enables you to perform alchemy.",
-        "desc2": "grants you knowledge of alchemy."
-      },
-      "anatomy": {
-        "name": "anatomy",
-        "desc1": "Gives you a better chance of finding dead bodies.",
-        "desc2": "grants you knowledge of anatomy."
-      },
-      "axe": {
-        "name": "axe",
-        "desc1": "Indicates your skill with axes."
-      },
-      "blunt": {
-        "name": "blunt",
-        "desc1": "Indicates your skill with blunt weapons."
-      },
-      "bow": {
-        "name": "bow",
-        "desc1": "Indicates your skill with bows."
-      },
-      "carpentry": {
-        "name": "carpentry",
-        "desc1": "Skill to cut trees and manufcture products.",
-        "desc2": "makes you a better carpenter."
-      },
-      "casting": {
-        "name": "casting",
-        "desc1": "Reduces the chance of casting failure.",
-        "desc2": "enhances your casting ability."
-      },
-      "control magic": {
-        "name": "control magic",
-        "desc1": "Prevents your allies to get hit by your spells.",
-        "desc2": "enhances your ability to control magics. "
-      },
-      "cooking": {
-        "name": "cooking",
-        "desc1": "Improves your cooking skill.",
-        "desc2": "enhances your cooking skill."
-      },
-      "crossbow": {
-        "name": "crossbow",
-        "desc1": "Indicates your skill with cross bows"
-      },
-      "detection": {
-        "name": "detection",
-        "desc1": "It is used to search hidden locations and traps.",
-        "desc2": "strengthens your ability to detect objects."
-      },
-      "disarm trap": {
-        "name": "disarm trap",
-        "desc1": "Allows you to disarm harder traps.",
-        "desc2": "grants you the trick of disarming traps."
-      },
-      "dual wield": {
-        "name": "dual wield",
-        "desc1": "Used when wielding two weapoms at the same time."
-      },
-      "evasion": {
-        "name": "evasion",
-        "desc1": "Increases your chance of evading enemy attacks."
-      },
-      "eye of mind": {
-        "name": "eye of mind",
-        "desc1": "Increases your chance to deliver critical hits."
-      },
-      "faith": {
-        "name": "faith",
-        "desc1": "Gets you closer to god.",
-        "desc2": "makes you pious."
-      },
-      "firearm": {
-        "name": "firearm",
-        "desc1": "Indicates your skill with firearms."
-      },
-      "fishing": {
-        "name": "fishing",
-        "desc1": "Displays your fishing skill.",
-        "desc2": "makes you better fisher."
-      },
-      "gardening": {
-        "name": "gardening",
-        "desc1": "Skill to plant seeds and gather harvests.",
-        "desc2": "grants you knowledge of gardening."
-      },
-      "gene engineer": {
-        "name": "gene engineer",
-        "desc1": "Allows you to control genes.",
-        "desc2": "makes you a better gene engineer."
-      },
-      "greater evasion": {
-        "name": "greater evasion",
-        "desc1": "Makes you able to evade inaccurate attacks."
-      },
-      "healing": {
-        "name": "healing",
-        "desc1": "Gradually heals your wounds.",
-        "desc2": "enhances your body metabolism."
-      },
-      "heavy armor": {
-        "name": "heavy armor",
-        "desc1": "Skill to effectively act while wearing heavy armor."
-      },
-      "investing": {
-        "name": "investing",
-        "desc1": "Lowers the money needed to invest in shops.",
-        "desc2": "grants you knowledge of investing."
-      },
-      "jeweler": {
-        "name": "jeweler",
-        "desc1": "Skill to process jewels and manufucture products.",
-        "desc2": "makes you a better jeweler."
-      },
-      "light armor": {
-        "name": "light armor",
-        "desc1": "Skill to effectively act while wearing light armor."
-      },
-      "literacy": {
-        "name": "literacy",
-        "desc1": "Allows you to read difficult books.",
-        "desc2": "makes you literate."
-      },
-      "lock picking": {
-        "name": "lock picking",
-        "desc1": "Allows you to pick more difficult locks.",
-        "desc2": "grants you the trick of lock picking."
-      },
-      "long sword": {
-        "name": "long sword",
-        "desc1": "Indicates your skill with long swords."
-      },
-      "magic capacity": {
-        "name": "magic capacity",
-        "desc1": "Reduces kickback damage from over casting.",
-        "desc2": "strengthens your magic capacity."
-      },
-      "magic device": {
-        "name": "magic device",
-        "desc1": "Improves effectiveness of magic devices.",
-        "desc2": "enhances power of magical devices."
-      },
-      "marksman": {
-        "name": "marksman",
-        "desc1": "Increases shooting damage.",
-        "desc2": "makes you a better marksman."
-      },
-      "martial arts": {
-        "name": "martial arts",
-        "desc1": "Indicates your skill fighting unarmed."
-      },
-      "meditation": {
-        "name": "meditation",
-        "desc1": "Gradually restores your magic points.",
-        "desc2": "enhances your meditation."
-      },
-      "medium armor": {
-        "name": "medium armor",
-        "desc1": "Skill to effectively act while wearing medium armor."
-      },
-      "memorization": {
-        "name": "memorization",
-        "desc1": "Helps you acquire additional spell stocks.",
-        "desc2": "enhances your memory."
-      },
-      "mining": {
-        "name": "mining",
-        "desc1": "Shows how good of a miner you are.",
-        "desc2": "enhances your mining skill."
-      },
-      "negotiation": {
-        "name": "negotiation",
-        "desc1": "Convinces someone to give you better deals.",
-        "desc2": "grants you knowledge of negotiation."
-      },
-      "performer": {
-        "name": "performer",
-        "desc1": "Shows how good of a performer you are.",
-        "desc2": "makes your performance better."
-      },
-      "pickpocket": {
-        "name": "pickpocket",
-        "desc1": "Shows how good of a thief you are.",
-        "desc2": "grants you the trick of pickpocketing."
-      },
-      "polearm": {
-        "name": "polearm",
-        "desc1": "Indicates your skill with polearms."
-      },
-      "riding": {
-        "name": "riding",
-        "desc1": "Allows you to ride creatures.",
-        "desc2": "enhances your ability to ride."
-      },
-      "scythe": {
-        "name": "scythe",
-        "desc1": "Indicates your skill with scythes."
-      },
-      "sense quality": {
-        "name": "sense quality",
-        "desc1": "Allows you to sense the quality of stuff.",
-        "desc2": "makes it easier to sense the quality of stuff."
-      },
-      "shield": {
-        "name": "shield",
-        "desc1": "Increases the effectivness of using shields."
-      },
-      "short sword": {
-        "name": "short sword",
-        "desc1": "Indicates your skill with short swords."
-      },
-      "stave": {
-        "name": "stave",
-        "desc1": "Indicates your skill with staves."
-      },
-      "stealth": {
-        "name": "stealth",
-        "desc1": "Allows you to move quietly.",
-        "desc2": "strengthens your ability to hide."
-      },
-      "tactics": {
-        "name": "tactics",
-        "desc1": "Increases melee damage.",
-        "desc2": "makes you a better tactician."
-      },
-      "tailoring": {
-        "name": "tailoring",
-        "desc1": "Skill to sew materials and manufucture products.",
-        "desc2": "makes you a better tailor."
-      },
-      "throwing": {
-        "name": "throwing",
-        "desc1": "Indicates your skill with throwing objects."
-      },
-      "traveling": {
-        "name": "traveling",
-        "desc1": "Allows you to receive more EXP from traveling.",
-        "desc2": "makes you a better traveler."
-      },
-      "two hand": {
-        "name": "two hand",
-        "desc1": "Used when wielding a weapon with both hands."
-      },
-      "weight lifting": {
-        "name": "weight lifting",
-        "desc1": "Allows you to carry more stuff.",
-        "desc2": "makes you better at weight lifting."
-      }
+  "skills": {
+    "alchemy": {
+      "name": "alchemy",
+      "desc1": "Enables you to perform alchemy.",
+      "desc2": "grants you knowledge of alchemy."
+    },
+    "anatomy": {
+      "name": "anatomy",
+      "desc1": "Gives you a better chance of finding dead bodies.",
+      "desc2": "grants you knowledge of anatomy."
+    },
+    "axe": {
+      "name": "axe",
+      "desc1": "Indicates your skill with axes."
+    },
+    "blunt": {
+      "name": "blunt",
+      "desc1": "Indicates your skill with blunt weapons."
+    },
+    "bow": {
+      "name": "bow",
+      "desc1": "Indicates your skill with bows."
+    },
+    "carpentry": {
+      "name": "carpentry",
+      "desc1": "Skill to cut trees and manufcture products.",
+      "desc2": "makes you a better carpenter."
+    },
+    "casting": {
+      "name": "casting",
+      "desc1": "Reduces the chance of casting failure.",
+      "desc2": "enhances your casting ability."
+    },
+    "control magic": {
+      "name": "control magic",
+      "desc1": "Prevents your allies to get hit by your spells.",
+      "desc2": "enhances your ability to control magics. "
+    },
+    "cooking": {
+      "name": "cooking",
+      "desc1": "Improves your cooking skill.",
+      "desc2": "enhances your cooking skill."
+    },
+    "crossbow": {
+      "name": "crossbow",
+      "desc1": "Indicates your skill with cross bows"
+    },
+    "detection": {
+      "name": "detection",
+      "desc1": "It is used to search hidden locations and traps.",
+      "desc2": "strengthens your ability to detect objects."
+    },
+    "disarm trap": {
+      "name": "disarm trap",
+      "desc1": "Allows you to disarm harder traps.",
+      "desc2": "grants you the trick of disarming traps."
+    },
+    "dual wield": {
+      "name": "dual wield",
+      "desc1": "Used when wielding two weapoms at the same time."
+    },
+    "evasion": {
+      "name": "evasion",
+      "desc1": "Increases your chance of evading enemy attacks."
+    },
+    "eye of mind": {
+      "name": "eye of mind",
+      "desc1": "Increases your chance to deliver critical hits."
+    },
+    "faith": {
+      "name": "faith",
+      "desc1": "Gets you closer to god.",
+      "desc2": "makes you pious."
+    },
+    "firearm": {
+      "name": "firearm",
+      "desc1": "Indicates your skill with firearms."
+    },
+    "fishing": {
+      "name": "fishing",
+      "desc1": "Displays your fishing skill.",
+      "desc2": "makes you better fisher."
+    },
+    "gardening": {
+      "name": "gardening",
+      "desc1": "Skill to plant seeds and gather harvests.",
+      "desc2": "grants you knowledge of gardening."
+    },
+    "gene engineer": {
+      "name": "gene engineer",
+      "desc1": "Allows you to control genes.",
+      "desc2": "makes you a better gene engineer."
+    },
+    "greater evasion": {
+      "name": "greater evasion",
+      "desc1": "Makes you able to evade inaccurate attacks."
+    },
+    "healing": {
+      "name": "healing",
+      "desc1": "Gradually heals your wounds.",
+      "desc2": "enhances your body metabolism."
+    },
+    "heavy armor": {
+      "name": "heavy armor",
+      "desc1": "Skill to effectively act while wearing heavy armor."
+    },
+    "investing": {
+      "name": "investing",
+      "desc1": "Lowers the money needed to invest in shops.",
+      "desc2": "grants you knowledge of investing."
+    },
+    "jeweler": {
+      "name": "jeweler",
+      "desc1": "Skill to process jewels and manufucture products.",
+      "desc2": "makes you a better jeweler."
+    },
+    "light armor": {
+      "name": "light armor",
+      "desc1": "Skill to effectively act while wearing light armor."
+    },
+    "literacy": {
+      "name": "literacy",
+      "desc1": "Allows you to read difficult books.",
+      "desc2": "makes you literate."
+    },
+    "lock picking": {
+      "name": "lock picking",
+      "desc1": "Allows you to pick more difficult locks.",
+      "desc2": "grants you the trick of lock picking."
+    },
+    "long sword": {
+      "name": "long sword",
+      "desc1": "Indicates your skill with long swords."
+    },
+    "magic capacity": {
+      "name": "magic capacity",
+      "desc1": "Reduces kickback damage from over casting.",
+      "desc2": "strengthens your magic capacity."
+    },
+    "magic device": {
+      "name": "magic device",
+      "desc1": "Improves effectiveness of magic devices.",
+      "desc2": "enhances power of magical devices."
+    },
+    "marksman": {
+      "name": "marksman",
+      "desc1": "Increases shooting damage.",
+      "desc2": "makes you a better marksman."
+    },
+    "martial arts": {
+      "name": "martial arts",
+      "desc1": "Indicates your skill fighting unarmed."
+    },
+    "meditation": {
+      "name": "meditation",
+      "desc1": "Gradually restores your magic points.",
+      "desc2": "enhances your meditation."
+    },
+    "medium armor": {
+      "name": "medium armor",
+      "desc1": "Skill to effectively act while wearing medium armor."
+    },
+    "memorization": {
+      "name": "memorization",
+      "desc1": "Helps you acquire additional spell stocks.",
+      "desc2": "enhances your memory."
+    },
+    "mining": {
+      "name": "mining",
+      "desc1": "Shows how good of a miner you are.",
+      "desc2": "enhances your mining skill."
+    },
+    "negotiation": {
+      "name": "negotiation",
+      "desc1": "Convinces someone to give you better deals.",
+      "desc2": "grants you knowledge of negotiation."
+    },
+    "performer": {
+      "name": "performer",
+      "desc1": "Shows how good of a performer you are.",
+      "desc2": "makes your performance better."
+    },
+    "pickpocket": {
+      "name": "pickpocket",
+      "desc1": "Shows how good of a thief you are.",
+      "desc2": "grants you the trick of pickpocketing."
+    },
+    "polearm": {
+      "name": "polearm",
+      "desc1": "Indicates your skill with polearms."
+    },
+    "riding": {
+      "name": "riding",
+      "desc1": "Allows you to ride creatures.",
+      "desc2": "enhances your ability to ride."
+    },
+    "scythe": {
+      "name": "scythe",
+      "desc1": "Indicates your skill with scythes."
+    },
+    "sense quality": {
+      "name": "sense quality",
+      "desc1": "Allows you to sense the quality of stuff.",
+      "desc2": "makes it easier to sense the quality of stuff."
+    },
+    "shield": {
+      "name": "shield",
+      "desc1": "Increases the effectivness of using shields."
+    },
+    "short sword": {
+      "name": "short sword",
+      "desc1": "Indicates your skill with short swords."
+    },
+    "stave": {
+      "name": "stave",
+      "desc1": "Indicates your skill with staves."
+    },
+    "stealth": {
+      "name": "stealth",
+      "desc1": "Allows you to move quietly.",
+      "desc2": "strengthens your ability to hide."
+    },
+    "tactics": {
+      "name": "tactics",
+      "desc1": "Increases melee damage.",
+      "desc2": "makes you a better tactician."
+    },
+    "tailoring": {
+      "name": "tailoring",
+      "desc1": "Skill to sew materials and manufucture products.",
+      "desc2": "makes you a better tailor."
+    },
+    "throwing": {
+      "name": "throwing",
+      "desc1": "Indicates your skill with throwing objects."
+    },
+    "traveling": {
+      "name": "traveling",
+      "desc1": "Allows you to receive more EXP from traveling.",
+      "desc2": "makes you a better traveler."
+    },
+    "two hand": {
+      "name": "two hand",
+      "desc1": "Used when wielding a weapon with both hands."
+    },
+    "weight lifting": {
+      "name": "weight lifting",
+      "desc1": "Allows you to carry more stuff.",
+      "desc2": "makes you better at weight lifting."
     }
   }
+}

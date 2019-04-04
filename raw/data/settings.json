@@ -1,0 +1,38 @@
+{
+  "settings": {
+    "adaptive_res": {
+      "id": "adaptive_res",
+      "category": "display",
+      "type": "toggle",
+      "initial": true
+    },
+    "canvas_resolution": {
+      "id": "canvas_resolution",
+      "category": "display",
+      "type": "predefined",
+      "values": [
+        "800 x 600",
+        "1024 x 768",
+        "1920 x 1080"
+      ],
+      "initial": "800 x 600"
+    },
+    "canvas_size": {
+      "id": "canvas_size",
+      "category": "display",
+      "type": "predefined",
+      "values": [
+        "800 x 600",
+        "1024 x 768",
+        "1920 x 1080"
+      ],
+      "initial": "800 x 600"
+    },
+    "fullscreen": {
+      "id": "fullscreen",
+      "category": "display",
+      "type": "toggle",
+      "initial": false
+    }
+  }
+}

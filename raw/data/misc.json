@@ -1,0 +1,14 @@
+{
+    "misc": {
+        "Male": {
+            "id": "Male",
+            "name": "sexes.male",
+            "tag": "gender"
+        },
+        "Female": {
+            "id": "Female",
+            "name": "sexes.female",
+            "tag": "gender"
+        }
+    }
+}

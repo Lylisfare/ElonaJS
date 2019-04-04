@@ -22,11 +22,12 @@ class UniComponent{
     }
 
     /** Aligns the component based on the parameters and scaling.
-     * @param {Number[]} base The base position of the menu to align on.
+     * @param {Object} base The base position of the menu to align on.
+     * @param {Number} base.x The base x position
+     * @param {Number} base.y The base y position
      */
     Align(base){
-        //let dims = Graphics.Dims();
-        let dims = {x: 800, y: 600};
+        let dims = Graphics.GetWindowDimensions();
         let point = {x: 0, y: 0};
         let opt = this.params;
 
@@ -41,7 +42,6 @@ class UniComponent{
         this.sprite.position.set(point.x + opt.position.x * Graphics.Scale(), point.y + opt.position.y * Graphics.Scale());
 
         if(opt.centered && opt.position.x !== undefined){
-            if(opt.centerx) this.sprite.position.x = point.x + opt.centerx * Graphics.Scale();
             this.sprite.position.x -= this.sprite.width / 2;
         }
     }
@@ -67,7 +67,7 @@ class UniComponent{
      * @returns {Point2D}
      */
     GetBasePosition(){
-        return {x: this.params.x, y: this.params.y}
+        return {x: this.params.position.x, y: this.params.position.y}
     }
 
     /** Returns the post-scaling height of the component.

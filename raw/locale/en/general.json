@@ -5,6 +5,7 @@
       "constitution": "Constitution",
       "dexterity": "Dexterity",
       "learning": "Learning",
+      "perception": "Perception",
       "will": "Will",
       "magic": "Magic",
       "charisma": "Charisma"
@@ -16,7 +17,8 @@
       "learning": "LER",
       "will": "WIL",
       "magic": "MAG",
-      "charisma": "CHA"
+      "charisma": "CHA",
+      "perception": "PER"
     },
     "magnitude": {
       "none": "None",
@@ -45,7 +47,7 @@
     "potion_plural": "potions",
     "scroll": "scroll",
     "scroll_plural": "scrolls",
-    "objectWithCount": "%{count} %{type}"
+    "objectWithCount": "%{count} ${Objects.%{type}}"
   },
   "Potential": {
     "Superb": "Superb",
@@ -66,20 +68,6 @@
         "3": "Excellent. Let me know when you've finished your preparations for death and I'll take you to the testing grounds.",
         "4": "Fine then, piss off you spineless coward."
       }
-    }
-  },
-  "settings": {
-    "name": {
-      "adaptive_res": "Adaptive Resolution",
-      "canvas_size": "Canvas Size",
-      "canvas_resolution": "Canvas Resolution",
-      "fullscreen": "Fullscreen"
-    },
-    "description": {
-      "adaptive_res": "Match canvas resolution to canvas size, and canvas size to window.",
-      "canvas_size": "Size of the canvas on the screen. Ignored if adaptive resolution is enabled.",
-      "canvas_resolution": "The internal size of the canvas. Ignored if adaptive resolution is enabled.",
-      "fullscreen": "Toggles fullscreen. Only works when using Electron; in browser, hit F11 instead."
     }
   },
   "ui": {
@@ -129,16 +117,17 @@
       "attributesShort": "${ui.raceselect.attributes}",
       "attributesLong": "Strength,Consitution,Dexterity,Learning,Will,Magic,Charisma"
     },
-    "FeatSelect": {
-      "Guide": "Choose your feats wisely.",
-      "Section1": "Name",
-      "Section2": "Detail",
-      "Disclaimer": "You can acquire %{count} ${ui.FeatSelect.Feat}.",
-      "Feat": "feat",
-      "Feat_plural": "feats",
-      "Header1": "[Feats and traits]",
-      "Header2": "[Available feats]",
-      "Title": "Feats and Traits"
+    "featselect": {
+      "guide": "Choose your feats wisely.",
+      "section1": "Name",
+      "section2": "Detail",
+      "disclaimer": "You can acquire %{count} ${ui.featselect.feat}.",
+      "feat": "feat",
+      "feat_plural": "feats",
+      "header1": "[Feats and traits]",
+      "header2": "[Available feats]",
+      "title": "Feats and Traits",
+      "hint": "${hints.4} ${hints.2} ${hints.3} ${hints.5}"
     },
     "reroll": "Reroll",
     "proceed": "Proceed",

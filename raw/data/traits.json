@@ -1,0 +1,642 @@
+{"traits": {
+    "ft_accountant": {
+      "id": "ft_accountant",
+      "category": "feat",
+      "min": 0,
+      "max": 2,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "ft_attbchr": {
+      "id": "ft_attbchr",
+      "category": "feat",
+      "min": 0,
+      "max": 2,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "ft_attbcon": {
+      "id": "ft_attbcon",
+      "category": "feat",
+      "min": 0,
+      "max": 3,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "ft_attblck": {
+      "id": "ft_attblck",
+      "category": "feat",
+      "min": 0,
+      "max": 3,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "ft_attblife": {
+      "id": "ft_attblife",
+      "category": "feat",
+      "min": 0,
+      "max": 5,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "ft_attbmana": {
+      "id": "ft_attbmana",
+      "category": "feat",
+      "min": 0,
+      "max": 5,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "ft_attbspd": {
+      "id": "ft_attbspd",
+      "category": "feat",
+      "min": 0,
+      "max": 2,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "ft_attbstr": {
+      "id": "ft_attbstr",
+      "category": "feat",
+      "min": 0,
+      "max": 3,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "ft_breathfire": {
+      "id": "ft_breathfire",
+      "category": "feat",
+      "min": 0,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "ft_dimensionmove": {
+      "id": "ft_dimensionmove",
+      "category": "feat",
+      "min": 0,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "ft_dv": {
+      "id": "ft_dv",
+      "category": "feat",
+      "min": 0,
+      "max": 3,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "ft_exorcist": {
+      "id": "ft_exorcist",
+      "category": "feat",
+      "min": 0,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "ft_gentleface": {
+      "id": "ft_gentleface",
+      "category": "feat",
+      "min": 0,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "ft_leader": {
+      "id": "ft_leader",
+      "category": "feat",
+      "min": 0,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "ft_pv": {
+      "id": "ft_pv",
+      "category": "feat",
+      "min": 0,
+      "max": 3,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "ft_quartermaster": {
+      "id": "ft_quartermaster",
+      "category": "feat",
+      "min": 0,
+      "max": 2,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "ft_resistdark": {
+      "id": "ft_resistdark",
+      "category": "feat",
+      "min": 0,
+      "max": 2,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "ft_resistpoison": {
+      "id": "ft_resistpoison",
+      "category": "feat",
+      "min": 0,
+      "max": 2,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "ft_shieldbash": {
+      "id": "ft_shieldbash",
+      "category": "feat",
+      "min": 0,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "ft_skillcasting": {
+      "id": "ft_skillcasting",
+      "category": "feat",
+      "min": 0,
+      "max": 2,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "ft_skilldetection": {
+      "id": "ft_skilldetection",
+      "category": "feat",
+      "min": 0,
+      "max": 2,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "ft_skilldualwield": {
+      "id": "ft_skilldualwield",
+      "category": "feat",
+      "min": 0,
+      "max": 2,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "ft_skillfaith": {
+      "id": "ft_skillfaith",
+      "category": "feat",
+      "min": 0,
+      "max": 2,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "ft_skillmartial": {
+      "id": "ft_skillmartial",
+      "category": "feat",
+      "min": 0,
+      "max": 2,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "ft_skillnegotiation": {
+      "id": "ft_skillnegotiation",
+      "category": "feat",
+      "min": 0,
+      "max": 2,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "ft_stamina": {
+      "id": "ft_stamina",
+      "category": "feat",
+      "min": 0,
+      "max": 3,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "ft_touchdrain": {
+      "id": "ft_touchdrain",
+      "category": "feat",
+      "min": 0,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "ft_touchpoison": {
+      "id": "ft_touchpoison",
+      "category": "feat",
+      "min": 0,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "ft_touchsleep": {
+      "id": "ft_touchsleep",
+      "category": "feat",
+      "min": 0,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "mut_arms": {
+      "id": "mut_arms",
+      "category": "mutation",
+      "min": -3,
+      "max": 3,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "mut_brain": {
+      "id": "mut_brain",
+      "category": "mutation",
+      "min": -2,
+      "max": 2,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "mut_cannibalism": {
+      "id": "mut_cannibalism",
+      "category": "mutation",
+      "min": 0,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "mut_eyes": {
+      "id": "mut_eyes",
+      "category": "mutation",
+      "min": -2,
+      "max": 2,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "mut_ironskin": {
+      "id": "mut_ironskin",
+      "category": "mutation",
+      "min": -3,
+      "max": 3,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "mut_joint": {
+      "id": "mut_joint",
+      "category": "mutation",
+      "min": -3,
+      "max": 3,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "mut_legs": {
+      "id": "mut_legs",
+      "category": "mutation",
+      "min": -3,
+      "max": 3,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "mut_resistcold": {
+      "id": "mut_resistcold",
+      "category": "mutation",
+      "min": -1,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "mut_resistfire": {
+      "id": "mut_resistfire",
+      "category": "mutation",
+      "min": -1,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "mut_resistlightning": {
+      "id": "mut_resistlightning",
+      "category": "mutation",
+      "min": -1,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "mut_resistmagic": {
+      "id": "mut_resistmagic",
+      "category": "mutation",
+      "min": -1,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "mut_resistsound": {
+      "id": "mut_resistsound",
+      "category": "mutation",
+      "min": -1,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "mut_trollblood": {
+      "id": "mut_trollblood",
+      "category": "mutation",
+      "min": -2,
+      "max": 2,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "mut_voice": {
+      "id": "mut_voice",
+      "category": "mutation",
+      "min": -2,
+      "max": 2,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "race_digestion": {
+      "id": "race_digestion",
+      "category": "race",
+      "min": 0,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "race_evil": {
+      "id": "race_evil",
+      "category": "race",
+      "min": 0,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "race_fairyresist": {
+      "id": "race_fairyresist",
+      "category": "race",
+      "min": 0,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "race_fairyweak": {
+      "id": "race_fairyweak",
+      "category": "race",
+      "min": 0,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "race_godluck": {
+      "id": "race_godluck",
+      "category": "race",
+      "min": 0,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "race_godprotect": {
+      "id": "race_godprotect",
+      "category": "race",
+      "min": 0,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "race_godsanity": {
+      "id": "race_godsanity",
+      "category": "race",
+      "min": 0,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "race_godspells": {
+      "id": "race_godspells",
+      "category": "race",
+      "min": 0,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "race_good": {
+      "id": "race_good",
+      "category": "race",
+      "min": 0,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "race_magcapacity": {
+      "id": "race_magcapacity",
+      "category": "race",
+      "min": 0,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "race_material": {
+      "id": "race_material",
+      "category": "race",
+      "min": 0,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "race_moe": {
+      "id": "race_moe",
+      "category": "race",
+      "min": 0,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "race_mutate": {
+      "id": "race_mutate",
+      "category": "race",
+      "min": 0,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "race_resistcold": {
+      "id": "race_resistcold",
+      "category": "race",
+      "min": -2,
+      "max": 2,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "race_resistdark": {
+      "id": "race_resistdark",
+      "category": "race",
+      "min": -2,
+      "max": 2,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "race_resistdim": {
+      "id": "race_resistdim",
+      "category": "race",
+      "min": 0,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "race_resistfire": {
+      "id": "race_resistfire",
+      "category": "race",
+      "min": -2,
+      "max": 2,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "race_resistmagic": {
+      "id": "race_resistmagic",
+      "category": "race",
+      "min": -2,
+      "max": 2,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "race_resistpoison": {
+      "id": "race_resistpoison",
+      "category": "race",
+      "min": -2,
+      "max": 2,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "race_skillpoint": {
+      "id": "race_skillpoint",
+      "category": "race",
+      "min": 0,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    },
+    "race_slowether": {
+      "id": "race_slowether",
+      "category": "race",
+      "min": 0,
+      "max": 1,
+      "reqLvl": 1,
+      "reqTrait": 0,
+      "rarity": 100,
+      "stats": false
+    }
+  }}

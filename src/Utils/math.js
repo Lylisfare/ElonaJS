@@ -29,4 +29,10 @@ math_util.NearestMultiple = function(divisor, base){
     return Math.floor(base/divisor);
 }
 
+math_util.Limit = function(value, min, max){
+    let val = Math.max(value, min);
+    val = Math.min(val, max);
+    return val;
+}
+
 module.exports = math_util;
