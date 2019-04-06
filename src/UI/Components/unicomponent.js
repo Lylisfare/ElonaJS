@@ -27,7 +27,7 @@ class UniComponent{
      * @param {Number} base.y The base y position
      */
     Align(base){
-        let dims = Graphics.GetWindowDimensions();
+        let dims = Graphics.GetCanvasSize();
         let point = {x: 0, y: 0};
         let opt = this.params;
 

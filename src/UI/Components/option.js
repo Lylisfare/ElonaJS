@@ -64,19 +64,23 @@ class Option extends MultiComponent{
             Object.assign(val, {position: {x: op.position.x + val.offset.x, y: op.position.y + val.offset.y}})
             if(!this.set.arrows || !Utils.Parse.ObjEq(op.arrows, this.params.arrows)){
                 chng = true;
-                if(this.set.arrow){
+/*                 if(this.set.arrow){
                     this.set.arrow_left.Destroy();
                     this.set.arrow_right.Destroy();
-                } 
+                }  */
 
                 let leftparam = $.extend(true, {}, val, val.arrow_left);
                 let rightparam = $.extend(true, {}, val, val.arrow_right, {position: {x: op.position.x + val.offset.x + val.spacing, y: op.position.y + val.offset.y}});
 
-
-                this.set.arrow_left = new UI.Components.Image(leftparam);
-                this.set.arrow_right = new UI.Components.Image(rightparam);
-                this.menu.AddSprite(this.set.arrow_left.sprite); 
-                this.menu.AddSprite(this.set.arrow_right.sprite); 
+                if(this.set.arrow_left){
+                    this.set.arrow_left.Reconstruct(leftparam);
+                    this.set.arrow_right.Reconstruct(rightparam);
+                } else {
+                    this.set.arrow_left = new UI.Components.Image(leftparam);
+                    this.set.arrow_right = new UI.Components.Image(rightparam);
+                    this.menu.AddSprite(this.set.arrow_left.sprite); 
+                    this.menu.AddSprite(this.set.arrow_right.sprite); 
+                }
             } 
             this.set.arrow_left.Show();
             this.set.arrow_right.Show();

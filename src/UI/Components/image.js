@@ -36,6 +36,30 @@ class Image extends UniComponent{
         this.sprite = Graphics.Spriting.GetImage(this.params);
     }
 
+    Reconstruct(params){
+        if(params.tint) this.sprite.tint = params.tint;
+        else this.sprite.tint = 0xFFFFFF;
+
+        if(params.shadow) this.sprite.filters = [new PIXI.filters.DropShadowFilter({distance: params.shadow.distance, blur: params.shadow.blur})]
+        else this.sprite.filters = [];
+
+        if(params.alpha) this.sprite.alpha = params.alpha;
+        else this.sprite.alpha = 1;
+
+        if(params.position) this.sprite.position.set(params.position.x, params.position.y);
+
+        if(params.scale) this.sprite.scale.set(params.scale, params.scale);
+        else this.sprite.scale.set(1, 1);
+
+        if(params.img && this.params.img != params.img){
+            this.sprite.setTexture(DB.Graphics.Get(params.img), true, params.width, params.height);
+        }
+
+        if(!params.alignment) params.alignment = "relative";
+
+        this.params = params;
+    }
+
     Scale(scale){
         if(this.params.height !== undefined){
             this.sprite.height = this.params.height * scale;

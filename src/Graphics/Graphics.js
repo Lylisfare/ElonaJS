@@ -13,6 +13,7 @@ let Graphics = {
         return {x: window.innerWidth, y: window.innerHeight}
     },
     GetCanvasSize: function(){
+        if(!Settings.GetByID("adaptive_res")) return {x: 800, y: 600};
         if(Settings.GetByID("adaptive_res").value) return this.GetWindowDimensions();
         else return Utils.Parse.Dim2DInt(Settings.GetByID("canvas_resolution").value);
     },

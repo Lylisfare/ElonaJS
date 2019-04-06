@@ -1075,6 +1075,7 @@ let Graphics = {
         return {x: window.innerWidth, y: window.innerHeight}
     },
     GetCanvasSize: function(){
+        if(!Settings.GetByID("adaptive_res")) return {x: 800, y: 600};
         if(Settings.GetByID("adaptive_res").value) return this.GetWindowDimensions();
         else return Utils.Parse.Dim2DInt(Settings.GetByID("canvas_resolution").value);
     },
@@ -1297,6 +1298,30 @@ class Image extends UniComponent{
         this.sprite = Graphics.Spriting.GetImage(this.params);
     }
 
+    Reconstruct(params){
+        if(params.tint) this.sprite.tint = params.tint;
+        else this.sprite.tint = 0xFFFFFF;
+
+        if(params.shadow) this.sprite.filters = [new PIXI.filters.DropShadowFilter({distance: params.shadow.distance, blur: params.shadow.blur})]
+        else this.sprite.filters = [];
+
+        if(params.alpha) this.sprite.alpha = params.alpha;
+        else this.sprite.alpha = 1;
+
+        if(params.position) this.sprite.position.set(params.position.x, params.position.y);
+
+        if(params.scale) this.sprite.scale.set(params.scale, params.scale);
+        else this.sprite.scale.set(1, 1);
+
+        if(params.img && this.params.img != params.img){
+            this.sprite.setTexture(DB.Graphics.Get(params.img), true, params.width, params.height);
+        }
+
+        if(!params.alignment) params.alignment = "relative";
+
+        this.params = params;
+    }
+
     Scale(scale){
         if(this.params.height !== undefined){
             this.sprite.height = this.params.height * scale;
@@ -1438,19 +1463,23 @@ class Option extends MultiComponent{
             Object.assign(val, {position: {x: op.position.x + val.offset.x, y: op.position.y + val.offset.y}})
             if(!this.set.arrows || !Utils.Parse.ObjEq(op.arrows, this.params.arrows)){
                 chng = true;
-                if(this.set.arrow){
+/*                 if(this.set.arrow){
                     this.set.arrow_left.Destroy();
                     this.set.arrow_right.Destroy();
-                } 
+                }  */
 
                 let leftparam = $.extend(true, {}, val, val.arrow_left);
                 let rightparam = $.extend(true, {}, val, val.arrow_right, {position: {x: op.position.x + val.offset.x + val.spacing, y: op.position.y + val.offset.y}});
 
-
-                this.set.arrow_left = new UI.Components.Image(leftparam);
-                this.set.arrow_right = new UI.Components.Image(rightparam);
-                this.menu.AddSprite(this.set.arrow_left.sprite); 
-                this.menu.AddSprite(this.set.arrow_right.sprite); 
+                if(this.set.arrow_left){
+                    this.set.arrow_left.Reconstruct(leftparam);
+                    this.set.arrow_right.Reconstruct(rightparam);
+                } else {
+                    this.set.arrow_left = new UI.Components.Image(leftparam);
+                    this.set.arrow_right = new UI.Components.Image(rightparam);
+                    this.menu.AddSprite(this.set.arrow_left.sprite); 
+                    this.menu.AddSprite(this.set.arrow_right.sprite); 
+                }
             } 
             this.set.arrow_left.Show();
             this.set.arrow_right.Show();
@@ -2002,7 +2031,7 @@ class UniComponent{
      * @param {Number} base.y The base y position
      */
     Align(base){
-        let dims = Graphics.GetWindowDimensions();
+        let dims = Graphics.GetCanvasSize();
         let point = {x: 0, y: 0};
         let opt = this.params;
 
