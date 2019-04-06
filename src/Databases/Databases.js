@@ -56,7 +56,7 @@ Databases.Load = async function(){
     UI.Menus.LoadingScreen.Message("Loading locale...");
     await this.i18n.LoadFromJSON("./locale/en.json");
     UI.Menus.LoadingScreen.Message("Loading graphics...");
-    await this.Graphics.LoadFromJSON("./data/Graphics.JSON");
+    await this.Graphics.BatchLoad(a.graphics);
 }
 
 module.exports = Databases;

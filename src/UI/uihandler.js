@@ -171,9 +171,9 @@ UI._SetResolution = function(){
     let dims = Utils.Parse.Dim2DInt(Settings.GetByID("canvas_resolution").value);
 
     if(Settings.GetByID("adaptive_res").value == false){
-        App.renderer.resize(dims[0], dims[1]);
-        this._canvas.width = dims[0];
-        this._canvas.height = dims[1];
+        App.renderer.resize(dims.x, dims.y);
+        this._canvas.width = dims.x;
+        this._canvas.height = dims.y;
     } else {
         App.renderer.resize(parseInt(this._canvas.style.width), parseInt(this._canvas.style.height));
     }
@@ -184,11 +184,11 @@ UI._ResizeCanvas = function(){
 
     if(Settings.GetByID("adaptive_res").value == false){
         if(Sys.env == "node"){
-            electron.ipcRenderer.send('resize', dims[0], dims[1]);
+            electron.ipcRenderer.send('resize', dims.x, dims.y);
         } 
 
-        this._canvas.style.width = dims[0] + "px";
-        this._canvas.style.height = dims[1] + "px";
+        this._canvas.style.width = dims.x + "px";
+        this._canvas.style.height = dims.y + "px";
     } else {
         this._canvas.style.width = window.innerWidth + "px";
         this._canvas.style.height = window.innerHeight + "px";

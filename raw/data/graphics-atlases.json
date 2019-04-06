@@ -1,0 +1,236 @@
+{
+    "graphics": {
+        "atlases": {
+            "feat_deco": {
+                "id": "feat_deco",
+                "path": "media/graphics/deco_feat.png",
+                "definitions": {
+                    "bl": {
+                        "x": 50,
+                        "y": 150,
+                        "w": 87,
+                        "h": 41
+                    },
+                    "br": {
+                        "x": 4,
+                        "y": 0,
+                        "w": 42,
+                        "h": 172
+                    },
+                    "tl": {
+                        "x": 50,
+                        "y": 0,
+                        "w": 31,
+                        "h": 144
+                    },
+                    "tr": {
+                        "x": 4,
+                        "y": 194,
+                        "w": 91,
+                        "h": 55
+                    }
+                }
+            },
+            "interface": {
+                "id": "interface",
+                "path": "media/graphics/interface.png",
+                "definitions": {
+                    "arrow_left": {
+                        "h": 17,
+                        "w": 22,
+                        "x": 313,
+                        "y": 341
+                    },
+                    "arrow_right": {
+                        "h": 17,
+                        "w": 22,
+                        "x": 337,
+                        "y": 341
+                    },
+                    "black_box": {
+                        "h": 1,
+                        "w": 1,
+                        "x": 164,
+                        "y": 726
+                    },
+                    "buff_box": {
+                        "h": 32,
+                        "w": 32,
+                        "x": 320,
+                        "y": 160
+                    },
+                    "choice_header": {
+                        "h": 32,
+                        "w": 43,
+                        "x": 64,
+                        "y": 288
+                    },
+                    "header1": {
+                        "composable": true,
+                        "composer": "Header1",
+                        "h": 48,
+                        "w": 48,
+                        "x": 48,
+                        "y": 240
+                    },
+                    "header1_bg": {
+                        "h": 68,
+                        "w": 192,
+                        "x": 496,
+                        "y": 530
+                    },
+                    "header2": {
+                        "composable": true,
+                        "composer": "Header2",
+                        "h": 26,
+                        "w": 152,
+                        "x": 272,
+                        "y": 477
+                    },
+                    "icon_bulb": {
+                        "h": 16,
+                        "w": 20,
+                        "x": 98,
+                        "y": 360
+                    },
+                    "icon_cha": {
+                        "h": 15,
+                        "w": 16,
+                        "x": 272,
+                        "y": 656
+                    },
+                    "icon_con": {
+                        "h": 15,
+                        "w": 16,
+                        "x": 240,
+                        "y": 656
+                    },
+                    "icon_dex": {
+                        "h": 15,
+                        "w": 16,
+                        "x": 288,
+                        "y": 656
+                    },
+                    "icon_diamond": {
+                        "h": 16,
+                        "w": 20,
+                        "x": 122,
+                        "y": 360
+                    },
+                    "icon_feat": {
+                        "h": 48,
+                        "w": 48,
+                        "x": 816,
+                        "y": 48
+                    },
+                    "icon_gene": {
+                        "h": 16,
+                        "w": 20,
+                        "x": 434,
+                        "y": 342
+                    },
+                    "icon_inputHira": {
+                        "h": 18,
+                        "w": 17,
+                        "x": 51,
+                        "y": 340
+                    },
+                    "icon_inputLatin": {
+                        "h": 18,
+                        "w": 17,
+                        "x": 27,
+                        "y": 340
+                    },
+                    "icon_ler": {
+                        "h": 15,
+                        "w": 16,
+                        "x": 256,
+                        "y": 656
+                    },
+                    "icon_mag": {
+                        "h": 15,
+                        "w": 16,
+                        "x": 224,
+                        "y": 656
+                    },
+                    "icon_per": {
+                        "h": 15,
+                        "w": 16,
+                        "x": 208,
+                        "y": 656
+                    },
+                    "icon_star": {
+                        "h": 16,
+                        "w": 20,
+                        "x": 386,
+                        "y": 342
+                    },
+                    "icon_str": {
+                        "h": 15,
+                        "w": 16,
+                        "x": 192,
+                        "y": 656
+                    },
+                    "icon_wil": {
+                        "h": 15,
+                        "w": 16,
+                        "x": 304,
+                        "y": 656
+                    },
+                    "input_header": {
+                        "h": 26,
+                        "w": 111,
+                        "x": 128,
+                        "y": 296
+                    },
+                    "input_indicator": {
+                        "h": 16,
+                        "w": 9,
+                        "x": 1,
+                        "y": 340
+                    },
+                    "more_btn": {
+                        "h": 22,
+                        "w": 120,
+                        "x": 552,
+                        "y": 504
+                    },
+                    "narration_bg": {
+                        "h": 64,
+                        "w": 352,
+                        "x": 448,
+                        "y": 144
+                    },
+                    "option": {
+                        "h": 17,
+                        "w": 22,
+                        "x": 0,
+                        "y": 31
+                    },
+                    "paper": {
+                        "composable": true,
+                        "composer": "Paper",
+                        "h": 192,
+                        "w": 264,
+                        "x": 0,
+                        "y": 48
+                    },
+                    "paper_frame": {
+                        "composable": true,
+                        "composer": "PaperFrame",
+                        "h": 48,
+                        "w": 48,
+                        "x": 48,
+                        "y": 240
+                    },
+                    "selector": {
+                        "h": 10,
+                        "w": 10,
+                        "x": 48,
+                        "y": 360
+                    }
+                }
+            }
+        }
+    }
+}

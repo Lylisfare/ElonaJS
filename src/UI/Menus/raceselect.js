@@ -96,7 +96,6 @@ RaceSelect._OnLoad = function(parameters){
 
 RaceSelect._BuildList = function(){
     if(!this.races) this.races = DB.Races.Search({playable: true});
-    if(!this.csheet) this.csheet = DB.Graphics.GetByID("character").exceptions;
     let races = this.races;
     let opt = [];
 
@@ -120,12 +119,13 @@ RaceSelect._BuildList = function(){
 
 RaceSelect._PreviewData = function(){
     let op = this.options.GetCurrentOption();
+    let ipara = DB.Graphics.GetByID("character." + op.preview.pic1);
     this.components.Desc.SetText(i18n(op.preview.desc));
     this.components.CPrev1.SetImage("character." + op.preview.pic1);
     this.components.CPrev2.SetImage("character." + op.preview.pic2);
 
-    if(this.csheet[op.preview.pic1]){
-        let offset = (this.csheet[op.preview.pic1].offY ? this.csheet[op.preview.pic1].offY : 0);
+    if(ipara){
+        let offset = (ipara.offY ? ipara.offY : 0);
         this.components.CPrev1.SetBasePosition(300, 135 - this.components.CPrev1.GetActualHeight() - offset);
         this.components.CPrev2.SetBasePosition(444, 135 - this.components.CPrev2.GetActualHeight() - offset);
     } else {

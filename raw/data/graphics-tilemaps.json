@@ -1,0 +1,19 @@
+{
+    "graphics": {
+        "tilemaps": {
+            "tilemap0": {
+                "id": "tilemap0",
+                "path": "media/graphics/map0.png",
+                "tsx": 48,
+                "tsy": 48
+            },
+            "tilemap1": {
+                "id": "tilemap1",
+                "path": "media/graphics/map1.png",
+                "tsx": 48,
+                "tsy": 48,
+                "tiler": "BaseTiler"
+            }
+        }
+    }
+}

@@ -45,23 +45,7 @@ module.exports = Unit;
 
 
 /* 
-EloChara.prototype.HasTrait = function(key){
-    return (this.traits[key] !== undefined && this.traits[key] != 0);
-}
 
-EloChara.prototype.GetTrait = function(key){
-    return this.traits[key];
-}
-
-EloChara.prototype.GetTraitLevel = function(key){
-    if(this.HasTrait(key)) return this.traits[key];
-    else return 0;
-}
-
-EloChara.prototype.AddTrait = function(key){
-    if(this.HasTrait(key)) this.traits[key]++;
-    else this.traits[key] = 1;
-}
 
 EloChara.prototype.GetAttbBase = function(name){
     return this.attributes[name].base;

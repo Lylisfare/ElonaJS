@@ -63,7 +63,6 @@ String.prototype.initCap = function () {
     UI.HideLS(true);
    
     UI.LoadMenu("TitleScreen");
-    UI.Resize();
  })
 
 /*  function sortObjByKey(value) {

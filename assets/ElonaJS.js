@@ -125,7 +125,7 @@ Databases.Load = async function(){
     UI.Menus.LoadingScreen.Message("Loading locale...");
     await this.i18n.LoadFromJSON("./locale/en.json");
     UI.Menus.LoadingScreen.Message("Loading graphics...");
-    await this.Graphics.LoadFromJSON("./data/Graphics.JSON");
+    await this.Graphics.BatchLoad(a.graphics);
 }
 
 module.exports = Databases;
@@ -284,65 +284,139 @@ let AsyncDB = require("./asyncdb");
 
 let GraphicsDB = new AsyncDB();
 
-GraphicsDB.Get = function(img, w, h, base){
-    let parts = img.split(".");
-    let doc = this.db.findOne({id: parts[0]});
-    let scale = 1;
-    let texture, sp, rect, identifier, tw, th, ow, oh, original, ret;
+GraphicsDB._ParseTiled = async function(obj){
+    let base = obj.details;
+    let idims = await this.RegisterImage(obj.id, obj.path);
+    let toinsert = [];
+    let basedoc = {id: obj.id, path: obj.path, details: obj.details};
 
-    ret = {texture: PIXI.utils.TextureCache[parts[0]]};
-
-    if(parts.length == 1) ret.doc = doc;
-    else {
-
-        if(doc.tiled){
-            let details = this._RetrieveDetails(doc, parts[1]);
-            let mx = details.w || doc.tsx;
-            let my = details.h || doc.tsy;
-
-            ret.rect = new PIXI.Rectangle((parts[1] % (ret.texture.orig.width / doc.tsx)) * doc.tsx, Math.floor(parts[1] / (ret.texture.orig.width / doc.tsx)) * doc.tsy, mx, my);
-            ret.texture = new PIXI.Texture(ret.texture.baseTexture, ret.rect);
-            return ret.texture;
-        }
-
-        let sp = doc.definitions[parts[1]]
-        ret.doc = sp;
-        ret.rect = new PIXI.Rectangle(sp.x, sp.y, sp.w, sp.h);
-        ret.texture = new PIXI.Texture(ret.texture.baseTexture, ret.rect);
-
-    }
-
-    ow = (ret.rect ? ret.rect.width : ret.texture.orig.width);
-    oh = (ret.rect ? ret.rect.height : ret.texture.orig.height);
-    tw = (w ? w : ow) * scale;
-    th = (h ? h : oh) * scale;
-
-
-    //If it's not composable, or there is no size difference, then we need to return what we have. Scaling is handled by PIXI.
-    if(!ret.doc.composable || (ow == tw && oh == th) || base){
-        if(parts.length == 1){
-            return ret.texture;
-        }
-        else{
-            if(doc.tex && doc.tex[parts[1]]){
-                return doc.tex[parts[1]];
+    for(let cy = 0; cy < Math.floor(idims[1] / base.h); cy++){
+        for(let cx = 0; cx < Math.floor(idims[0] / base.w); cx++){
+            let tnum = (cx + cy * (Math.floor(idims[0] / base.w)));
+            let params = Object.assign({}, base);
+            params.x = cx * base.w;
+            params.y = cy * base.h;
+            params.image = obj.id;
+            params.id = obj.id + "." + tnum;
+            
+            
+            if(obj.exceptions){
+                for(let i = 0, arr = Object.values(obj.exceptions); i < arr.length; i++){
+                    if(arr[i].list.indexOf(tnum) != -1) Object.assign(params, arr[i].details);
+                }
             }
 
-            if(!doc.tex) doc.tex = {};
-            doc.tex[parts[1]] = ret.texture;
-            this.db.update(doc);
-            return ret.texture;
+            toinsert.push(params);
         }
     }
 
-    identifier = img + "." + tw + "x" + th;
-    if(doc.variants && doc.variants[identifier]) return doc.variants[identifier];
-
-    if(!doc.variants) doc.variants = {};
-    doc.variants[identifier] = Graphics.Composers[ret.doc.composer](tw, th);
-    return doc.variants[identifier];
+    this.db.insert(basedoc);
+    return toinsert;
 }
 
+GraphicsDB._ParseAtlas = async function(obj){
+    let toinsert = [];
+    let basedoc = {id: obj.id, path: obj.path};
+    await this.RegisterImage(obj.id, obj.path);
+
+    for(let i = 0, arr = Object.values(obj.definitions), arr2 = Object.keys(obj.definitions); i < arr.length; i++){
+        let params = Object.assign({}, arr[i]);
+        params.image = obj.id;
+        params.id = obj.id + "." + arr2[i];
+        toinsert.push(params);
+    }
+
+    this.db.insert(basedoc);
+    return toinsert;
+}
+
+GraphicsDB.BatchLoad = async function(arr){
+
+    //Load simple images. No processing required.
+    let toLoad = arr.simple;
+    if(toLoad){
+        for(let i = 0, vals = Object.values(toLoad); i < vals.length; i++){
+            await this.Register(vals[i]);
+        }
+    }
+
+    //Load tiled atlases. Create an object for each tile.
+    toLoad = arr.tiledatlas;
+    if(toLoad){
+        for(let i = 0, vals = Object.values(toLoad); i < vals.length; i++){
+            let output = await this._ParseTiled(vals[i]);
+            for(let j = 0; j < output.length; j++) this.db.insert(output[j]);
+        }
+    }
+
+    //Load non-tiled atlases. Creates an object for specified images.
+    toLoad = arr.atlases;
+    if(toLoad){
+        for(let i = 0, vals = Object.values(toLoad); i < vals.length; i++){
+            let output = await this._ParseAtlas(vals[i]);
+            for(let j = 0; j < output.length; j++) this.db.insert(output[j]);
+        }
+    }
+}
+
+GraphicsDB.RegisterImage = async function(id, path){
+    return new Promise((resolve, reject) => {
+        PIXI.loader.add(id, path).load((loader, resources) => {
+            resources[id].texture.baseTexture.scaleMode = PIXI.SCALE_MODES.NEAREST;
+            resolve([resources[id].texture.baseTexture.width, resources[id].texture.baseTexture.height]);
+        })});
+
+        /*             params.x = resources[params.id].texture.baseTexture.width;
+            params.y = resources[params.id].texture.baseTexture.height; */
+}
+
+GraphicsDB.Register = async function(params){
+    await this.RegisterImage(params.id, params.path);
+    this.db.insert(params);
+}
+
+
+GraphicsDB.Get = function(img, scale = true, width, height){
+    //Find the document
+    let doc = this.db.findOne({id: img});
+    let texture;
+    let basew, baseh, targetw, targeth;
+    let scalef = 1;
+    let id;
+
+    //Find the texture
+    if(doc.image) texture = PIXI.utils.TextureCache[doc.image];
+    else texture = PIXI.utils.TextureCache[doc.id];
+
+    //Set a sub-rect of the texture, if the texture is not the full image
+    if(doc.x || doc.y){
+        let rect = new PIXI.Rectangle(doc.x, doc.y, doc.w, doc.h);
+        texture = new PIXI.Texture(texture.baseTexture, rect);
+    }
+
+    //If the image is not composable, or we decide not to scale anyways, return what we have.
+    if(!doc.composable || !scale) return texture;
+
+    //Return what we have if the target size is equal to the original size.
+    basew = (doc.w ? doc.w : texture.baseTexture.width);
+    baseh = (doc.h ? doc.h : texture.baseTexture.height);
+    targetw = (width ? width : basew) * scalef;
+    targeth = (height ? height: baseh) * scalef;
+
+    if(basew == targetw && baseh == targeth) return texture;
+    
+    //Check if a composited image of proper size already exists, and return it if so.
+    id = img + "." + targetw + "x" + targeth;
+    if(doc.variants && doc.variants[id]) return doc.variants[id];
+
+    //Otherwise, compose the variant, save it, and return it.
+    if(!doc.variants) doc.variants = {};
+    doc.variants[id] = Graphics.Composers[doc.composer](targetw, targeth);
+    return doc.variants[id];
+}
+
+
+/*
 GraphicsDB.GetDetails = function(img){
     let parts = img.split(".");
     let doc = this.db.findOne({id: parts[0]});
@@ -350,15 +424,7 @@ GraphicsDB.GetDetails = function(img){
     return this._RetrieveDetails(doc, parts[1]);
 }
 
-GraphicsDB.Register = async function(params){
-    return new Promise((resolve, reject) => {
-        PIXI.loader.add(params.id, params.path).load((loader, resources) => {
-            resources[params.id].texture.baseTexture.scaleMode = PIXI.SCALE_MODES.NEAREST;
-            params.x = resources[params.id].texture.baseTexture.width;
-            params.y = resources[params.id].texture.baseTexture.height;
-            this.db.insert(params);
-            resolve(true);
-    })});
+
 }
 
 GraphicsDB._RetrieveDetails = function(doc, id){
@@ -368,7 +434,7 @@ GraphicsDB._RetrieveDetails = function(doc, id){
     }
 
     return Object.assign({}, doc.basic, doc.exceptions[id]);
-}
+} */
 
 module.exports = GraphicsDB;
 },{"./asyncdb":3}],6:[function(require,module,exports){
@@ -612,7 +678,6 @@ String.prototype.initCap = function () {
     UI.HideLS(true);
    
     UI.LoadMenu("TitleScreen");
-    UI.Resize();
  })
 
 /*  function sortObjByKey(value) {
@@ -826,23 +891,7 @@ module.exports = Unit;
 
 
 /* 
-EloChara.prototype.HasTrait = function(key){
-    return (this.traits[key] !== undefined && this.traits[key] != 0);
-}
 
-EloChara.prototype.GetTrait = function(key){
-    return this.traits[key];
-}
-
-EloChara.prototype.GetTraitLevel = function(key){
-    if(this.HasTrait(key)) return this.traits[key];
-    else return 0;
-}
-
-EloChara.prototype.AddTrait = function(key){
-    if(this.HasTrait(key)) this.traits[key]++;
-    else this.traits[key] = 1;
-}
 
 EloChara.prototype.GetAttbBase = function(name){
     return this.attributes[name].base;
@@ -908,8 +957,8 @@ let DrawTexture = require("./drawtexture.js");
 
 let Header1 = function(nw, nh){
     let rt = PIXI.RenderTexture.create(nw, nh);
-    let bgbase = DB.Graphics.Get("interface.header1_bg", null, null, true);
-    let fmbase = DB.Graphics.Get("interface.header1", null, null, true);
+    let bgbase = DB.Graphics.Get("interface.header1_bg", false);
+    let fmbase = DB.Graphics.Get("interface.header1", false);
     let bgbt = bgbase.baseTexture;
     let fmbt = fmbase.baseTexture;
     let bo = {x: fmbase.orig.x, y: fmbase.orig.y, w: fmbase.orig.width, h: fmbase.orig.height};
@@ -947,7 +996,7 @@ let DrawTexture = require("./drawtexture.js");
     
 let Header2 = function(nw, nh){
     let rt = PIXI.RenderTexture.create(nw, nh);
-    let base = DB.Graphics.Get("interface.header2", null, null, true);
+    let base = DB.Graphics.Get("interface.header2", false);
     let bt = base.baseTexture;
     let bo = {x: base.orig.x, y: base.orig.y, w: base.orig.width, h: base.orig.height};
 
@@ -971,7 +1020,7 @@ let DrawTexture = require("./drawtexture.js");
 
 let Paper = function(nw, nh){
     let rt = PIXI.RenderTexture.create(nw, nh);
-    let base = DB.Graphics.Get("interface.paper", null, null, true);
+    let base = DB.Graphics.Get("interface.paper", false);
     let bt = base.baseTexture;
     let bo = {x: base.orig.x, y: base.orig.y, w: base.orig.width, h: base.orig.height};
 
@@ -1024,6 +1073,10 @@ let Graphics = {
     },
     GetWindowDimensions: function(){
         return {x: window.innerWidth, y: window.innerHeight}
+    },
+    GetCanvasSize: function(){
+        if(Settings.GetByID("adaptive_res").value) return this.GetWindowDimensions();
+        else return Utils.Parse.Dim2DInt(Settings.GetByID("canvas_resolution").value);
     },
     Scale: function(){return 1;},
     Spriting: require("./spriting.js"),
@@ -1096,7 +1149,7 @@ Spriting.GetText = function(params){
  * @returns PIXI.Sprite
  */
 Spriting.GetImage = function(params){
-    let texture = DB.Graphics.Get(params.img, params.width, params.height);
+    let texture = DB.Graphics.Get(params.img, true, params.width, params.height);
     let sprite = new PIXI.Sprite(texture);
 
     for(let i = 0, keys = Object.keys(params); i < keys.length; i++){
@@ -2105,7 +2158,7 @@ module.exports = UniComponent;
  * A collection of Menus used in the game.
  * @namespace ElonaJS.UI.Menus
  * @memberOf ElonaJS.UI
- * @property {module:RaceSelect} RaceSelect The RaceSelect Module
+ * @property {ElonaJS.UI.Menus.BaseMenu} RaceSelect The RaceSelect Module
  */
 let Menus = {
     LoadingScreen: require("./loadingscreen.js"),
@@ -2465,7 +2518,7 @@ class BaseMenu{
 
     _UpdateBase(){
         if(this.centered){
-            let dims = Graphics.GetWindowDimensions();
+            let dims = Graphics.GetCanvasSize();
             this.position.x = (dims.x - this.size.w) / 2;
             this.position.y = (dims.y - this.size.h) / 2;
         }
@@ -2572,7 +2625,6 @@ ClassSelect._OnLoad = function(parameters){
 
 ClassSelect._BuildList = function(){
     if(!this.classes) this.classes = DB.Classes.Search({playable: true});
-    if(!this.csheet) this.csheet = DB.Graphics.GetByID("character").exceptions;
     let classes = this.classes;
     let opt = [];
 
@@ -3229,7 +3281,6 @@ RaceSelect._OnLoad = function(parameters){
 
 RaceSelect._BuildList = function(){
     if(!this.races) this.races = DB.Races.Search({playable: true});
-    if(!this.csheet) this.csheet = DB.Graphics.GetByID("character").exceptions;
     let races = this.races;
     let opt = [];
 
@@ -3253,12 +3304,13 @@ RaceSelect._BuildList = function(){
 
 RaceSelect._PreviewData = function(){
     let op = this.options.GetCurrentOption();
+    let ipara = DB.Graphics.GetByID("character." + op.preview.pic1);
     this.components.Desc.SetText(i18n(op.preview.desc));
     this.components.CPrev1.SetImage("character." + op.preview.pic1);
     this.components.CPrev2.SetImage("character." + op.preview.pic2);
 
-    if(this.csheet[op.preview.pic1]){
-        let offset = (this.csheet[op.preview.pic1].offY ? this.csheet[op.preview.pic1].offY : 0);
+    if(ipara){
+        let offset = (ipara.offY ? ipara.offY : 0);
         this.components.CPrev1.SetBasePosition(300, 135 - this.components.CPrev1.GetActualHeight() - offset);
         this.components.CPrev2.SetBasePosition(444, 135 - this.components.CPrev2.GetActualHeight() - offset);
     } else {
@@ -3757,9 +3809,9 @@ UI._SetResolution = function(){
     let dims = Utils.Parse.Dim2DInt(Settings.GetByID("canvas_resolution").value);
 
     if(Settings.GetByID("adaptive_res").value == false){
-        App.renderer.resize(dims[0], dims[1]);
-        this._canvas.width = dims[0];
-        this._canvas.height = dims[1];
+        App.renderer.resize(dims.x, dims.y);
+        this._canvas.width = dims.x;
+        this._canvas.height = dims.y;
     } else {
         App.renderer.resize(parseInt(this._canvas.style.width), parseInt(this._canvas.style.height));
     }
@@ -3770,11 +3822,11 @@ UI._ResizeCanvas = function(){
 
     if(Settings.GetByID("adaptive_res").value == false){
         if(Sys.env == "node"){
-            electron.ipcRenderer.send('resize', dims[0], dims[1]);
+            electron.ipcRenderer.send('resize', dims.x, dims.y);
         } 
 
-        this._canvas.style.width = dims[0] + "px";
-        this._canvas.style.height = dims[1] + "px";
+        this._canvas.style.width = dims.x + "px";
+        this._canvas.style.height = dims.y + "px";
     } else {
         this._canvas.style.width = window.innerWidth + "px";
         this._canvas.style.height = window.innerHeight + "px";
@@ -4086,7 +4138,7 @@ Parse.Dim2DInt = function(str){
     n[1] = parseInt(n[1]);
 
     if(isNaN(n[0]) || isNaN(n[1])) return undefined;
-    return n;
+    return {x: n[0], y: n[1]}
 }
 
 

@@ -4,8 +4,8 @@ let DrawTexture = require("./drawtexture.js");
 
 let Header1 = function(nw, nh){
     let rt = PIXI.RenderTexture.create(nw, nh);
-    let bgbase = DB.Graphics.Get("interface.header1_bg", null, null, true);
-    let fmbase = DB.Graphics.Get("interface.header1", null, null, true);
+    let bgbase = DB.Graphics.Get("interface.header1_bg", false);
+    let fmbase = DB.Graphics.Get("interface.header1", false);
     let bgbt = bgbase.baseTexture;
     let fmbt = fmbase.baseTexture;
     let bo = {x: fmbase.orig.x, y: fmbase.orig.y, w: fmbase.orig.width, h: fmbase.orig.height};

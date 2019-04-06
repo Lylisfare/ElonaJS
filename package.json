@@ -8,7 +8,6 @@
     "watch": "watchify ./src/ElonaJS.js --node --exclude electron -o ./assets/ElonaJS.js",
     "doc": "jsdoc ./src/ -c jsdoc-conf.json -d ./docs/",
     "serve": "http-server -p 22331",
-
     "build-data": "node ./scripts/build_locales.js",
     "compress": "uglifyjs --compress --mangle -o ./assets/ElonaJS.js -- ./assets/ElonaJS.js",
     "package": "node ./scripts/package.js",
@@ -28,6 +27,7 @@
     "electron": "^3.1.7",
     "electron-packager": "^13.1.1",
     "json-concat": "0.0.1",
+    "lodash.merge": "^4.6.1",
     "tui-jsdoc-template": "^1.2.2"
   }
 }

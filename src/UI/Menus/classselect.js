@@ -91,7 +91,6 @@ ClassSelect._OnLoad = function(parameters){
 
 ClassSelect._BuildList = function(){
     if(!this.classes) this.classes = DB.Classes.Search({playable: true});
-    if(!this.csheet) this.csheet = DB.Graphics.GetByID("character").exceptions;
     let classes = this.classes;
     let opt = [];
 

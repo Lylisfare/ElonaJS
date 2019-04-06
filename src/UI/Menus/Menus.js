@@ -4,7 +4,7 @@
  * A collection of Menus used in the game.
  * @namespace ElonaJS.UI.Menus
  * @memberOf ElonaJS.UI
- * @property {module:RaceSelect} RaceSelect The RaceSelect Module
+ * @property {ElonaJS.UI.Menus.BaseMenu} RaceSelect The RaceSelect Module
  */
 let Menus = {
     LoadingScreen: require("./loadingscreen.js"),

@@ -1,0 +1,150 @@
+{
+    "graphics": {
+      "simple": {
+        "bg1": {
+          "id": "bg1",
+          "path": "media/graphics/bg1.png"
+        },
+        "bg2": {
+          "id": "bg2",
+          "path": "media/graphics/bg2.png"
+        },
+        "bg3": {
+          "id": "bg3",
+          "path": "media/graphics/bg3.png"
+        },
+        "bg4": {
+          "id": "bg4",
+          "path": "media/graphics/bg4.png"
+        },
+        "bg5": {
+          "id": "bg5",
+          "path": "media/graphics/bg5.png"
+        },
+        "bg6": {
+          "id": "bg6",
+          "path": "media/graphics/bg6.png"
+        },
+        "bg7": {
+          "id": "bg7",
+          "path": "media/graphics/bg7.png"
+        },
+        "bg8": {
+          "id": "bg8",
+          "path": "media/graphics/bg8.png"
+        },
+        "bg9": {
+          "id": "bg9",
+          "path": "media/graphics/bg9.png"
+        },
+        "bg10": {
+          "id": "bg10",
+          "path": "media/graphics/bg10.png"
+        },
+        "bg11": {
+          "id": "bg11",
+          "path": "media/graphics/bg11.png"
+        },
+        "bg12": {
+          "id": "bg12",
+          "path": "media/graphics/bg12.png"
+        },
+        "bg13": {
+          "id": "bg13",
+          "path": "media/graphics/bg13.png"
+        },
+        "bg14": {
+          "id": "bg14",
+          "path": "media/graphics/bg14.png"
+        },
+        "bg15": {
+          "id": "bg15",
+          "path": "media/graphics/bg15.png"
+        },
+        "bg16": {
+          "id": "bg16",
+          "path": "media/graphics/bg16.png"
+        },
+        "bg17": {
+          "id": "bg17",
+          "path": "media/graphics/bg17.png"
+        },
+        "bg18": {
+          "id": "bg18",
+          "path": "media/graphics/bg18.png"
+        },
+        "bg19": {
+          "id": "bg19",
+          "path": "media/graphics/bg19.png"
+        },
+        "bg20": {
+          "id": "bg20",
+          "path": "media/graphics/bg20.png"
+        },
+        "bg21": {
+          "id": "bg21",
+          "path": "media/graphics/bg21.png"
+        },
+        "bg22": {
+          "id": "bg22",
+          "path": "media/graphics/bg22.png"
+        },
+        "cbg1": {
+          "id": "cbg1",
+          "category": "paper_bg",
+          "path": "media/graphics/g1.png"
+        },
+        "cbg2": {
+          "id": "cbg2",
+          "category": "paper_bg",
+          "path": "media/graphics/g2.png"
+        },
+        "cbg3": {
+          "id": "cbg3",
+          "category": "paper_bg",
+          "path": "media/graphics/g3.png"
+        },
+        "cbg4": {
+          "id": "cbg4",
+          "category": "paper_bg",
+          "path": "media/graphics/g4.png"
+        },
+        "cgb5": {
+          "id": "cbg5",
+          "category": "paper_bg",
+          "path": "media/graphics/g5.png"
+        },
+        "cbg6": {
+          "id": "cbg6",
+          "category": "paper_bg",
+          "path": "media/graphics/g6.png"
+        },
+        "cbg7": {
+          "id": "cbg7",
+          "category": "paper_bg",
+          "path": "media/graphics/g7.png"
+        },
+        "cbg8": {
+          "id": "cbg8",
+          "category": "paper_bg",
+          "path": "media/graphics/g8.png"
+        },
+        "chat": {
+          "id": "chat",
+          "path": "media/graphics/ie_chat.png"
+        },
+        "overview": {
+          "id": "overview",
+          "path": "media/graphics/ie_sheet.png"
+        },
+        "title": {
+          "id": "title",
+          "path": "media/graphics/title.png"
+        },
+        "void": {
+          "id": "void",
+          "path": "media/graphics/void.png"
+        }
+      }
+    }
+  }

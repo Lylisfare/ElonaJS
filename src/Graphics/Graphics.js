@@ -12,6 +12,10 @@ let Graphics = {
     GetWindowDimensions: function(){
         return {x: window.innerWidth, y: window.innerHeight}
     },
+    GetCanvasSize: function(){
+        if(Settings.GetByID("adaptive_res").value) return this.GetWindowDimensions();
+        else return Utils.Parse.Dim2DInt(Settings.GetByID("canvas_resolution").value);
+    },
     Scale: function(){return 1;},
     Spriting: require("./spriting.js"),
     Composers: require("./Composers/Composers.js")

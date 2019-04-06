@@ -25,7 +25,7 @@ Parse.Dim2DInt = function(str){
     n[1] = parseInt(n[1]);
 
     if(isNaN(n[0]) || isNaN(n[1])) return undefined;
-    return n;
+    return {x: n[0], y: n[1]}
 }
 
 

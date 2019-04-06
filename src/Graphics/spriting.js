@@ -61,7 +61,7 @@ Spriting.GetText = function(params){
  * @returns PIXI.Sprite
  */
 Spriting.GetImage = function(params){
-    let texture = DB.Graphics.Get(params.img, params.width, params.height);
+    let texture = DB.Graphics.Get(params.img, true, params.width, params.height);
     let sprite = new PIXI.Sprite(texture);
 
     for(let i = 0, keys = Object.keys(params); i < keys.length; i++){
