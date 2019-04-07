@@ -148,8 +148,8 @@ class BaseMenu{
     _UpdateBase(){
         if(this.centered){
             let dims = Graphics.GetCanvasSize();
-            this.position.x = (dims.x - this.size.w) / 2;
-            this.position.y = (dims.y - this.size.h) / 2;
+            this.position.x = Math.floor((dims.x - this.size.w) / 2);
+            this.position.y = Math.floor((dims.y - this.size.h) / 2);
         }
     }
 

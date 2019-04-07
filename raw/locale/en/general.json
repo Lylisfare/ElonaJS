@@ -90,8 +90,7 @@
       "section2": "Detail",
       "section3": "Attribute Bonuses",
       "section4": "Trained Skills",
-      "wepprefix": "Weaponry: ",
-      "attributes": "str,con,dex,ler,wil,mag,cha"
+      "wepprefix": "Weaponry: "
     },
     "genderselect": {
       "guide": "What's your gender?",
@@ -105,8 +104,8 @@
       "section2": "Detail",
       "section3": "Attribute Bonuses",
       "section4": "Trained Skills",
-      "attributes": "${ui.raceselect.attributes}",
-      "wepprefix": "Weaponry: "
+      "wepprefix": "Weaponry: ",
+      "race": "Race: ${%{race}}"
     },
     "attributeroll": {
       "guide": "You should prepare well, if you want to survive long enough in Irva.",

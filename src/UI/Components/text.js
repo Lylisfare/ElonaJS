@@ -57,8 +57,36 @@ class UIText extends UniComponent {
         return this.sprite.text;
     }
 
+    Reconstruct(params){
+        if(params.size) this.sprite._style.fontSize = params.size;
+        else this.sprite._style.fontSize = this._default.size;
+
+        if(params.color) this.sprite._style.fill = params.color;
+        else this.sprite._style.fill = this._default.color;
+
+        if(params.wrap) {
+            this.sprite._style.wordWrap = true;
+            this.sprite._style.wordWrapWidth = params.wrap.width;
+        } else this.sprite._style.wordWrap = false;
+
+        if(params.weight) this.sprite._style.fontWeight = params.weight;
+        else this.sprite._style.fontWeight = "normal";
+
+        if(params.outline) {
+            this.sprite._style.stroke = params.outline.color;
+            this.sprite._style.strokeThickness = params.outline.size;
+        } else this.sprite._style.strokeThickness = 0;
+
+        if(!params.alignment) params.alignment = "relative";
+
+        if(params.text) this.SetText(params.text);
+
+        this.params = params;
+        if(params.i18n) this.RefreshI18n();
+    }
+
     RefreshI18n(){
-        if(this.params.i18n) this.sprite.text = i18n(this.params.i18n);
+        if(this.params.i18n) this.SetText(i18n(this.params.i18n));
     }
 
     Scale(scale){

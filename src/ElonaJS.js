@@ -18,6 +18,7 @@ String.prototype.initCap = function () {
     window.electron = require('electron')
     window.__baseDir = window.__dirname + "\\assets\\";
   }
+  PIXI.SCALE_MODES.DEFAULT = PIXI.SCALE_MODES.NEAREST;
 
     /**
      * @namespace ElonaJS

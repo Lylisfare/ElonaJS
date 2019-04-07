@@ -83,7 +83,16 @@ class OptionList extends MultiComponent{
         this.UpdateSelector();
         this.AlignSelector(this.menu.position);
         this.menu.AlignElements();
-        
+    }
+
+    JumpTo(index){
+        let pg = Math.floor(index / this.settings.perpage);
+        this.page = pg;
+        this.current = index;
+        this.Build();
+        this.UpdateSelector();
+        this.AlignSelector(this.menu.position);
+        this.menu.AlignElements();
     }
 
     AlignSelector(base){

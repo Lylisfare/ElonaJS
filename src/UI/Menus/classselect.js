@@ -13,11 +13,16 @@ ClassSelect.sounds.select = "spell";
 
 ClassSelect._OnLoad = function(parameters){
     this.parameters = parameters;
+    let race = DB.Races.GetByID(parameters.unit.GetRace());
+    let rimgdet = DB.Graphics.GetByID("character." + race.pic.female);
     if(this.init){
         this.options.current = 0;
         this.options.page = 0;
-        this.components.CPrev1.SetImage("character." + DB.Races.GetByID(parameters.unit.GetRace()).pic.female);
-        this.components.CPrev2.SetImage("character." + DB.Races.GetByID(parameters.unit.GetRace()).pic.male);
+        this.components.CPrev1.SetImage("character." + race.pic.female);
+        this.components.CPrev2.SetImage("character." + race.pic.male);
+        this.components.CPrev1.SetBasePosition(330, 63 - rimgdet.h);
+        this.components.CPrev2.SetBasePosition(330 + 20 + rimgdet.w, 63 - rimgdet.h);
+        this.components.Race.SetText(i18n("ui.classselect.race", {race: DB.Races.GetByID(parameters.unit.race).name}));
         return;
     }
 
@@ -30,9 +35,10 @@ ClassSelect._OnLoad = function(parameters){
     new UI.Components.Image({id: "BG_Deco", img: "cbg3", position: {x: 30, y: 40, z: 1}, width: 290, height: 430, alpha: 0.2}).Attach(this);
     new UI.Components.Text({id: "Desc", position: {x: 210, y: 70}, wrap: {width: 460, spacing: 16}, text: ""}).Attach(this);
     new UI.Components.Text({id: "Help", alignment: "bottom-left", i18n: "hints.help", position: {x: 30, y: -22}}).Attach(this);
+    new UI.Components.Text({id: "Race", text: "Race: ", position: {x: 520, y: 40}}).Attach(this);
     new UI.Components.Text({id: "PageNum", position: {x: 640, y: 475}, size: 10}).Attach(this);
-    new UI.Components.Image({id: "CPrev1", img: "character." + DB.Races.GetByID(parameters.unit.GetRace()).pic.female, position: {x: 300, y: 45, z: 3}, alpha: 0.2, scale: 1}).Attach(this);
-    new UI.Components.Image({id: "CPrev2", img: "character."  + DB.Races.GetByID(parameters.unit.GetRace()).pic.male, position: {x: 444, y: 45, z: 3}, alpha: 0.2, scale: 1}).Attach(this);
+    new UI.Components.Image({id: "CPrev1", img: "character." + race.pic.female, position: {x: 350, y: 15, z: 3}, alpha: 1, scale: 1}).Attach(this);
+    new UI.Components.Image({id: "CPrev2", img: "character."  + race.pic.male, position: {x: 400, y: 15, z: 3}, alpha: 1, scale: 1}).Attach(this);
 
     new UI.Components.PaperHeader({
         id: "Header",
@@ -75,6 +81,11 @@ ClassSelect._OnLoad = function(parameters){
         id: "Guide",
         text: {i18n: "ui.classselect.guide"}
     }).Attach(this);
+
+
+    this.components.CPrev1.SetBasePosition(330, 63 - rimgdet.h);
+    this.components.CPrev2.SetBasePosition(330 + 20 + rimgdet.w, 63 - rimgdet.h);
+    this.components.Race.SetText(i18n("ui.classselect.race", {race: DB.Races.GetByID(parameters.unit.race).name}));
 
 
     let attb = DB.Attributes.Search({primary: true});

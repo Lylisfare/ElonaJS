@@ -28,10 +28,13 @@ class Option extends MultiComponent{
             Object.assign(val, {position: {x: op.position.x + val.offset.x, y: op.position.y + val.offset.y}});
             if(!this.set.text || val.modified || !Utils.Parse.ObjEq(op.text, this.params.text)){
                 chng = true;
-                if(this.set.text) this.set.text.Destroy();
-                this.set.text = new UI.Components.Text(val);
-                this.menu.AddSprite(this.set.text.sprite);
-                val.modified = false;
+                if(this.set.text) {
+                    this.set.text.Reconstruct(val);
+                    val.modified = false;
+                } else {
+                    this.set.text = new UI.Components.Text(val);
+                    this.menu.AddSprite(this.set.text.sprite);
+                }
             }
         } else (this.set.text ? this.set.text.Hide() : null);
 
@@ -40,9 +43,12 @@ class Option extends MultiComponent{
             Object.assign(val, {position: {x: op.position.x + val.offset.x, y: op.position.y + val.offset.y}})
             if(!this.set.keyimage || !Utils.Parse.ObjEq(op.keyimage, this.params.keyimage)){
                 chng = true;
-                if(this.set.keyimage) this.set.keyimage.Destroy();
-                this.set.keyimage = new UI.Components.Image(val);
-                this.menu.AddSprite(this.set.keyimage.sprite);
+                if(this.set.keyimage) {
+                    this.set.keyimage.Reconstruct(val);   
+                } else {
+                    this.set.keyimage = new UI.Components.Image(val);
+                    this.menu.AddSprite(this.set.keyimage.sprite);
+                }
             }
             this.set.keyimage.Show();
         } else (this.set.keyimage ? this.set.keyimage.Hide() : null);
@@ -52,9 +58,12 @@ class Option extends MultiComponent{
             Object.assign(val, {position: {x: op.position.x + val.offset.x, y: op.position.y + val.offset.y}})
             if(!this.set.keytext || !Utils.Parse.ObjEq(op.keytext, this.params.keytext)){
                 chng = true;
-                if(this.set.keytext) this.set.keytext.Destroy();
-                this.set.keytext = new UI.Components.Text(val);
-                this.menu.AddSprite(this.set.keytext.sprite); 
+                if(this.set.keytext) {
+                    this.set.keytext.Reconstruct(val);
+                } else {
+                    this.set.keytext = new UI.Components.Text(val);
+                    this.menu.AddSprite(this.set.keytext.sprite); 
+                }
             } 
             this.set.keytext.Show();
         } else (this.set.keytext ? this.set.keytext.Hide() : null);
@@ -64,10 +73,6 @@ class Option extends MultiComponent{
             Object.assign(val, {position: {x: op.position.x + val.offset.x, y: op.position.y + val.offset.y}})
             if(!this.set.arrows || !Utils.Parse.ObjEq(op.arrows, this.params.arrows)){
                 chng = true;
-/*                 if(this.set.arrow){
-                    this.set.arrow_left.Destroy();
-                    this.set.arrow_right.Destroy();
-                }  */
 
                 let leftparam = $.extend(true, {}, val, val.arrow_left);
                 let rightparam = $.extend(true, {}, val, val.arrow_right, {position: {x: op.position.x + val.offset.x + val.spacing, y: op.position.y + val.offset.y}});
@@ -87,11 +92,14 @@ class Option extends MultiComponent{
 
             if(!this.set.arrow_text || !Utils.Parse.ObjEq(op.arrow_text, this.params.arrow_text)){
                 chng = true;
-                if(this.set.arrow_text) this.set.arrow_text.Destroy();
-
-                let textparam = $.extend(true, {}, op.arrow_text);          
-                this.set.arrow_text = new UI.Components.Text(textparam);
-                
+                let textparam = $.extend(true, {}, op.arrow_text);
+                if(this.set.arrow_text) {
+                    thi.set.arrow_text.Reconstruct();
+                } else {
+                    this.set.arrow_text = new UI.Components.Text(textparam);
+                    this.menu.AddSprite(this.set.arrow_text.sprite); 
+                }
+                                                  
                 if(op.arrow_text.centered){
                     this.set.arrow_text.SetBasePosition(
                         op.position.x + op.arrows.offset.x + (op.arrows.spacing + this.set.arrow_left.GetActualWidth())/2,
@@ -99,7 +107,6 @@ class Option extends MultiComponent{
                     );
                 }
 
-                this.menu.AddSprite(this.set.arrow_text.sprite); 
                 this.set.arrow_text.Show();
             } 
             this._SetArrows();

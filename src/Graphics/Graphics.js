@@ -4,7 +4,7 @@
 
 let Graphics = {
     Init: function(){
-        this.App = new PIXI.Application({width: 800, height: 600, transparent: false, antialias: true});
+        this.App = new PIXI.Application({width: 800, height: 600, transparent: true});
         window.App = this.App;
         this.App.view.id = "game-canvas";
         $('body').append(this.App.view);

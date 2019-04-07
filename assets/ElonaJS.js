@@ -633,6 +633,7 @@ String.prototype.initCap = function () {
     window.electron = require('electron')
     window.__baseDir = window.__dirname + "\\assets\\";
   }
+  PIXI.SCALE_MODES.DEFAULT = PIXI.SCALE_MODES.NEAREST;
 
     /**
      * @namespace ElonaJS
@@ -1066,7 +1067,7 @@ module.exports = Paper;
 
 let Graphics = {
     Init: function(){
-        this.App = new PIXI.Application({width: 800, height: 600, transparent: false, antialias: true});
+        this.App = new PIXI.Application({width: 800, height: 600, transparent: true});
         window.App = this.App;
         this.App.view.id = "game-canvas";
         $('body').append(this.App.view);
@@ -1427,10 +1428,13 @@ class Option extends MultiComponent{
             Object.assign(val, {position: {x: op.position.x + val.offset.x, y: op.position.y + val.offset.y}});
             if(!this.set.text || val.modified || !Utils.Parse.ObjEq(op.text, this.params.text)){
                 chng = true;
-                if(this.set.text) this.set.text.Destroy();
-                this.set.text = new UI.Components.Text(val);
-                this.menu.AddSprite(this.set.text.sprite);
-                val.modified = false;
+                if(this.set.text) {
+                    this.set.text.Reconstruct(val);
+                    val.modified = false;
+                } else {
+                    this.set.text = new UI.Components.Text(val);
+                    this.menu.AddSprite(this.set.text.sprite);
+                }
             }
         } else (this.set.text ? this.set.text.Hide() : null);
 
@@ -1439,9 +1443,12 @@ class Option extends MultiComponent{
             Object.assign(val, {position: {x: op.position.x + val.offset.x, y: op.position.y + val.offset.y}})
             if(!this.set.keyimage || !Utils.Parse.ObjEq(op.keyimage, this.params.keyimage)){
                 chng = true;
-                if(this.set.keyimage) this.set.keyimage.Destroy();
-                this.set.keyimage = new UI.Components.Image(val);
-                this.menu.AddSprite(this.set.keyimage.sprite);
+                if(this.set.keyimage) {
+                    this.set.keyimage.Reconstruct(val);   
+                } else {
+                    this.set.keyimage = new UI.Components.Image(val);
+                    this.menu.AddSprite(this.set.keyimage.sprite);
+                }
             }
             this.set.keyimage.Show();
         } else (this.set.keyimage ? this.set.keyimage.Hide() : null);
@@ -1451,9 +1458,12 @@ class Option extends MultiComponent{
             Object.assign(val, {position: {x: op.position.x + val.offset.x, y: op.position.y + val.offset.y}})
             if(!this.set.keytext || !Utils.Parse.ObjEq(op.keytext, this.params.keytext)){
                 chng = true;
-                if(this.set.keytext) this.set.keytext.Destroy();
-                this.set.keytext = new UI.Components.Text(val);
-                this.menu.AddSprite(this.set.keytext.sprite); 
+                if(this.set.keytext) {
+                    this.set.keytext.Reconstruct(val);
+                } else {
+                    this.set.keytext = new UI.Components.Text(val);
+                    this.menu.AddSprite(this.set.keytext.sprite); 
+                }
             } 
             this.set.keytext.Show();
         } else (this.set.keytext ? this.set.keytext.Hide() : null);
@@ -1463,10 +1473,6 @@ class Option extends MultiComponent{
             Object.assign(val, {position: {x: op.position.x + val.offset.x, y: op.position.y + val.offset.y}})
             if(!this.set.arrows || !Utils.Parse.ObjEq(op.arrows, this.params.arrows)){
                 chng = true;
-/*                 if(this.set.arrow){
-                    this.set.arrow_left.Destroy();
-                    this.set.arrow_right.Destroy();
-                }  */
 
                 let leftparam = $.extend(true, {}, val, val.arrow_left);
                 let rightparam = $.extend(true, {}, val, val.arrow_right, {position: {x: op.position.x + val.offset.x + val.spacing, y: op.position.y + val.offset.y}});
@@ -1486,11 +1492,14 @@ class Option extends MultiComponent{
 
             if(!this.set.arrow_text || !Utils.Parse.ObjEq(op.arrow_text, this.params.arrow_text)){
                 chng = true;
-                if(this.set.arrow_text) this.set.arrow_text.Destroy();
-
-                let textparam = $.extend(true, {}, op.arrow_text);          
-                this.set.arrow_text = new UI.Components.Text(textparam);
-                
+                let textparam = $.extend(true, {}, op.arrow_text);
+                if(this.set.arrow_text) {
+                    thi.set.arrow_text.Reconstruct();
+                } else {
+                    this.set.arrow_text = new UI.Components.Text(textparam);
+                    this.menu.AddSprite(this.set.arrow_text.sprite); 
+                }
+                                                  
                 if(op.arrow_text.centered){
                     this.set.arrow_text.SetBasePosition(
                         op.position.x + op.arrows.offset.x + (op.arrows.spacing + this.set.arrow_left.GetActualWidth())/2,
@@ -1498,7 +1507,6 @@ class Option extends MultiComponent{
                     );
                 }
 
-                this.menu.AddSprite(this.set.arrow_text.sprite); 
                 this.set.arrow_text.Show();
             } 
             this._SetArrows();
@@ -1643,7 +1651,16 @@ class OptionList extends MultiComponent{
         this.UpdateSelector();
         this.AlignSelector(this.menu.position);
         this.menu.AlignElements();
-        
+    }
+
+    JumpTo(index){
+        let pg = Math.floor(index / this.settings.perpage);
+        this.page = pg;
+        this.current = index;
+        this.Build();
+        this.UpdateSelector();
+        this.AlignSelector(this.menu.position);
+        this.menu.AlignElements();
     }
 
     AlignSelector(base){
@@ -1970,8 +1987,36 @@ class UIText extends UniComponent {
         return this.sprite.text;
     }
 
+    Reconstruct(params){
+        if(params.size) this.sprite._style.fontSize = params.size;
+        else this.sprite._style.fontSize = this._default.size;
+
+        if(params.color) this.sprite._style.fill = params.color;
+        else this.sprite._style.fill = this._default.color;
+
+        if(params.wrap) {
+            this.sprite._style.wordWrap = true;
+            this.sprite._style.wordWrapWidth = params.wrap.width;
+        } else this.sprite._style.wordWrap = false;
+
+        if(params.weight) this.sprite._style.fontWeight = params.weight;
+        else this.sprite._style.fontWeight = "normal";
+
+        if(params.outline) {
+            this.sprite._style.stroke = params.outline.color;
+            this.sprite._style.strokeThickness = params.outline.size;
+        } else this.sprite._style.strokeThickness = 0;
+
+        if(!params.alignment) params.alignment = "relative";
+
+        if(params.text) this.SetText(params.text);
+
+        this.params = params;
+        if(params.i18n) this.RefreshI18n();
+    }
+
     RefreshI18n(){
-        if(this.params.i18n) this.sprite.text = i18n(this.params.i18n);
+        if(this.params.i18n) this.SetText(i18n(this.params.i18n));
     }
 
     Scale(scale){
@@ -2548,8 +2593,8 @@ class BaseMenu{
     _UpdateBase(){
         if(this.centered){
             let dims = Graphics.GetCanvasSize();
-            this.position.x = (dims.x - this.size.w) / 2;
-            this.position.y = (dims.y - this.size.h) / 2;
+            this.position.x = Math.floor((dims.x - this.size.w) / 2);
+            this.position.y = Math.floor((dims.y - this.size.h) / 2);
         }
     }
 
@@ -2576,11 +2621,16 @@ ClassSelect.sounds.select = "spell";
 
 ClassSelect._OnLoad = function(parameters){
     this.parameters = parameters;
+    let race = DB.Races.GetByID(parameters.unit.GetRace());
+    let rimgdet = DB.Graphics.GetByID("character." + race.pic.female);
     if(this.init){
         this.options.current = 0;
         this.options.page = 0;
-        this.components.CPrev1.SetImage("character." + DB.Races.GetByID(parameters.unit.GetRace()).pic.female);
-        this.components.CPrev2.SetImage("character." + DB.Races.GetByID(parameters.unit.GetRace()).pic.male);
+        this.components.CPrev1.SetImage("character." + race.pic.female);
+        this.components.CPrev2.SetImage("character." + race.pic.male);
+        this.components.CPrev1.SetBasePosition(330, 63 - rimgdet.h);
+        this.components.CPrev2.SetBasePosition(330 + 20 + rimgdet.w, 63 - rimgdet.h);
+        this.components.Race.SetText(i18n("ui.classselect.race", {race: DB.Races.GetByID(parameters.unit.race).name}));
         return;
     }
 
@@ -2593,9 +2643,10 @@ ClassSelect._OnLoad = function(parameters){
     new UI.Components.Image({id: "BG_Deco", img: "cbg3", position: {x: 30, y: 40, z: 1}, width: 290, height: 430, alpha: 0.2}).Attach(this);
     new UI.Components.Text({id: "Desc", position: {x: 210, y: 70}, wrap: {width: 460, spacing: 16}, text: ""}).Attach(this);
     new UI.Components.Text({id: "Help", alignment: "bottom-left", i18n: "hints.help", position: {x: 30, y: -22}}).Attach(this);
+    new UI.Components.Text({id: "Race", text: "Race: ", position: {x: 520, y: 40}}).Attach(this);
     new UI.Components.Text({id: "PageNum", position: {x: 640, y: 475}, size: 10}).Attach(this);
-    new UI.Components.Image({id: "CPrev1", img: "character." + DB.Races.GetByID(parameters.unit.GetRace()).pic.female, position: {x: 300, y: 45, z: 3}, alpha: 0.2, scale: 1}).Attach(this);
-    new UI.Components.Image({id: "CPrev2", img: "character."  + DB.Races.GetByID(parameters.unit.GetRace()).pic.male, position: {x: 444, y: 45, z: 3}, alpha: 0.2, scale: 1}).Attach(this);
+    new UI.Components.Image({id: "CPrev1", img: "character." + race.pic.female, position: {x: 350, y: 15, z: 3}, alpha: 1, scale: 1}).Attach(this);
+    new UI.Components.Image({id: "CPrev2", img: "character."  + race.pic.male, position: {x: 400, y: 15, z: 3}, alpha: 1, scale: 1}).Attach(this);
 
     new UI.Components.PaperHeader({
         id: "Header",
@@ -2638,6 +2689,11 @@ ClassSelect._OnLoad = function(parameters){
         id: "Guide",
         text: {i18n: "ui.classselect.guide"}
     }).Attach(this);
+
+
+    this.components.CPrev1.SetBasePosition(330, 63 - rimgdet.h);
+    this.components.CPrev2.SetBasePosition(330 + 20 + rimgdet.w, 63 - rimgdet.h);
+    this.components.Race.SetText(i18n("ui.classselect.race", {race: DB.Races.GetByID(parameters.unit.race).name}));
 
 
     let attb = DB.Attributes.Search({primary: true});
@@ -2905,6 +2961,7 @@ FeatSelect._OnSelect = function(){
             trait = unit.Get(opt.preview.id);
             list[1].text.text = trait.GetDescription();
             list[1].text.modified = true;
+            this.options.JumpTo(rawlist.indexOf(list[1]));
         } else {
             unit.Add(opt.preview.id, 1);
             trait = unit.Get(opt.preview.id);
@@ -2913,16 +2970,19 @@ FeatSelect._OnSelect = function(){
             );
             opt.text.color = "blue";
             opt.text.modified = true;
+            this.options.JumpToLast();
         }
 
         if(trait.CanGain()){
             opt.text.text = trait.GetName();
             opt.text.modified = true;
         } else{
-            rawlist.splice(rawlist.indexOf(opt), 1);
+            opt.text.text += " (MAX)";
+            opt.text.modified = true;
+            opt.preview.allowed = false;
         }
 
-        this.options.JumpToLast();
+        
         this.components.Disclaimer.SetText(i18n("ui.featselect.disclaimer", {count: unit.Available()}));
         this._UpdatePage();
     }

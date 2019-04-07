@@ -112,6 +112,7 @@ FeatSelect._OnSelect = function(){
             trait = unit.Get(opt.preview.id);
             list[1].text.text = trait.GetDescription();
             list[1].text.modified = true;
+            this.options.JumpTo(rawlist.indexOf(list[1]));
         } else {
             unit.Add(opt.preview.id, 1);
             trait = unit.Get(opt.preview.id);
@@ -120,16 +121,19 @@ FeatSelect._OnSelect = function(){
             );
             opt.text.color = "blue";
             opt.text.modified = true;
+            this.options.JumpToLast();
         }
 
         if(trait.CanGain()){
             opt.text.text = trait.GetName();
             opt.text.modified = true;
         } else{
-            rawlist.splice(rawlist.indexOf(opt), 1);
+            opt.text.text += " (MAX)";
+            opt.text.modified = true;
+            opt.preview.allowed = false;
         }
 
-        this.options.JumpToLast();
+        
         this.components.Disclaimer.SetText(i18n("ui.featselect.disclaimer", {count: unit.Available()}));
         this._UpdatePage();
     }
